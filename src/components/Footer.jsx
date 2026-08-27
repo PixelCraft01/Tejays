@@ -529,7 +529,7 @@ export default function Footer() {
                         >
 
                             <img
-                                src="/assets/tejays-logo.png"
+                                src="/Tejays/assets/tejays-logo.png"
                                 alt="TEJAYS Network"
                                 className="
                                     h-12

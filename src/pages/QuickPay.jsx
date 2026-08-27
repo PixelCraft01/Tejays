@@ -28,7 +28,7 @@ const QuickPay = () => {
                 ====================================================== */}
                 <section className="relative overflow-hidden bg-[#07111f] bg-cover bg-center bg-no-repeat px-5 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28"
                     style={{
-                        backgroundImage: "url('/assets/quickpay-hero.jpg')",
+                        backgroundImage: "url('/Tejays/assets/quickpay-hero.jpg')",
                     }}>
 
                     {/* Background Glow */}
@@ -476,7 +476,7 @@ const QuickPay = () => {
                                 ">
 
                                                     <img
-                                                        src="/assets/Tejays-barcode.png"
+                                                        src="/Tejays/assets/Tejays-barcode.png"
                                                         alt="TEJAYS Payment QR Code"
                                                         className="h-full w-full object-contain"
                                                     />

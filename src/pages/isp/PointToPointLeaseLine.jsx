@@ -493,7 +493,7 @@ export default function PointToPointLeaseLine() {
                             <div className="relative overflow-hidden rounded-2xl">
 
                                 <img
-                                    src="/assets/point-to-point1.jpg"
+                                    src="/Tejays/assets/point-to-point1.jpg"
                                     alt="TEJAYS Point-to-Point Connectivity"
                                     className="
                             h-[300px]
@@ -759,7 +759,7 @@ export default function PointToPointLeaseLine() {
                             <div className="relative overflow-hidden">
 
                                 <img
-                                    src="/assets/lease-line.jpg"
+                                    src="/Tejays/assets/lease-line.jpg"
                                     alt="TEJAYS Point-to-Point Lease Line"
                                     className="
                                         h-[330px]
@@ -1569,7 +1569,7 @@ export default function PointToPointLeaseLine() {
                             <div className="relative overflow-hidden rounded-2xl">
 
                                 <img
-                                    src="/assets/lease-line-infrastructure2.jpg"
+                                    src="/Tejays/assets/lease-line-infrastructure2.jpg"
                                     alt="TEJAYS Lease Line Infrastructure"
                                     className="
                                         h-[380px]

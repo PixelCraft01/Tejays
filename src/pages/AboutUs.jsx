@@ -87,12 +87,12 @@ export default function AboutUs() {
             ====================================================== */}
             <section className="relative overflow-hidden bg-[#07111f] bg-cover bg-no-repeat bg-center py-24 sm:py-28 lg:py-24"
                 style={{
-                    // backgroundImage: "url('/assets/about-tejays1-min.png')",
-                    // backgroundImage: "url('/assets/about-tejays2-min.png')",
-                    // backgroundImage: "url('/assets/ind.jpg')",
-                    backgroundImage: "url('/assets/fiber-network1.jpg')",
-                    // backgroundImage: "url('/assets/fiber-network.jpg')",
-                    // backgroundImage: "url('/assets/inff.jpg')",
+                    // backgroundImage: "url('/Tejays/assets/about-tejays1-min.png')",
+                    // backgroundImage: "url('/Tejays/assets/about-tejays2-min.png')",
+                    // backgroundImage: "url('/Tejays/assets/ind.jpg')",
+                    backgroundImage: "url('/Tejays/assets/fiber-network1.jpg')",
+                    // backgroundImage: "url('/Tejays/assets/fiber-network.jpg')",
+                    // backgroundImage: "url('/Tejays/assets/inff.jpg')",
                 }}>
 
                 <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#e3292f]/10 blur-3xl" />
@@ -242,7 +242,7 @@ export default function AboutUs() {
                                 <div className="relative overflow-hidden">
 
                                     <img
-                                        src="/assets/about-tejays3-min.png"
+                                        src="/Tejays/assets/about-tejays3-min.png"
                                         alt="About TEJAYS"
                                         className="
                                             h-[320px]
@@ -432,7 +432,7 @@ export default function AboutUs() {
                 <div className="absolute inset-0">
 
                     <img
-                        src="/assets/india-network-bg.jpg"
+                        src="/Tejays/assets/india-network-bg.jpg"
                         alt=""
                         aria-hidden="true"
                         className="

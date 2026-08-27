@@ -434,7 +434,7 @@ export default function Peering() {
                                 >
 
                                     <img
-                                        src="/assets/peering1.jpg"
+                                        src="/Tejays/assets/peering1.jpg"
                                         alt="TEJAYS network peering connectivity"
                                         className="
                             relative

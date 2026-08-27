@@ -140,7 +140,7 @@ export default function Header() {
                     "
         >
           <img
-            src="/assets/tejays-logo1.png"
+            src="/Tejays/assets/tejays-logo1.png"
             alt="TEJAYS"
             className="
                             h-12

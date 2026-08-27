@@ -131,47 +131,47 @@ const stats = [
 const brands = [
     {
         id: 1,
-        image: "/assets/brands/brand-1.png",
+        image: "/Tejays/assets/brands/brand-1.png",
         name: "Brand 1",
     },
     {
         id: 2,
-        image: "/assets/brands/brand-2.png",
+        image: "/Tejays/assets/brands/brand-2.png",
         name: "Brand 2",
     },
     {
         id: 3,
-        image: "/assets/brands/brand-3.png",
+        image: "/Tejays/assets/brands/brand-3.png",
         name: "Brand 3",
     },
     {
         id: 4,
-        image: "/assets/brands/brand-4.png",
+        image: "/Tejays/assets/brands/brand-4.png",
         name: "Brand 4",
     },
     {
         id: 5,
-        image: "/assets/brands/brand-5.png",
+        image: "/Tejays/assets/brands/brand-5.png",
         name: "Brand 5",
     },
     {
         id: 6,
-        image: "/assets/brands/brand-6.png",
+        image: "/Tejays/assets/brands/brand-6.png",
         name: "Brand 6",
     },
     {
         id: 7,
-        image: "/assets/brands/brand-7.png",
+        image: "/Tejays/assets/brands/brand-7.png",
         name: "Brand 7",
     },
     {
         id: 8,
-        image: "/assets/brands/brand-8.png",
+        image: "/Tejays/assets/brands/brand-8.png",
         name: "Brand 8",
     },
     {
         id: 9,
-        image: "/assets/brands/brand-9.png",
+        image: "/Tejays/assets/brands/brand-9.png",
         name: "Brand 9",
     },
 ];
@@ -343,13 +343,13 @@ export default function Home() {
             hover:scale-110
         "
                     style={{
-                        // backgroundImage: "url('/assets/bulk-bandwidth.jpg')",
-                        backgroundImage: "url('/assets/broadband-hero.jpg')",
-                        // backgroundImage: "url('/assets/home-hero.jpg')",
-                        // backgroundImage: "url('/assets/bg-img2.jpg')",
-                        // backgroundImage: "url('/assets/bg-img4.jpg')",
-                        // backgroundImage: "url('/assets/bg-img5.jpg')",
-                        // backgroundImage: "url('/assets/bg-img6.jpg')",
+                        // backgroundImage: "url('/Tejays/assets/bulk-bandwidth.jpg')",
+                        backgroundImage: "url('/Tejays/assets/broadband-hero.jpg')",
+                        // backgroundImage: "url('/Tejays/assets/home-hero.jpg')",
+                        // backgroundImage: "url('/Tejays/assets/bg-img2.jpg')",
+                        // backgroundImage: "url('/Tejays/assets/bg-img4.jpg')",
+                        // backgroundImage: "url('/Tejays/assets/bg-img5.jpg')",
+                        // backgroundImage: "url('/Tejays/assets/bg-img6.jpg')",
                     }}
                 />
 
@@ -750,7 +750,7 @@ export default function Home() {
                         YOUR ORIGINAL IMAGE
                     ================================================== */}
                                 <img
-                                    src="/assets/network.jpg"
+                                    src="/Tejays/assets/network.jpg"
                                     alt="TEJAYS Network"
                                     className="
                             h-full
