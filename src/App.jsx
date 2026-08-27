@@ -23,6 +23,9 @@ import WifiSolutions from "./pages/corporate/WifiSolutions";
 import NetworkingSolutions from "./pages/corporate/NetworkingSolutions";
 import Contact from "./pages/Contact";
 import QuickPay from "./pages/QuickPay";
+import TermsConditions from "./pages/TermsConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import AutoScroll from "./components/AutoScroll";
 
 import { FaWhatsapp } from "react-icons/fa";
@@ -125,6 +128,21 @@ function App() {
         <Route
           path="/quick-pay"
           element={<QuickPay />}
+        />
+
+        <Route
+          path="/terms-conditions-tc/"
+          element={<TermsConditions />}
+        />
+
+        <Route
+          path="/privacy-policy-2/"
+          element={<PrivacyPolicy />}
+        />
+
+        <Route
+          path="/refund-return-cancellation-policy/"
+          element={<RefundCancellationPolicy />}
         />
 
 

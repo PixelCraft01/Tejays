@@ -3637,7 +3637,7 @@ export default function Home() {
             {/* =========================================================
                 BRANDS SECTION
             ========================================================= */}
-            <section className="relative overflow-hidden bg-slate-100 py-20 sm:py-24 lg:py-28">
+            <section className="relative overflow-hidden bg-slate-100 py-20 sm:py-24 lg:py-28 ">
 
                 {/* Background Glow */}
 

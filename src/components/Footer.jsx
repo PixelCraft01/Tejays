@@ -102,6 +102,12 @@ const corporateServices = [
     },
 ];
 
+const legalLinks = [
+    { title: "Terms & Conditions", path: "/terms-conditions-tc/" },
+    { title: "Privacy Policy", path: "/privacy-policy-2/" },
+    { title: "Refund / Return / Cancellation Policy", path: "/refund-return-cancellation-policy/" },
+];
+
 
 /* =========================================================
    SOCIAL MEDIA
@@ -529,7 +535,7 @@ export default function Footer() {
                         >
 
                             <img
-                                src="/Tejays/assets/tejays-logo.png"
+                                src="/Tejays/assets/tejays-logo2.png"
                                 alt="TEJAYS Network"
                                 className="
                                     h-12
@@ -680,7 +686,7 @@ export default function Footer() {
                             gap-12
                             sm:grid-cols-2
                             sm:gap-14
-                            lg:grid-cols-4
+                            lg:grid-cols-5
                             lg:gap-10
                             xl:gap-14
                         "
@@ -699,6 +705,11 @@ export default function Footer() {
                         <FooterColumn
                             title="Corporate Services"
                             links={corporateServices}
+                        />
+
+                        <FooterColumn
+                            title="Legal"
+                            links={legalLinks}
                         />
 
                         <ContactDetails />
