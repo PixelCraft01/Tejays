@@ -35,7 +35,7 @@ const Contact = () => {
 
         try {
             const response = await fetch(
-                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contact`,
+                `${import.meta.env.VITE_API_URL || ""}/api/contact`,
                 {
                     method: "POST",
                     headers: {
@@ -294,7 +294,7 @@ const Contact = () => {
                                 {/* SUCCESS MESSAGE */}
                                 {sent && (
                                     <div className="mt-5 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700">
-                                        Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.
+                                        Thank you! Your enquiry has been submitted successfully. Our team will contact you soon.
                                     </div>
                                 )}
 

@@ -1,14 +1,15 @@
 import {
     ArrowUpRight,
-    AtSign,
-    BriefcaseBusiness,
-    Camera,
-    Globe2,
     Mail,
     MapPin,
     Phone,
-    PlayCircle,
 } from "lucide-react";
+import {
+    FaFacebookF,
+    FaGoogle,
+    FaLinkedinIn,
+    FaXTwitter,
+} from "react-icons/fa6";
 
 import { Link } from "react-router-dom";
 
@@ -116,29 +117,24 @@ const legalLinks = [
 
 const socialLinks = [
     {
-        label: "Facebook",
-        icon: Globe2,
-        href: "#",
-    },
-    {
-        label: "Twitter / X",
-        icon: AtSign,
-        href: "#",
-    },
-    {
-        label: "Instagram",
-        icon: Camera,
-        href: "#",
-    },
-    {
         label: "LinkedIn",
-        icon: BriefcaseBusiness,
-        href: "#",
+        icon: FaLinkedinIn,
+        href: import.meta.env.VITE_LINKEDIN_URL || "https://www.linkedin.com",
     },
     {
-        label: "YouTube",
-        icon: PlayCircle,
-        href: "#",
+        label: "Facebook",
+        icon: FaFacebookF,
+        href: import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com",
+    },
+    {
+        label: "X (Twitter)",
+        icon: FaXTwitter,
+        href: import.meta.env.VITE_X_URL || "https://x.com",
+    },
+    {
+        label: "Google Business Profile",
+        icon: FaGoogle,
+        href: import.meta.env.VITE_GOOGLE_BUSINESS_URL || "https://www.google.com/business/",
     },
 ];
 
