@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { publicRoutes } from "../routeConfig";
 
 const RESUME_DELAY = 4000;
-const SCROLL_SPEED = 300;
+const SCROLL_SPEED = 150;
 const TOP_RESET_DELAY = 900;
 const FRAME_TIME_CAP = 64;
 const ROUTE_SEQUENCE = publicRoutes;
