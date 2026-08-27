@@ -6,7 +6,6 @@ import {
 } from "lucide-react";
 import {
     FaFacebookF,
-    FaGoogle,
     FaLinkedinIn,
     FaXTwitter,
 } from "react-icons/fa6";
@@ -119,22 +118,22 @@ const socialLinks = [
     {
         label: "LinkedIn",
         icon: FaLinkedinIn,
-        href: import.meta.env.VITE_LINKEDIN_URL || "https://www.linkedin.com",
+        href: "https://www.linkedin.com/company/tejays-dynamic-limited/",
     },
     {
         label: "Facebook",
         icon: FaFacebookF,
-        href: import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com",
+        href: "",
     },
     {
         label: "X (Twitter)",
         icon: FaXTwitter,
-        href: import.meta.env.VITE_X_URL || "https://x.com",
+        href: "",
     },
     {
-        label: "Google Business Profile",
-        icon: FaGoogle,
-        href: import.meta.env.VITE_GOOGLE_BUSINESS_URL || "https://www.google.com/business/",
+        label: "Email",
+        icon: Mail,
+        href: "mailto:info@tejays.com",
     },
 ];
 
@@ -616,8 +615,14 @@ export default function Footer() {
                                     <a
                                         key={label}
                                         href={href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                        {...(href
+                                            ? {
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                            }
+                                            : {
+                                                onClick: (event) => event.preventDefault(),
+                                            })}
                                         title={label}
                                         aria-label={label}
                                         className="
