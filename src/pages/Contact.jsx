@@ -14,6 +14,8 @@ const Contact = () => {
     });
 
     const [sent, setSent] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submissionError, setSubmissionError] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -24,54 +26,48 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // ================= WHATSAPP MESSAGE =================
-        const whatsappMessage = `
-*TEJAYS - New Contact Enquiry*
+        setIsSubmitting(true);
+        setSent(false);
+        setSubmissionError(false);
 
-*Name:* ${form.name}
-*Phone:* ${form.phone}
-*Email:* ${form.email}
-*City:* ${form.city}
-*Pin Code:* ${form.pincode}
-*Service:* ${form.service}
+        try {
+            const response = await fetch(
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contact`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(form),
+                }
+            );
 
-*Message:*
-${form.message}
+            if (!response.ok) {
+                throw new Error("Contact enquiry could not be sent");
+            }
 
--------------------------
-Sent from TEJAYS Website
-        `.trim();
+            setSent(true);
+            setForm({
+                name: "",
+                phone: "",
+                email: "",
+                city: "",
+                pincode: "",
+                service: "",
+                message: "",
+            });
 
-        // Your WhatsApp number
-        const whatsappNumber = "919509612559";
-
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-            whatsappMessage
-        )}`;
-
-        // Open WhatsApp
-        window.open(whatsappURL, "_blank");
-
-        // Success message
-        setSent(true);
-
-        // Clear form
-        setForm({
-            name: "",
-            phone: "",
-            email: "",
-            city: "",
-            pincode: "",
-            service: "",
-            message: "",
-        });
-
-        setTimeout(() => {
-            setSent(false);
-        }, 5000);
+            setTimeout(() => {
+                setSent(false);
+            }, 5000);
+        } catch {
+            setSubmissionError(true);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -298,8 +294,13 @@ Sent from TEJAYS Website
                                 {/* SUCCESS MESSAGE */}
                                 {sent && (
                                     <div className="mt-5 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700">
-                                        WhatsApp opened successfully. Please press
-                                        Send in WhatsApp to send your enquiry.
+                                        Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.
+                                    </div>
+                                )}
+
+                                {submissionError && (
+                                    <div className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+                                        Something went wrong while sending your enquiry. Please try again.
                                     </div>
                                 )}
 
@@ -513,9 +514,10 @@ Sent from TEJAYS Website
                                     {/* ================= BUTTON ================= */}
                                     <button
                                         type="submit"
+                                        disabled={isSubmitting}
                                         className="group inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[#e3292f] px-6 py-4 text-sm font-bold text-white shadow-lg shadow-red-200 transition-all duration-300 hover:-translate-y-1 hover:bg-[#c91f25] hover:shadow-xl sm:w-auto"
                                     >
-                                        Send Message
+                                        {isSubmitting ? "Sending..." : "Send Message"}
 
                                         <svg
                                             className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
