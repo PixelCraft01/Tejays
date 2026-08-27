@@ -26,6 +26,7 @@ import QuickPay from "./pages/QuickPay";
 import TermsConditions from "./pages/TermsConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
+import ISOCertification from "./pages/ISOCertification";
 import AutoScroll from "./components/AutoScroll";
 
 import { FaWhatsapp } from "react-icons/fa";
@@ -143,6 +144,11 @@ function App() {
         <Route
           path="/refund-return-cancellation-policy/"
           element={<RefundCancellationPolicy />}
+        />
+
+        <Route
+          path="/iso-certification/"
+          element={<ISOCertification />}
         />
 
 

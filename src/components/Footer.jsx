@@ -106,6 +106,7 @@ const legalLinks = [
     { title: "Terms & Conditions", path: "/terms-conditions-tc/" },
     { title: "Privacy Policy", path: "/privacy-policy-2/" },
     { title: "Refund / Return / Cancellation Policy", path: "/refund-return-cancellation-policy/" },
+    { title: "ISO Certification", path: "/iso-certification/" },
 ];
 
 

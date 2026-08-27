@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { FileBadge, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -37,7 +37,7 @@ function ContactBox() {
   );
 }
 
-export default function LegalPage({ title, breadcrumb, intro, sections }) {
+export default function LegalPage({ title, breadcrumb, subtitle, intro, sections }) {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <Header />
@@ -54,6 +54,7 @@ export default function LegalPage({ title, breadcrumb, intro, sections }) {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f]">TEJAYS LEGAL</p>
             <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">{title}</h1>
             <div className="mt-6 h-1 w-16 bg-[#e3292f]" />
+            {subtitle && <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">{subtitle}</p>}
           </div>
         </div>
       </div>
@@ -96,6 +97,23 @@ export default function LegalPage({ title, breadcrumb, intro, sections }) {
                       <ul className="list-disc space-y-2 pl-5 marker:text-[#e3292f]">
                         {section.bullets.map((item) => <li key={item} className="pl-2">{item}</li>)}
                       </ul>
+                    )}
+                    {section.details && (
+                      <div className="grid gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 sm:grid-cols-2 sm:p-5">
+                        {section.details.map((detail) => (
+                          <div key={detail.label} className="border-b border-slate-200 pb-3 last:border-0 sm:last:border-b sm:nth-last-child(-n+2):border-0 sm:nth-last-child(-n+2):pb-0">
+                            <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">{detail.label}</p>
+                            <p className="mt-1 text-sm font-semibold text-[#07111f]">{detail.value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {section.certificate && (
+                      <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50 px-5 py-10 text-center sm:py-12">
+                        <FileBadge aria-hidden="true" size={34} strokeWidth={1.5} className="text-[#e3292f]" />
+                        <p className="mt-4 font-semibold text-[#07111f]">Official ISO Certificate</p>
+                        <p className="mt-2 text-sm text-slate-500">Certificate document will be published here.</p>
+                      </div>
                     )}
                   </div>
                 </section>

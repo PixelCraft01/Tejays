@@ -185,7 +185,7 @@ Sent from TEJAYS Website
                                         </h3>
 
                                         <p className="mt-1 text-sm text-slate-600">
-                                            +91 95096 12559
+                                            0141-4556633
                                         </p>
 
                                     </div>
