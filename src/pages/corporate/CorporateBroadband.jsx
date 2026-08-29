@@ -353,7 +353,7 @@ export default function CorporateBroadband() {
                                             items-center
                                             justify-center
                                             gap-3
-                                            
+                                           
                                             bg-[#e3292f]
                                             px-7
                                             py-3.5
@@ -390,7 +390,7 @@ export default function CorporateBroadband() {
                                             w-full
                                             items-center
                                             justify-center
-                                            
+                                         
                                             border
                                             border-slate-300
                                             bg-white
