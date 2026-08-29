@@ -63,7 +63,7 @@ export default function DotCompliances() {
                     className="
                         relative
                         overflow-hidden
-                        bg-red-50
+                        bg-red-100
                         py-24
                         sm:py-28
                         lg:py-36
@@ -84,6 +84,19 @@ export default function DotCompliances() {
                             bg-[#e3292f]/10
                             blur-[120px]
                         "
+                    />
+
+                    {/* Grid */}
+
+                    <div
+                        className="
+        pointer-events-none
+        absolute
+        inset-0
+        opacity-[0.04]
+        [background-image:linear-gradient(rgba(127,29,29,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(127,29,29,.8)_1px,transparent_1px)]
+        [background-size:50px_50px]
+    "
                     />
 
                     <div

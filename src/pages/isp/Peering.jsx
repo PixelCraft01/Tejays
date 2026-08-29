@@ -72,7 +72,7 @@ export default function Peering() {
                     className="
         relative
         overflow-hidden
-        bg-red-50
+        bg-red-100
         py-20
         sm:py-24
         lg:py-28
@@ -94,6 +94,19 @@ export default function Peering() {
             bg-[#e3292f]/10
             blur-[120px]
         "
+                    />
+
+                    {/* Grid */}
+
+                    <div
+                        className="
+        pointer-events-none
+        absolute
+        inset-0
+        opacity-[0.04]
+        [background-image:linear-gradient(rgba(127,29,29,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(127,29,29,.8)_1px,transparent_1px)]
+        [background-size:50px_50px]
+    "
                     />
 
                     <div
@@ -826,7 +839,7 @@ export default function Peering() {
                 ================================================== */}
 
                                 <div
-    className="
+                                    className="
         mx-auto
         mt-7
         grid
@@ -837,19 +850,19 @@ export default function Peering() {
         sm:mt-8
         sm:gap-4
     "
->
-    {[
-        "Efficient Routing",
-        "Better Reachability",
-        "Reliable Connectivity",
-        "Network Performance",
-    ].map((item, index) => (
+                                >
+                                    {[
+                                        "Efficient Routing",
+                                        "Better Reachability",
+                                        "Reliable Connectivity",
+                                        "Network Performance",
+                                    ].map((item, index) => (
 
-        <div
-            key={item}
-            data-aos="fade-up"
-            data-aos-delay={index * 70}
-            className="
+                                        <div
+                                            key={item}
+                                            data-aos="fade-up"
+                                            data-aos-delay={index * 70}
+                                            className="
                 group
 
                 flex
@@ -879,12 +892,12 @@ export default function Peering() {
                 sm:min-h-[64px]
                 sm:px-4
             "
-        >
+                                        >
 
-            <CheckCircle2
-                size={17}
-                strokeWidth={2}
-                className="
+                                            <CheckCircle2
+                                                size={17}
+                                                strokeWidth={2}
+                                                className="
                     shrink-0
                     text-[#e3292f]
 
@@ -893,10 +906,10 @@ export default function Peering() {
 
                     group-hover:scale-110
                 "
-            />
+                                            />
 
-            <span
-                className="
+                                            <span
+                                                className="
                     text-[10px]
                     font-semibold
                     leading-4
@@ -905,14 +918,14 @@ export default function Peering() {
                     sm:text-xs
                     sm:leading-5
                 "
-            >
-                {item}
-            </span>
+                                            >
+                                                {item}
+                                            </span>
 
-        </div>
+                                        </div>
 
-    ))}
-</div>
+                                    ))}
+                                </div>
                             </div>
 
 
