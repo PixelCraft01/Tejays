@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/prajapatnilesh001@gmail.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
 
 const Contact = () => {
     const [form, setForm] = useState({
