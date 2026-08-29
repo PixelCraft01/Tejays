@@ -353,7 +353,7 @@ export default function CorporateBroadband() {
                                             items-center
                                             justify-center
                                             gap-3
-                                            rounded-xl
+                                            
                                             bg-[#e3292f]
                                             px-7
                                             py-3.5
@@ -390,7 +390,7 @@ export default function CorporateBroadband() {
                                             w-full
                                             items-center
                                             justify-center
-                                            rounded-xl
+                                            
                                             border
                                             border-slate-300
                                             bg-white
