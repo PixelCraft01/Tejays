@@ -170,61 +170,88 @@ export default function BulkBandwidth() {
                         </p>
 
                         {/* Buttons */}
-<div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
 
-    <Link
-        to="/contact-us"
-        className="
-            inline-flex
-            items-center
-            justify-center
-            gap-2
-            rounded-full
-            bg-[#e3292f]
-            px-6
-            py-3
-            text-sm
-            font-bold
-            text-white
-            shadow-[0_12px_30px_rgba(227,41,47,0.22)]
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:bg-[#c91f25]
-            hover:shadow-[0_18px_40px_rgba(227,41,47,0.28)]
-        "
-    >
-        Get Started
-        <ArrowRight size={17} />
-    </Link>
+                        <div
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            className="
+                                        mt-9
+                                        flex
+                                        flex-col
+                                        items-center
+                                        justify-center
+                                        gap-3
+                                        sm:flex-row
+                                        lg:justify-start
+                                    "
+                        >
 
-    <Link
-        to="/contact-us"
-        className="
-            inline-flex
-            items-center
-            justify-center
-            gap-2
-            rounded-full
-            border
-            border-slate-300
-            bg-white
-            px-6
-            py-3
-            text-sm
-            font-bold
-            text-slate-800
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:border-[#e3292f]
-            hover:text-[#e3292f]
-        "
-    >
-        Talk to Our Team
-    </Link>
+                            <Link
+                                to="/contact-us"
+                                className="
+                                            group
+                                            inline-flex
+                                            w-full
+                                            items-center
+                                            justify-center
+                                            gap-3
+                                            bg-[#e3292f]
+                                            px-7
+                                            py-3.5
+                                            text-sm
+                                            font-bold
+                                            text-white
+                                            shadow-[0_15px_35px_rgba(227,41,47,0.20)]
+                                            transition-all
+                                            duration-500
+                                            hover:-translate-y-1
+                                            hover:bg-[#c91f25]
+                                            hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
+                                            sm:w-auto
+                                        "
+                            >
+                                Talk To Our Team
 
-</div>
+                                <ArrowRight
+                                    size={17}
+                                    className="
+                                                transition-transform
+                                                duration-300
+                                                group-hover:translate-x-1
+                                            "
+                                />
+
+                            </Link>
+
+
+                            <Link
+                                to="/contact-us"
+                                className="
+                                            inline-flex
+                                            w-full
+                                            items-center
+                                            justify-center
+                                            border
+                                            border-slate-300
+                                            bg-white
+                                            px-7
+                                            py-3.5
+                                            text-sm
+                                            font-bold
+                                            text-slate-800
+                                            transition-all
+                                            duration-500
+                                            hover:-translate-y-1
+                                            hover:border-[#e3292f]/40
+                                            hover:text-[#e3292f]
+                                            hover:shadow-md
+                                            sm:w-auto
+                                        "
+                            >
+                                Get Started
+                            </Link>
+
+                        </div>
 
                         {/* Trust Points */}
                         <div className="mt-9 flex flex-wrap justify-center gap-x-6 gap-y-3 lg:justify-start">
