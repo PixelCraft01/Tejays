@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const FORM_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "YOUR_CONFIGURED_FORMSPREE_ENDPOINT";
-const FORM_RECIPIENT = "prajapatnilesh001@gmail.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/prajapatnilesh001@gmail.com";
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -37,19 +36,18 @@ const Contact = () => {
         setSubmissionError(false);
 
         try {
-            if (FORM_ENDPOINT === "YOUR_CONFIGURED_FORMSPREE_ENDPOINT") {
-                throw new Error("Formspree endpoint is not configured");
-            }
+            const formData = new FormData();
+            Object.entries(form).forEach(([name, value]) => {
+                formData.append(name, value);
+            });
+            formData.append("_subject", "TEJAYS - New Contact Enquiry");
 
             const response = await fetch(FORM_ENDPOINT, {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
                 },
-                body: new URLSearchParams({
-                    ...form,
-                    _to: FORM_RECIPIENT,
-                }),
+                body: formData,
             });
 
             if (!response.ok) {
