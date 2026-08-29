@@ -222,7 +222,7 @@ const Contact = () => {
                                         </h3>
 
                                         <p className="mt-1 text-sm text-slate-600">
-                                            info@tejays.com
+                                             sales@tejays.in
                                         </p>
 
                                     </div>
