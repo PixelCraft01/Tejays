@@ -205,86 +205,89 @@ export default function FiberOnLease() {
                             </p>
 
 
-                            {/* Buttons */}
-                            <div
-                                className="
-                        mt-8
-                        flex
-                        flex-col
-                        items-center
-                        justify-center
-                        gap-3
-                        sm:flex-row
-                        lg:justify-start
-                    "
-                            >
+                           {/* Buttons */}
 
-                                {/* Primary Button */}
-                                <Link
-                                    to="/contact-us"
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-delay="300"
                                     className="
-                            group
-                            inline-flex
-                            items-center
-                            justify-center
-                            gap-2
-                            rounded-xl
-                            bg-[#e3292f]
-                            px-6
-                            py-3.5
-                            text-sm
-                            font-bold
-                            text-white
-                            shadow-lg
-                            shadow-red-900/20
-                            transition-all
-                            duration-300
-                            hover:-translate-y-1
-                            hover:bg-[#c91f25]
-                        "
+                                        mt-9
+                                        flex
+                                        flex-col
+                                        items-center
+                                        justify-center
+                                        gap-3
+                                        sm:flex-row
+                                        lg:justify-start
+                                    "
                                 >
-                                    Get Started
 
-                                    <ArrowRight
-                                        size={17}
+                                    <Link
+                                        to="/contact-us"
                                         className="
-                                transition-transform
-                                duration-300
-                                group-hover:translate-x-1
-                            "
-                                    />
-                                </Link>
+                                            group
+                                            inline-flex
+                                            w-full
+                                            items-center
+                                            justify-center
+                                            gap-3
+                                            bg-[#e3292f]
+                                            px-7
+                                            py-3.5
+                                            text-sm
+                                            font-bold
+                                            text-white
+                                            shadow-[0_15px_35px_rgba(227,41,47,0.20)]
+                                            transition-all
+                                            duration-500
+                                            hover:-translate-y-1
+                                            hover:bg-[#c91f25]
+                                            hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
+                                            sm:w-auto
+                                        "
+                                    >
+                                        Talk To Our Team
+
+                                        <ArrowRight
+                                            size={17}
+                                            className="
+                                                transition-transform
+                                                duration-300
+                                                group-hover:translate-x-1
+                                            "
+                                        />
+
+                                    </Link>
 
 
-                                {/* Secondary Button */}
-                                <Link
-                                    to="/contact-us"
-                                    className="
-                            inline-flex
-                            items-center
-                            justify-center
-                            rounded-xl
-                            border
-                            border-red-200
-                            bg-white/70
-                            px-6
-                            py-3.5
-                            text-sm
-                            font-semibold
-                            text-slate-800
-                            shadow-sm
-                            backdrop-blur
-                            transition-all
-                            duration-300
-                            hover:-translate-y-1
-                            hover:border-[#e3292f]/30
-                            hover:bg-white
-                        "
-                                >
-                                    Talk To Our Team
-                                </Link>
+                                    <Link
+                                        to="/contact-us"
+                                        className="
+                                            inline-flex
+                                            w-full
+                                            items-center
+                                            justify-center
+                                            border
+                                            border-slate-300
+                                            bg-white
+                                            px-7
+                                            py-3.5
+                                            text-sm
+                                            font-bold
+                                            text-slate-800
+                                            transition-all
+                                            duration-500
+                                            hover:-translate-y-1
+                                            hover:border-[#e3292f]/40
+                                            hover:text-[#e3292f]
+                                            hover:shadow-md
+                                            sm:w-auto
+                                        "
+                                    >
+                                        Get Started
+                                    </Link>
 
-                            </div>
+                                </div>
 
                         </div>
 
