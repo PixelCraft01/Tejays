@@ -258,49 +258,53 @@ export default function SecurityAndSurveillance() {
                             {/* Buttons */}
 
                             <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
                                 className="
-                        mt-8
-                        flex
-                        flex-col
-                        items-center
-                        justify-center
-                        gap-3
-                        sm:flex-row
-                        lg:justify-start
-                    "
+                                        mt-9
+                                        flex
+                                        flex-col
+                                        items-center
+                                        justify-center
+                                        gap-3
+                                        sm:flex-row
+                                        lg:justify-start
+                                    "
                             >
 
                                 <Link
                                     to="/contact-us"
                                     className="
-                            group
-                            inline-flex
-                            items-center
-                            justify-center
-                            gap-2
-                            rounded-xl
-                            bg-[#e3292f]
-                            px-6
-                            py-3.5
-                            text-sm
-                            font-bold
-                            text-white
-                            shadow-[0_12px_30px_rgba(227,41,47,0.20)]
-                            transition-all
-                            duration-300
-                            hover:-translate-y-1
-                            hover:bg-[#c91f25]
-                        "
+                                            group
+                                            inline-flex
+                                            w-full
+                                            items-center
+                                            justify-center
+                                            gap-3
+                                            bg-[#e3292f]
+                                            px-7
+                                            py-3.5
+                                            text-sm
+                                            font-bold
+                                            text-white
+                                            shadow-[0_15px_35px_rgba(227,41,47,0.20)]
+                                            transition-all
+                                            duration-500
+                                            hover:-translate-y-1
+                                            hover:bg-[#c91f25]
+                                            hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
+                                            sm:w-auto
+                                        "
                                 >
-                                    Get Started
+                                    Talk To Our Team
 
                                     <ArrowRight
                                         size={17}
                                         className="
-                                transition-transform
-                                duration-300
-                                group-hover:translate-x-1
-                            "
+                                                transition-transform
+                                                duration-300
+                                                group-hover:translate-x-1
+                                            "
                                     />
 
                                 </Link>
@@ -309,29 +313,28 @@ export default function SecurityAndSurveillance() {
                                 <Link
                                     to="/contact-us"
                                     className="
-                            inline-flex
-                            items-center
-                            justify-center
-                            rounded-xl
-                            border
-                            border-slate-200
-                            bg-white/80
-                            px-6
-                            py-3.5
-                            text-sm
-                            font-semibold
-                            text-slate-700
-                            shadow-sm
-                            backdrop-blur-sm
-                            transition-all
-                            duration-300
-                            hover:-translate-y-1
-                            hover:border-red-200
-                            hover:bg-red-50
-                            hover:text-[#e3292f]
-                        "
+                                            inline-flex
+                                            w-full
+                                            items-center
+                                            justify-center
+                                            border
+                                            border-slate-300
+                                            bg-white
+                                            px-7
+                                            py-3.5
+                                            text-sm
+                                            font-bold
+                                            text-slate-800
+                                            transition-all
+                                            duration-500
+                                            hover:-translate-y-1
+                                            hover:border-[#e3292f]/40
+                                            hover:text-[#e3292f]
+                                            hover:shadow-md
+                                            sm:w-auto
+                                        "
                                 >
-                                    Talk To Our Team
+                                    Get Started
                                 </Link>
 
                             </div>
