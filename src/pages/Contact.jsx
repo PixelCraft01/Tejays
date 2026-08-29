@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/prajapatnilesh001@gamil.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -50,8 +50,23 @@ const Contact = () => {
                 body: formData,
             });
 
-            if (!response.ok) {
-                throw new Error("Contact enquiry could not be sent");
+            const responseText = await response.text();
+            let result;
+
+            try {
+                result = JSON.parse(responseText);
+            } catch {
+                result = { message: responseText };
+            }
+
+            console.log("FormSubmit response:", {
+                status: response.status,
+                ok: response.ok,
+                body: result,
+            });
+
+            if (!response.ok || (result.success !== true && result.success !== "true")) {
+                throw new Error(result.message || "Contact enquiry could not be sent");
             }
 
             setSent(true);
@@ -68,7 +83,8 @@ const Contact = () => {
             setTimeout(() => {
                 setSent(false);
             }, 5000);
-        } catch {
+        } catch (error) {
+            console.error("Contact form submission failed:", error);
             setSubmissionError(true);
         } finally {
             setIsSubmitting(false);
