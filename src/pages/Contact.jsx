@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+const FORM_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "YOUR_CONFIGURED_FORMSPREE_ENDPOINT";
+const FORM_RECIPIENT = "prajapatnilesh001@gmail.com";
+
 const Contact = () => {
     const [form, setForm] = useState({
         name: "",
@@ -34,16 +37,20 @@ const Contact = () => {
         setSubmissionError(false);
 
         try {
-            const response = await fetch(
-                `${import.meta.env.VITE_API_URL || ""}/api/contact`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(form),
-                }
-            );
+            if (FORM_ENDPOINT === "YOUR_CONFIGURED_FORMSPREE_ENDPOINT") {
+                throw new Error("Formspree endpoint is not configured");
+            }
+
+            const response = await fetch(FORM_ENDPOINT, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                },
+                body: new URLSearchParams({
+                    ...form,
+                    _to: FORM_RECIPIENT,
+                }),
+            });
 
             if (!response.ok) {
                 throw new Error("Contact enquiry could not be sent");

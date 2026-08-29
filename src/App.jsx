@@ -29,8 +29,6 @@ import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import ISOCertification from "./pages/ISOCertification";
 import AutoScroll from "./components/AutoScroll";
 
-import { FaWhatsapp } from "react-icons/fa";
-
 /* =========================================================
    COMMON PAGE LAYOUT
 ========================================================= */
@@ -249,16 +247,6 @@ function App() {
         />
       </Routes>
 
-
-      <a
-        href="https://wa.me/919509612559"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp"
-        className="fixed bottom-5 right-5 z-[999999] flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform duration-300 hover:scale-110 lg:bottom-6 lg:right-6"
-      >
-        <FaWhatsapp className="h-6 w-6" />
-      </a>
 
       <AutoScroll />
 

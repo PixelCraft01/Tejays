@@ -12,6 +12,14 @@
 </head>
 
 <body>
+  <script>
+    const base = "%BASE_URL%";
+    const redirectPath = new URLSearchParams(window.location.search).get("p");
+
+    if (redirectPath) {
+      window.history.replaceState(null, "", `${base}${redirectPath.replace(/^\/+/, "")}`);
+    }
+  </script>
   <div id="root"></div>
 
   <script type="module" src="./src/main.jsx"></script>
