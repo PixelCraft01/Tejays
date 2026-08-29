@@ -103,9 +103,29 @@ export default function AboutUs() {
 
                     <p
                         data-aos="fade-up"
-                        className="text-xs font-bold uppercase tracking-[0.3em] text-[#e3292f] sm:text-sm"
+                        className="
+        inline-flex
+        items-center
+        gap-2
+        rounded-full
+        border
+        border-red-200
+        bg-white/80
+        px-4
+        py-2
+        text-[10px]
+        font-bold
+        uppercase
+        tracking-[0.25em]
+        text-[#e3292f]
+        shadow-sm
+        backdrop-blur-sm
+        sm:text-xs
+    "
                     >
-                        <span className="bg-white text-e3292f border-1 border-red-400 px-3 py-1"> About TEJAYS </span>
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#e3292f] shadow-[0_0_8px_rgba(227,41,47,0.5)]" />
+
+                        About TEJAYS
                     </p>
 
                     <h1
