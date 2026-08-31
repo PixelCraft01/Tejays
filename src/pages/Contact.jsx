@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -34,27 +36,37 @@ const Contact = () => {
         setSubmissionError(false);
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL
-                ? `${import.meta.env.VITE_API_URL.replace(/\/$/, "")}/api/contact`
-                : "/api/contact";
+            const formData = new FormData();
+            Object.entries(form).forEach(([name, value]) => {
+                formData.append(name, value);
+            });
+            formData.append("_subject", "TEJAYS - New Contact Enquiry");
 
-            const response = await fetch(apiUrl, {
+            const response = await fetch(FORM_ENDPOINT, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    Accept: "application/json",
                 },
-                body: JSON.stringify(form),
+                body: formData,
             });
 
-            let payload = {};
+            const responseText = await response.text();
+            let result;
+
             try {
-                payload = await response.json();
+                result = JSON.parse(responseText);
             } catch {
-                payload = {};
+                result = { message: responseText };
             }
 
-            if (!response.ok) {
-                throw new Error(payload.message || "Contact enquiry could not be sent");
+            console.log("FormSubmit response:", {
+                status: response.status,
+                ok: response.ok,
+                body: result,
+            });
+
+            if (!response.ok || (result.success !== true && result.success !== "true")) {
+                throw new Error(result.message || "Contact enquiry could not be sent");
             }
 
             setSent(true);
@@ -73,7 +85,7 @@ const Contact = () => {
             }, 5000);
         } catch (error) {
             console.error("Contact form submission failed:", error);
-            setSubmissionError(error.message || "Something went wrong while sending your enquiry. Please try again.");
+            setSubmissionError(true);
         } finally {
             setIsSubmitting(false);
         }
@@ -149,7 +161,7 @@ const Contact = () => {
                             </p>
 
                             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                                We’d Love To Hear From You
+                                WeΓÇÖd Love To Hear From You
                             </h2>
 
                             <p className="mt-5 text-sm leading-7 text-slate-600 sm:text-base">
@@ -226,7 +238,7 @@ const Contact = () => {
                                         </h3>
 
                                         <p className="mt-1 text-sm text-slate-600">
-                                            info@tejays.com
+                                             sales@tejays.in
                                         </p>
 
                                     </div>
