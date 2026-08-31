@@ -670,16 +670,6 @@ export default function Home() {
                 blur-[120px]
             "
                     />
-
-                    {/* Subtle grid */}
-                    <div
-                        className="
-                absolute inset-0
-                opacity-[0.035]
-                [background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-                [background-size:55px_55px]
-            "
-                    />
                 </div>
 
 
@@ -1230,20 +1220,19 @@ export default function Home() {
 
 
                         {/* ====================================================
-                BENEFITS
-            ==================================================== */}
+    BENEFITS
+==================================================== */}
                         <div
                             className="
-                    mx-auto
-                    mt-7
-                    grid
-                    max-w-xl
-                    gap-3
-                    sm:grid-cols-2
-                    lg:mx-0
-                "
+        mx-auto
+        mt-7
+        grid
+        max-w-xl
+        grid-cols-2
+        gap-3
+        lg:mx-0
+    "
                         >
-
                             {benefits.map((benefit, index) => (
 
                                 <div
@@ -1251,65 +1240,74 @@ export default function Home() {
                                     data-aos="fade-up"
                                     data-aos-delay={300 + index * 80}
                                     className="
-                            group
-                            flex
-                            items-center
-                            gap-3.5
-                            rounded-xl
-                            border
-                            border-slate-200
-                            bg-white
-                            px-4
-                            py-3.5
-                            text-left
-                            shadow-[0_6px_25px_rgba(15,23,42,0.035)]
-                            transition-all
-                            duration-400
-                            hover:-translate-y-1
-                            hover:border-[#e3292f]/30
-                            hover:shadow-[0_15px_35px_rgba(15,23,42,0.08)]
-                        "
+                group
+                flex
+                items-center
+                gap-2.5
+                rounded-xl
+                border
+                border-slate-200
+                bg-white
+                px-3
+                py-3
+                text-left
+                shadow-[0_6px_25px_rgba(15,23,42,0.035)]
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-[#e3292f]/30
+                hover:shadow-[0_15px_35px_rgba(15,23,42,0.08)]
+                sm:gap-3.5
+                sm:px-4
+                sm:py-3.5
+            "
                                 >
 
+                                    {/* Icon */}
                                     <div
                                         className="
-                                flex
-                                h-9
-                                w-9
-                                shrink-0
-                                items-center
-                                justify-center
-                                rounded-lg
-                                bg-red-50
-                                transition-all
-                                duration-300
-                                group-hover:bg-[#e3292f]
-                            "
+                    flex
+                    h-8
+                    w-8
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-lg
+                    bg-red-50
+                    transition-all
+                    duration-300
+                    group-hover:bg-[#e3292f]
+                    sm:h-9
+                    sm:w-9
+                "
                                     >
-
                                         <CheckCircle2
-                                            size={18}
+                                            size={16}
                                             strokeWidth={2}
                                             className="
-                                    text-[#e3292f]
-                                    transition-colors
-                                    duration-300
-                                    group-hover:text-white
-                                "
+                        text-[#e3292f]
+                        transition-colors
+                        duration-300
+                        group-hover:text-white
+                        sm:h-[18px]
+                        sm:w-[18px]
+                    "
                                         />
-
                                     </div>
 
+                                    {/* Text */}
                                     <span
                                         className="
-                                text-sm
-                                font-semibold
-                                leading-5
-                                text-slate-700
-                                transition-colors
-                                duration-300
-                                group-hover:text-slate-950
-                            "
+                    min-w-0
+                    text-xs
+                    font-semibold
+                    leading-5
+                    text-slate-700
+                    transition-colors
+                    duration-300
+                    group-hover:text-slate-950
+                    sm:text-sm
+                "
                                     >
                                         {benefit}
                                     </span>
@@ -1317,7 +1315,6 @@ export default function Home() {
                                 </div>
 
                             ))}
-
                         </div>
 
 
