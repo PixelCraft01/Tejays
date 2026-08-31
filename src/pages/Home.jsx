@@ -1325,41 +1325,45 @@ export default function Home() {
                             data-aos="fade-up"
                             data-aos-delay="600"
                             className="
-                    mt-9
-                    flex
-                    flex-col
-                    items-center
-                    gap-3
-                    sm:flex-row
-                    lg:items-start
-                "
+        mt-9
+        flex
+        w-full
+        flex-col
+        items-center
+        justify-center
+        gap-3
+        sm:flex-row
+        sm:justify-center
+        lg:justify-start
+        lg:items-start
+    "
                         >
-
                             {/* Primary */}
                             <Link
                                 to="/about-us"
                                 className="
-                        group
-                        inline-flex
-                        w-full
-                        items-center
-                        justify-center
-                        gap-3
-                        rounded-xl
-                        bg-[#e3292f]
-                        px-7
-                        py-3.5
-                        text-sm
-                        font-bold
-                        text-white
-                        shadow-[0_14px_35px_rgba(227,41,47,0.22)]
-                        transition-all
-                        duration-300
-                        hover:-translate-y-1
-                        hover:bg-[#c91f25]
-                        hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
-                        sm:w-auto
-                    "
+            group
+            inline-flex
+            w-full
+            max-w-[220px]
+            items-center
+            justify-center
+            gap-3
+            rounded-xl
+            bg-[#e3292f]
+            px-7
+            py-3.5
+            text-sm
+            font-bold
+            text-white
+            shadow-[0_14px_35px_rgba(227,41,47,0.22)]
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:bg-[#c91f25]
+            hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
+            sm:w-auto
+        "
                             >
                                 Discover More
 
@@ -1367,10 +1371,10 @@ export default function Home() {
                                     size={17}
                                     strokeWidth={2}
                                     className="
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                        "
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+            "
                                 />
                             </Link>
 
@@ -1379,33 +1383,32 @@ export default function Home() {
                             <Link
                                 to="/services"
                                 className="
-                        inline-flex
-                        w-full
-                        items-center
-                        justify-center
-                        rounded-xl
-                        border
-                        border-slate-200
-                        bg-white
-                        px-7
-                        py-3.5
-                        text-sm
-                        font-bold
-                        text-slate-800
-                        shadow-sm
-                        transition-all
-                        duration-300
-                        hover:-translate-y-1
-                        hover:border-slate-300
-                        hover:bg-slate-50
-                        sm:w-auto
-                    "
+            inline-flex
+            w-full
+            max-w-[220px]
+            items-center
+            justify-center
+            rounded-xl
+            border
+            border-slate-200
+            bg-white
+            px-7
+            py-3.5
+            text-sm
+            font-bold
+            text-slate-800
+            shadow-sm
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-slate-300
+            hover:bg-slate-50
+        "
                             >
                                 Explore Services
                             </Link>
 
                         </div>
-
                     </div>
 
                 </div>
