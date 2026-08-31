@@ -34,19 +34,27 @@ const Contact = () => {
         setSubmissionError(false);
 
         try {
-            const response = await fetch(
-                `${import.meta.env.VITE_API_URL || ""}/api/contact`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(form),
-                }
-            );
+            const apiUrl = import.meta.env.VITE_API_URL
+                ? `${import.meta.env.VITE_API_URL.replace(/\/$/, "")}/api/contact`
+                : "/api/contact";
+
+            const response = await fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(form),
+            });
+
+            let payload = {};
+            try {
+                payload = await response.json();
+            } catch {
+                payload = {};
+            }
 
             if (!response.ok) {
-                throw new Error("Contact enquiry could not be sent");
+                throw new Error(payload.message || "Contact enquiry could not be sent");
             }
 
             setSent(true);
@@ -63,8 +71,9 @@ const Contact = () => {
             setTimeout(() => {
                 setSent(false);
             }, 5000);
-        } catch {
-            setSubmissionError(true);
+        } catch (error) {
+            console.error("Contact form submission failed:", error);
+            setSubmissionError(error.message || "Something went wrong while sending your enquiry. Please try again.");
         } finally {
             setIsSubmitting(false);
         }
