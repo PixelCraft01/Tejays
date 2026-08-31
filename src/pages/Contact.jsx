@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
-
 const Contact = () => {
     const [form, setForm] = useState({
         name: "",
@@ -36,37 +34,19 @@ const Contact = () => {
         setSubmissionError(false);
 
         try {
-            const formData = new FormData();
-            Object.entries(form).forEach(([name, value]) => {
-                formData.append(name, value);
-            });
-            formData.append("_subject", "TEJAYS - New Contact Enquiry");
+            const response = await fetch(
+                `${import.meta.env.VITE_API_URL || ""}/api/contact`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(form),
+                }
+            );
 
-            const response = await fetch(FORM_ENDPOINT, {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                },
-                body: formData,
-            });
-
-            const responseText = await response.text();
-            let result;
-
-            try {
-                result = JSON.parse(responseText);
-            } catch {
-                result = { message: responseText };
-            }
-
-            console.log("FormSubmit response:", {
-                status: response.status,
-                ok: response.ok,
-                body: result,
-            });
-
-            if (!response.ok || (result.success !== true && result.success !== "true")) {
-                throw new Error(result.message || "Contact enquiry could not be sent");
+            if (!response.ok) {
+                throw new Error("Contact enquiry could not be sent");
             }
 
             setSent(true);
@@ -83,8 +63,7 @@ const Contact = () => {
             setTimeout(() => {
                 setSent(false);
             }, 5000);
-        } catch (error) {
-            console.error("Contact form submission failed:", error);
+        } catch {
             setSubmissionError(true);
         } finally {
             setIsSubmitting(false);
@@ -238,7 +217,7 @@ const Contact = () => {
                                         </h3>
 
                                         <p className="mt-1 text-sm text-slate-600">
-                                             sales@tejays.in
+                                            info@tejays.com
                                         </p>
 
                                     </div>

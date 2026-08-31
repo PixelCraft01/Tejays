@@ -641,7 +641,7 @@ export default function Home() {
             {/* =========================================================
                 NETWORK / INTRO — PREMIUM
             ========================================================= */}
-            <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32">
+            <section className="relative overflow-hidden bg-red-800 py-20 sm:py-24 lg:py-32">
 
                 {/* =====================================================
         BACKGROUND GLOW
