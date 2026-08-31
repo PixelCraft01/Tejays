@@ -290,7 +290,6 @@ export default function Home() {
 
             }
 
-
             return previous + 1;
 
         });
@@ -638,49 +637,58 @@ export default function Home() {
             </section>
 
 
-            {/* =========================================================
-                NETWORK / INTRO — PREMIUM
-            ========================================================= */}
-            <section className="relative overflow-hidden bg-red-800 py-20 sm:py-24 lg:py-32">
 
-                {/* =====================================================
-        BACKGROUND GLOW
-    ====================================================== */}
-                <div
-                    className="
-            pointer-events-none
-            absolute
-            -right-40
-            top-10
-            h-[420px]
-            w-[420px]
-            rounded-full
-            bg-red-50/80
-            blur-3xl
-        "
-                />
+            {/* ================================================================
+    TEJAYS NETWORK — PREMIUM CORPORATE SECTION
+================================================================ */}
 
-                <div
-                    className="
-            pointer-events-none
-            absolute
-            -left-40
-            bottom-0
-            h-[320px]
-            w-[320px]
-            rounded-full
-            bg-slate-100/70
-            blur-3xl
-        "
-                />
+            <section className="relative overflow-hidden bg-[#f8fafc] py-20 sm:py-24 lg:py-32">
+
+                {/* ============================================================
+                    BACKGROUND DECORATION
+                               ============================================================ */}
+                <div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+                    {/* Red glow */}
+                    <div
+                        className="
+                absolute -right-40 -top-40
+                h-[520px] w-[520px]
+                rounded-full
+                bg-red-100/70
+                blur-[110px]
+            "
+                    />
+
+                    {/* Blue/Navy glow */}
+                    <div
+                        className="
+                absolute -bottom-48 -left-40
+                h-[500px] w-[500px]
+                rounded-full
+                bg-slate-200/70
+                blur-[120px]
+            "
+                    />
+
+                    {/* Subtle grid */}
+                    <div
+                        className="
+                absolute inset-0
+                opacity-[0.035]
+                [background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+                [background-size:55px_55px]
+            "
+                    />
+                </div>
 
 
-                {/* =====================================================
+                {/* ============================================================
         MAIN CONTAINER
-    ====================================================== */}
+    ============================================================ */}
                 <div
                     className="
-            relative
+            relative z-10
             mx-auto
             grid
             max-w-7xl
@@ -688,271 +696,266 @@ export default function Home() {
             gap-14
             px-5
             sm:px-6
-            lg:grid-cols-2
+            lg:grid-cols-[0.95fr_1.05fr]
             lg:gap-20
             lg:px-8
         "
                 >
 
 
-                    {/* =================================================
-            IMAGE SIDE
-        ================================================== */}
+                    {/* ========================================================
+            LEFT — IMAGE / NETWORK VISUAL
+        ======================================================== */}
                     <div
                         data-aos="fade-right"
                         data-aos-duration="1000"
-                        data-aos-easing="ease-out-cubic"
-                        className="
-                group
-                relative
-                mx-auto
-                w-full
-                max-w-xl
-                lg:mx-0
-            "
+                        className="group relative mx-auto w-full max-w-xl lg:mx-0"
                     >
 
-                        {/* =================================================
-                OUTER PREMIUM FRAME
-            ================================================== */}
+                        {/* Decorative red line */}
+                        <div
+                            className="
+                    absolute
+                    -left-4
+                    top-10
+                    hidden
+                    h-32
+                    w-[3px]
+                    bg-[#e3292f]
+                    sm:block
+                "
+                        />
+
+                        {/* Decorative square */}
+                        <div
+                            className="
+                    absolute
+                    -right-4
+                    -top-4
+                    h-24
+                    w-24
+                    border
+                    border-[#e3292f]/20
+                    transition-all
+                    duration-700
+                    group-hover:-right-6
+                    group-hover:-top-6
+                "
+                        />
+
+                        {/* Main image frame */}
                         <div
                             className="
                     relative
                     overflow-hidden
+                    rounded-2xl
                     border
                     border-slate-200
                     bg-white
                     p-2
-                    shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+                    shadow-[0_25px_80px_rgba(15,23,42,0.12)]
                     transition-all
                     duration-700
-                    ease-out
                     group-hover:-translate-y-2
                     group-hover:shadow-[0_35px_100px_rgba(15,23,42,0.18)]
                     sm:p-3
                 "
                         >
 
-                            {/* =================================================
-                    IMAGE CONTAINER
-                ================================================== */}
+                            {/* Image */}
                             <div
                                 className="
                         relative
-                        aspect-[4/5]
+                        aspect-[4/4.6]
                         overflow-hidden
+                        rounded-xl
                         bg-slate-100
-                        sm:aspect-[4/4.5]
                     "
                             >
 
-                                {/* =================================================
-                        YOUR ORIGINAL IMAGE
-                    ================================================== */}
                                 <img
                                     src="/Tejays/assets/network.jpg"
-                                    alt="TEJAYS Network"
+                                    alt="TEJAYS Network Infrastructure"
                                     className="
                             h-full
                             w-full
                             object-cover
                             transition-transform
-                            duration-[1200ms]
+                            duration-[1400ms]
                             ease-out
-                            group-hover:scale-[1.06]
+                            group-hover:scale-[1.07]
                         "
                                 />
 
-
-                                {/* =================================================
-                        VERY LIGHT OVERLAY
-
-                        Dark overlay नहीं है ताकि आपकी image
-                        का original black text clearly दिखाई दे।
-                    ================================================== */}
-                                <div
-                                    className="
-                            pointer-events-none
-                            absolute
-                            inset-0
-                            bg-white/[0.02]
-                            transition-all
-                            duration-700
-                            group-hover:bg-transparent
-                        "
-                                />
-
-
-                                {/* =================================================
-                        SOFT EDGE VIGNETTE
-                    ================================================== */}
+                                {/* Image gradient */}
                                 <div
                                     className="
                             pointer-events-none
                             absolute
                             inset-0
                             bg-gradient-to-t
-                            from-black/[0.08]
+                            from-[#020617]/70
                             via-transparent
                             to-transparent
-                            opacity-40
-                            transition-opacity
-                            duration-700
-                            group-hover:opacity-20
                         "
                                 />
 
-
-                                {/* =================================================
-                        PREMIUM SHINE EFFECT
-                    ================================================== */}
-                                <div
-                                    className="
-                            pointer-events-none
-                            absolute
-                            -left-[120%]
-                            top-0
-                            h-full
-                            w-[55%]
-                            rotate-[18deg]
-                            bg-gradient-to-r
-                            from-transparent
-                            via-white/30
-                            to-transparent
-                            transition-all
-                            duration-[1400ms]
-                            ease-out
-                            group-hover:left-[135%]
-                        "
-                                />
-
-
-                                {/* =================================================
-                        RED BOTTOM ACCENT
-                    ================================================== */}
+                                {/* Top status */}
                                 <div
                                     className="
                             absolute
-                            bottom-0
-                            left-0
-                            h-1
-                            w-24
-                            bg-[#e3292f]
-                            transition-all
-                            duration-700
-                            ease-out
-                            group-hover:w-52
+                            left-5
+                            top-5
+                            flex
+                            items-center
+                            gap-2
+                            rounded-full
+                            border
+                            border-white/20
+                            bg-black/30
+                            px-3.5
+                            py-2
+                            backdrop-blur-md
                         "
-                                />
+                                >
+                                    <span className="relative flex h-2.5 w-2.5">
+                                        <span
+                                            className="
+                                    absolute
+                                    inline-flex
+                                    h-full
+                                    w-full
+                                    animate-ping
+                                    rounded-full
+                                    bg-green-400
+                                    opacity-75
+                                "
+                                        />
+                                        <span
+                                            className="
+                                    relative
+                                    inline-flex
+                                    h-2.5
+                                    w-2.5
+                                    rounded-full
+                                    bg-green-400
+                                "
+                                        />
+                                    </span>
+
+                                    <span
+                                        className="
+                                text-[10px]
+                                font-bold
+                                uppercase
+                                tracking-[0.18em]
+                                text-white
+                            "
+                                    >
+                                        Network Active
+                                    </span>
+                                </div>
 
 
-                                {/* =================================================
-                        IMAGE LABEL
-                    ================================================== */}
+                                {/* Bottom information */}
                                 <div
                                     className="
                             absolute
                             bottom-5
                             left-5
                             right-5
+                            rounded-xl
                             border
-                            border-white/25
-                            bg-black/25
-                            px-5
-                            py-4
-                            backdrop-blur-sm
+                            border-white/15
+                            bg-black/30
+                            p-4
+                            backdrop-blur-lg
                             transition-all
                             duration-500
-                            group-hover:-translate-y-1
-                            group-hover:bg-black/30
+                            group-hover:translate-y-[-4px]
+                            sm:p-5
                         "
                                 >
 
-                                    <p
-                                        className="
-                                text-[10px]
-                                font-semibold
-                                uppercase
-                                tracking-[0.25em]
-                                text-white/75
-                            "
-                                    >
-                                        TEJAYS NETWORK
-                                    </p>
+                                    <div className="flex items-end justify-between gap-4">
 
+                                        <div>
 
-                                    <div
-                                        className="
-                                mt-1
-                                flex
-                                items-center
-                                justify-between
-                                gap-3
-                            "
-                                    >
+                                            <p
+                                                className="
+                                        text-[10px]
+                                        font-bold
+                                        uppercase
+                                        tracking-[0.22em]
+                                        text-white/60
+                                    "
+                                            >
+                                                TEJAYS NETWORK
+                                            </p>
 
-                                        <p
-                                            className="
-                                    text-sm
-                                    font-bold
-                                    text-white
-                                    sm:text-base
-                                "
-                                        >
-                                            Reliable Connectivity
-                                        </p>
+                                            <h3
+                                                className="
+                                        mt-1
+                                        text-lg
+                                        font-bold
+                                        tracking-tight
+                                        text-white
+                                        sm:text-xl
+                                    "
+                                            >
+                                                Reliable Connectivity
+                                            </h3>
 
+                                        </div>
 
-                                        {/* Network Icon */}
                                         <div
                                             className="
                                     flex
-                                    h-8
-                                    w-8
+                                    h-11
+                                    w-11
                                     shrink-0
                                     items-center
                                     justify-center
-                                    rounded-full
-                                    border
-                                    border-white/30
-                                    bg-white/10
+                                    rounded-xl
+                                    bg-[#e3292f]
+                                    text-white
+                                    shadow-lg
                                     transition-all
                                     duration-500
                                     group-hover:rotate-6
                                     group-hover:scale-110
-                                    group-hover:bg-[#e3292f]
                                 "
                                         >
                                             <Network
-                                                size={15}
+                                                size={20}
                                                 strokeWidth={1.8}
-                                                className="text-white"
                                             />
                                         </div>
 
                                     </div>
+
                                 </div>
 
                             </div>
                         </div>
 
 
-                        {/* =================================================
-                FLOATING CONNECTIVITY BADGE
-            ================================================== */}
+                        {/* ====================================================
+                FLOATING STATS CARD
+            ==================================================== */}
                         <div
                             className="
                     absolute
-                    -bottom-6
+                    -bottom-7
                     -right-3
                     hidden
+                    rounded-2xl
                     border
                     border-slate-200
-                    bg-white/95
-                    px-6
+                    bg-white
+                    px-5
                     py-4
-                    shadow-[0_20px_50px_rgba(15,23,42,0.12)]
-                    backdrop-blur-md
+                    shadow-[0_20px_60px_rgba(15,23,42,0.14)]
                     transition-all
                     duration-500
                     group-hover:-translate-y-2
@@ -960,39 +963,34 @@ export default function Home() {
                 "
                         >
 
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-4">
 
-                                {/* Badge Icon */}
                                 <div
                                     className="
                             flex
-                            h-10
-                            w-10
+                            h-11
+                            w-11
                             items-center
                             justify-center
+                            rounded-xl
                             bg-red-50
-                            transition-all
-                            duration-300
-                            group-hover:bg-red-100
                         "
                                 >
                                     <ShieldCheck
-                                        size={20}
+                                        size={22}
                                         strokeWidth={1.8}
                                         className="text-[#e3292f]"
                                     />
                                 </div>
 
-
-                                {/* Badge Text */}
                                 <div>
 
                                     <p
                                         className="
                                 text-[10px]
-                                font-semibold
+                                font-bold
                                 uppercase
-                                tracking-[0.18em]
+                                tracking-[0.16em]
                                 text-slate-400
                             "
                                     >
@@ -1019,25 +1017,18 @@ export default function Home() {
                     </div>
 
 
-                    {/* =================================================
-            CONTENT SIDE
-        ================================================== */}
+                    {/* ========================================================
+            RIGHT — CONTENT
+        ======================================================== */}
                     <div
                         data-aos="fade-left"
                         data-aos-duration="1000"
-                        data-aos-easing="ease-out-cubic"
-                        className="
-                text-center
-                lg:text-left
-            "
+                        className="text-center lg:text-left"
                     >
 
-                        {/* =================================================
-                EYEBROW
-            ================================================== */}
+                        {/* Eyebrow */}
                         <div
                             data-aos="fade-up"
-                            data-aos-duration="700"
                             className="
                     flex
                     items-center
@@ -1047,29 +1038,27 @@ export default function Home() {
                 "
                         >
 
-                            <span className="h-px w-8 bg-[#e3292f]" />
+                            <span className="h-[2px] w-9 bg-[#e3292f]" />
 
-                            <p
+                            <span
                                 className="
-                        text-xs
-                        font-bold
+                        text-[11px]
+                        font-extrabold
                         uppercase
-                        tracking-[0.25em]
+                        tracking-[0.28em]
                         text-[#e3292f]
-                        sm:text-sm
+                        sm:text-xs
                     "
                             >
                                 Our Network
-                            </p>
+                            </span>
 
-                            <span className="h-px w-8 bg-[#e3292f] lg:hidden" />
+                            <span className="h-[2px] w-9 bg-[#e3292f] lg:hidden" />
 
                         </div>
 
 
-                        {/* =================================================
-                HEADING
-            ================================================== */}
+                        {/* Heading */}
                         <h2
                             data-aos="fade-up"
                             data-aos-delay="100"
@@ -1077,28 +1066,32 @@ export default function Home() {
                     mx-auto
                     mt-5
                     max-w-2xl
-                    text-3xl
-                    font-bold
-                    leading-[1.12]
-                    tracking-tight
-                    text-slate-900
-                    sm:text-4xl
+                    text-4xl
+                    font-black
+                    leading-[1.08]
+                    tracking-[-0.04em]
+                    text-slate-950
+                    sm:text-5xl
                     lg:mx-0
-                    lg:text-5xl
-                    xl:text-[52px]
+                    lg:text-[52px]
+                    xl:text-[58px]
                 "
                         >
                             Connectivity that keeps your
 
-                            <span className="block text-[#e3292f]">
+                            <span
+                                className="
+                        mt-1
+                        block
+                        text-[#e3292f]
+                    "
+                            >
                                 business moving.
                             </span>
                         </h2>
 
 
-                        {/* =================================================
-                DESCRIPTION
-            ================================================== */}
+                        {/* Description */}
                         <p
                             data-aos="fade-up"
                             data-aos-delay="180"
@@ -1106,7 +1099,7 @@ export default function Home() {
                     mx-auto
                     mt-6
                     max-w-xl
-                    text-sm
+                    text-[15px]
                     leading-7
                     text-slate-600
                     sm:text-base
@@ -1115,20 +1108,138 @@ export default function Home() {
                 "
                         >
                             TEJAYS delivers professional connectivity and network
-                            infrastructure solutions focused on performance,
-                            reliability and business continuity.
+                            infrastructure solutions engineered for performance,
+                            reliability and uninterrupted business continuity.
                         </p>
 
 
-                        {/* =================================================
+                        {/* ====================================================
+                QUICK STATS
+            ==================================================== */}
+                        <div
+                            data-aos="fade-up"
+                            data-aos-delay="250"
+                            className="
+                    mx-auto
+                    mt-8
+                    grid
+                    max-w-xl
+                    grid-cols-3
+                    divide-x
+                    divide-slate-200
+                    border-y
+                    border-slate-200
+                    py-5
+                    lg:mx-0
+                "
+                        >
+
+                            <div className="px-3 text-center lg:text-left">
+
+                                <p
+                                    className="
+                            text-xl
+                            font-black
+                            tracking-tight
+                            text-slate-950
+                            sm:text-2xl
+                        "
+                                >
+                                    99.9%
+                                </p>
+
+                                <p
+                                    className="
+                            mt-1
+                            text-[9px]
+                            font-bold
+                            uppercase
+                            tracking-[0.15em]
+                            text-slate-400
+                            sm:text-[10px]
+                        "
+                                >
+                                    Reliability
+                                </p>
+
+                            </div>
+
+
+                            <div className="px-3 text-center lg:text-left">
+
+                                <p
+                                    className="
+                            text-xl
+                            font-black
+                            tracking-tight
+                            text-slate-950
+                            sm:text-2xl
+                        "
+                                >
+                                    24×7
+                                </p>
+
+                                <p
+                                    className="
+                            mt-1
+                            text-[9px]
+                            font-bold
+                            uppercase
+                            tracking-[0.15em]
+                            text-slate-400
+                            sm:text-[10px]
+                        "
+                                >
+                                    Support
+                                </p>
+
+                            </div>
+
+
+                            <div className="px-3 text-center lg:text-left">
+
+                                <p
+                                    className="
+                            text-xl
+                            font-black
+                            tracking-tight
+                            text-slate-950
+                            sm:text-2xl
+                        "
+                                >
+                                    B2B
+                                </p>
+
+                                <p
+                                    className="
+                            mt-1
+                            text-[9px]
+                            font-bold
+                            uppercase
+                            tracking-[0.15em]
+                            text-slate-400
+                            sm:text-[10px]
+                        "
+                                >
+                                    Solutions
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* ====================================================
                 BENEFITS
-            ================================================== */}
+            ==================================================== */}
                         <div
                             className="
                     mx-auto
-                    mt-9
+                    mt-7
+                    grid
                     max-w-xl
-                    space-y-3
+                    gap-3
+                    sm:grid-cols-2
                     lg:mx-0
                 "
                         >
@@ -1138,28 +1249,28 @@ export default function Home() {
                                 <div
                                     key={benefit}
                                     data-aos="fade-up"
-                                    data-aos-delay={250 + index * 90}
+                                    data-aos-delay={300 + index * 80}
                                     className="
                             group
                             flex
                             items-center
-                            gap-4
+                            gap-3.5
+                            rounded-xl
                             border
-                            border-slate-100
+                            border-slate-200
                             bg-white
                             px-4
                             py-3.5
                             text-left
-                            shadow-[0_8px_25px_rgba(15,23,42,0.04)]
+                            shadow-[0_6px_25px_rgba(15,23,42,0.035)]
                             transition-all
                             duration-400
                             hover:-translate-y-1
-                            hover:border-[#e3292f]/25
-                            hover:shadow-[0_15px_35px_rgba(15,23,42,0.09)]
+                            hover:border-[#e3292f]/30
+                            hover:shadow-[0_15px_35px_rgba(15,23,42,0.08)]
                         "
                                 >
 
-                                    {/* Benefit Icon */}
                                     <div
                                         className="
                                 flex
@@ -1168,38 +1279,36 @@ export default function Home() {
                                 shrink-0
                                 items-center
                                 justify-center
-                                rounded-full
+                                rounded-lg
                                 bg-red-50
                                 transition-all
                                 duration-300
-                                group-hover:scale-105
                                 group-hover:bg-[#e3292f]
                             "
                                     >
+
                                         <CheckCircle2
                                             size={18}
                                             strokeWidth={2}
                                             className="
                                     text-[#e3292f]
-                                    transition-all
+                                    transition-colors
                                     duration-300
                                     group-hover:text-white
                                 "
                                         />
+
                                     </div>
 
-
-                                    {/* Benefit Text */}
                                     <span
                                         className="
                                 text-sm
-                                font-medium
-                                leading-6
+                                font-semibold
+                                leading-5
                                 text-slate-700
                                 transition-colors
                                 duration-300
-                                group-hover:text-slate-900
-                                sm:text-base
+                                group-hover:text-slate-950
                             "
                                     >
                                         {benefit}
@@ -1212,37 +1321,49 @@ export default function Home() {
                         </div>
 
 
-                        {/* =================================================
-                DISCOVER BUTTON
-            ================================================== */}
+                        {/* ====================================================
+                CTA BUTTONS
+            ==================================================== */}
                         <div
                             data-aos="fade-up"
-                            data-aos-delay="650"
-                            className="mt-9"
+                            data-aos-delay="600"
+                            className="
+                    mt-9
+                    flex
+                    flex-col
+                    items-center
+                    gap-3
+                    sm:flex-row
+                    lg:items-start
+                "
                         >
 
+                            {/* Primary */}
                             <Link
                                 to="/about-us"
                                 className="
                         group
                         inline-flex
+                        w-full
                         items-center
+                        justify-center
                         gap-3
+                        rounded-xl
                         bg-[#e3292f]
                         px-7
                         py-3.5
                         text-sm
                         font-bold
                         text-white
-                        shadow-[0_12px_30px_rgba(227,41,47,0.20)]
+                        shadow-[0_14px_35px_rgba(227,41,47,0.22)]
                         transition-all
-                        duration-400
+                        duration-300
                         hover:-translate-y-1
                         hover:bg-[#c91f25]
-                        hover:shadow-[0_18px_40px_rgba(227,41,47,0.30)]
+                        hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
+                        sm:w-auto
                     "
                             >
-
                                 Discover More
 
                                 <ArrowRight
@@ -1254,7 +1375,36 @@ export default function Home() {
                             group-hover:translate-x-1
                         "
                                 />
+                            </Link>
 
+
+                            {/* Secondary */}
+                            <Link
+                                to="/services"
+                                className="
+                        inline-flex
+                        w-full
+                        items-center
+                        justify-center
+                        rounded-xl
+                        border
+                        border-slate-200
+                        bg-white
+                        px-7
+                        py-3.5
+                        text-sm
+                        font-bold
+                        text-slate-800
+                        shadow-sm
+                        transition-all
+                        duration-300
+                        hover:-translate-y-1
+                        hover:border-slate-300
+                        hover:bg-slate-50
+                        sm:w-auto
+                    "
+                            >
+                                Explore Services
                             </Link>
 
                         </div>
