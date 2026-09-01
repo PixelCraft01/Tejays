@@ -2,7 +2,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const API_ENDPOINT = "https://tejays-backend.onrender.com/api/contact";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -36,22 +36,36 @@ const Contact = () => {
         setSubmissionError(false);
 
         try {
-            const response = await fetch(API_ENDPOINT, {
+            const formData = new FormData();
+            Object.entries(form).forEach(([name, value]) => {
+                formData.append(name, value);
+            });
+            formData.append("_subject", "TEJAYS - New Contact Enquiry");
+
+            const response = await fetch(FORM_ENDPOINT, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    Accept: "application/json",
                 },
-                body: JSON.stringify(form),
+                body: formData,
             });
 
-            let result = {};
+            const responseText = await response.text();
+            let result;
+
             try {
-                result = await response.json();
+                result = JSON.parse(responseText);
             } catch {
-                result = { success: false, message: "Invalid response from server" };
+                result = { message: responseText };
             }
 
-            if (!response.ok) {
+            console.log("FormSubmit response:", {
+                status: response.status,
+                ok: response.ok,
+                body: result,
+            });
+
+            if (!response.ok || (result.success !== true && result.success !== "true")) {
                 throw new Error(result.message || "Contact enquiry could not be sent");
             }
 
@@ -70,8 +84,8 @@ const Contact = () => {
                 setSent(false);
             }, 5000);
         } catch (error) {
-            console.error("Contact form submission failed:", error.message);
-            setSubmissionError(error.message || "Failed to send your enquiry. Please try again.");
+            console.error("Contact form submission failed:", error);
+            setSubmissionError(true);
         } finally {
             setIsSubmitting(false);
         }
