@@ -161,7 +161,7 @@ const Contact = () => {
                             </p>
 
                             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                                WeΓÇÖd Love To Hear From You
+                                We'd Love To Hear From You
                             </h2>
 
                             <p className="mt-5 text-sm leading-7 text-slate-600 sm:text-base">
