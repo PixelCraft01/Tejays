@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Environment variables with secrets
+.env
+.env.local
+.env.*.local
+src/pages/backend/.env
+src/pages/backend/smtp.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
