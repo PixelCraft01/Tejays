@@ -12,10 +12,13 @@ dist
 dist-ssr
 *.local
 
-# Environment variables with secrets
+# Secret/environment files
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+*.env
+*.bak
+.backup/
 src/pages/backend/.env
 src/pages/backend/smtp.env
 
@@ -29,3 +32,5 @@ src/pages/backend/smtp.env
 *.njsproj
 *.sln
 *.sw?
+
+.backup/
