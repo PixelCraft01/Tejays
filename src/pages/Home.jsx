@@ -11,6 +11,17 @@ import {
     Headphones,
     ChevronLeft,
     ChevronRight,
+    Monitor,
+    Building2,
+    Factory,
+    Hospital,
+    Hotel,
+    Landmark,
+    GraduationCap,
+    Warehouse,
+    ShoppingBag,
+    Store,
+    Rocket,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
@@ -121,6 +132,29 @@ const stats = [
         label: "Proactive Support",
         icon: Headphones,
     },
+];
+
+
+// =========================================================
+// INDUSTRIES
+// =========================================================
+
+const industries = [
+    { name: "IT Companies", icon: Monitor },
+    { name: "Corporate Offices", icon: Building2 },
+    { name: "Manufacturing", icon: Factory },
+    { name: "Hospitals", icon: Hospital },
+    { name: "Hotels", icon: Hotel },
+    { name: "Banks", icon: Landmark },
+    { name: "Schools & Colleges", icon: GraduationCap },
+    { name: "Warehouses", icon: Warehouse },
+    { name: "Retail Chains", icon: ShoppingBag },
+    { name: "Shopping Malls", icon: Store },
+    { name: "Startups", icon: Rocket },
+    { name: "Government", icon: Landmark },
+    { name: "BPO & Call Centers", icon: Headphones },
+    { name: "Factories", icon: Factory },
+    { name: "Apartment Communities", icon: Building2 },
 ];
 
 
@@ -3781,6 +3815,85 @@ export default function Home() {
 
                 </div>
 
+            </section>
+
+
+            {/* =========================================================
+                INDUSTRIES WE SERVE
+            ========================================================= */}
+            <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+                <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-50 blur-3xl" />
+                <div className="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-slate-100 blur-3xl" />
+
+                <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div
+                        data-aos="fade-up"
+                        data-aos-duration="900"
+                        className="mx-auto max-w-3xl text-center"
+                    >
+                        <div className="flex items-center justify-center gap-3">
+                            <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
+                            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-xs">
+                                Industries We Serve
+                            </p>
+                            <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
+                        </div>
+
+                        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                            Trusted Across Every Sector
+                        </h2>
+
+                        <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+                            Purpose-built enterprise IT solutions tailored to the operational demands of every industry.
+                        </p>
+                    </div>
+
+                    <div
+                        className="mt-12 grid grid-cols-4 gap-2 sm:gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-5"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
+                        {industries.map((industry, index) => {
+                            const Icon = industry.icon;
+
+                            return (
+                                <div
+                                    key={industry.name}
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 50}
+                                    className="group min-w-0"
+                                >
+                                    <div
+                                        className="
+                                            flex min-h-[104px] flex-col items-center justify-center
+                                            rounded-xl border border-slate-200 bg-white p-2 text-center
+                                            shadow-[0_8px_24px_rgba(15,23,42,0.04)]
+                                            transition-all duration-300 ease-out
+                                            hover:-translate-y-1 hover:border-[#e3292f]/30 hover:shadow-[0_16px_30px_rgba(227,41,47,0.08)]
+                                            sm:min-h-[112px] sm:p-2.5
+                                            md:min-h-[120px] md:p-3
+                                            lg:min-h-[128px]
+                                        "
+                                    >
+                                        <div
+                                            className="
+                                                mb-2 flex h-8 w-8 items-center justify-center rounded-lg border border-red-100 bg-red-50 text-[#e3292f]
+                                                transition-all duration-300 group-hover:border-[#e3292f]/30 group-hover:bg-[#e3292f] group-hover:text-white
+                                                sm:h-9 sm:w-9
+                                            "
+                                        >
+                                            <Icon size={15} strokeWidth={1.8} className="sm:h-[18px] sm:w-[18px]" />
+                                        </div>
+
+                                        <p className="min-w-0 text-[9px] font-semibold leading-4 text-slate-700 sm:text-[10px] md:text-[11px] lg:text-xs">
+                                            {industry.name}
+                                        </p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
             </section>
 
 
