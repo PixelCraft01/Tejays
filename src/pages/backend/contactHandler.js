@@ -12,14 +12,22 @@ export async function handleContact(req, res) {
             });
         }
 
+        const smtpUser = process.env.SMTP_USER || process.env.BREVO_SMTP_USER;
+        const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD || process.env.BREVO_SMTP_KEY;
+        const contactEmail = process.env.CONTACT_EMAIL || process.env.MAIL_TO || "zindadil042@gmail.com";
+
+        if (!smtpUser || !smtpPass) {
+            throw new Error("SMTP credentials are not configured on the server.");
+        }
+
         // Create Nodemailer transporter with Brevo SMTP
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST || "smtp-relay.brevo.com",
             port: Number(process.env.SMTP_PORT || 587),
             secure: false, // TLS (not SSL)
             auth: {
-                user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
+                user: smtpUser,
+                pass: smtpPass,
             },
         });
 
@@ -41,8 +49,8 @@ Submitted from: TEJAYS Website`;
 
         // Send email to recipient
         await transporter.sendMail({
-            from: process.env.SMTP_USER,
-            to: process.env.CONTACT_EMAIL || "zindadil042@gmail.com",
+            from: smtpUser,
+            to: contactEmail,
             replyTo: email,
             subject: "TEJAYS - New Contact Enquiry",
             text: emailContent,
