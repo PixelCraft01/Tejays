@@ -2,7 +2,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const API_ENDPOINT = "/api/contact";
+const API_ENDPOINT = "https://tejays-backend.onrender.com/api/contact";
 
 const Contact = () => {
     const [form, setForm] = useState({
