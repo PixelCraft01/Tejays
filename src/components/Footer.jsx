@@ -52,10 +52,6 @@ const ispServices = [
         title: "OTT",
         path: "/ott",
     },
-    {
-        title: "DOT Compliances And Licensing",
-        path: "/dot-compliances-and-licensing",
-    },
 ];
 
 

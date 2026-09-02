@@ -84,13 +84,6 @@ const services = [
         icon: Zap,
         path: "/ott",
     },
-    {
-        title: "DOT Compliances And Licensing",
-        description:
-            "Professional support for telecom compliance and licensing requirements.",
-        icon: ShieldCheck,
-        path: "/dot-compliances-and-licensing",
-    },
 ];
 
 

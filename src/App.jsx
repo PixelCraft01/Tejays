@@ -9,7 +9,6 @@ import BulkBandwidth from "./pages/isp/BulkBandwidth";
 import ISPPointToPointLeaseLine from "./pages/isp/PointToPointLeaseLine";
 import ISPManagedServices from "./pages/isp/ManagedServices";
 import Peering from "./pages/isp/Peering";
-import DotCompliances from "./pages/isp/DotCompliances";
 import IPTV from "./pages/isp/IPTV";
 import OTT from "./pages/isp/OTT";
 import InternetLeaseLine from "./pages/corporate/InternetLeaseLine";
@@ -179,11 +178,6 @@ function App() {
         <Route
           path="/peering"
           element={<Peering />}
-        />
-
-        <Route
-          path="/dot-compliances-and-licensing"
-          element={<DotCompliances />}
         />
 
         <Route

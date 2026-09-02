@@ -4,7 +4,6 @@ export const ispServices = [
   { name: "Point To Point Lease Line", slug: "point-to-point-lease-line" },
   { name: "Managed Services", slug: "managed-services" },
   { name: "Peering", slug: "peering" },
-  { name: "DOT Compliances And Licensing", slug: "dot-compliances-and-licensing" },
   { name: "IPTV", slug: "iptv" },
   { name: "OTT", slug: "ott" },
 ];
