@@ -9,7 +9,6 @@ import {
     WalletCards,
 } from "lucide-react";
 
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const QuickPay = () => {
@@ -19,8 +18,6 @@ const QuickPay = () => {
             {/* =====================================================
                 HEADER
             ====================================================== */}
-            <Header />
-
             <main>
 
                 {/* =====================================================
@@ -813,8 +810,7 @@ export default QuickPay;
 //     WalletCards,
 //     Wifi,
 // } from "lucide-react";
-// import Header from "../components/Header";
-// import Footer from "../components/Footer";
+// // import Footer from "../components/Footer";
 
 // const QuickPay = () => {
 //     const [paymentMethod, setPaymentMethod] = useState("upi");

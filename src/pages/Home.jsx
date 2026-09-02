@@ -27,7 +27,6 @@ import {
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 
@@ -357,8 +356,6 @@ export default function Home() {
 
     return (
         <div className="min-h-screen overflow-x-clip bg-white text-slate-900">
-            <Header />
-
             {/* ========    PREMIUM HERO     ======== */}
             <section className="relative isolate min-h-[650px] overflow-hidden bg-[#07111f]">
 

@@ -1,6 +1,5 @@
 import { FileBadge, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import Header from "./Header";
 import Footer from "./Footer";
 
 const contactDetails = {
@@ -40,7 +39,6 @@ function ContactBox() {
 export default function LegalPage({ title, breadcrumb, subtitle, intro, sections }) {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <Header />
       <div className="bg-[#07111f] text-white">
         <div className="container-site py-12 sm:py-16 lg:py-20">
           <nav aria-label="Breadcrumb" className="text-xs font-medium text-slate-400 sm:text-sm">

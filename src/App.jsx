@@ -37,15 +37,10 @@ import { FaWhatsapp } from "react-icons/fa";
 function PageLayout({ children }) {
   return (
     <div className="min-h-screen bg-white text-slate-900">
-
-      <Header />
-
       <main>
         {children}
       </main>
-
       <Footer />
-
     </div>
   );
 }
@@ -101,7 +96,14 @@ function ServicePage({ title }) {
 function App() {
 
   return (
-    <>
+    <div className="site-shell relative min-h-screen bg-white text-slate-900">
+      <Header />
+
+      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-[999998] h-0">
+        <div className="pointer-events-auto relative">
+          <AutoScroll />
+        </div>
+      </div>
 
       <Routes>
 
@@ -259,9 +261,7 @@ function App() {
         <FaWhatsapp className="h-6 w-6" />
       </a>
 
-      <AutoScroll />
-
-    </>
+    </div>
   );
 }
 

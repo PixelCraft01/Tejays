@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function AboutUs() {
@@ -78,9 +77,7 @@ export default function AboutUs() {
     ];
 
     return (
-        <div className="min-h-screen bg-white">
-
-            <Header />
+        <div className="relative min-h-screen overflow-x-visible bg-white isolate">
 
             {/* =====================================================
                 HERO

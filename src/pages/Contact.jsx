@@ -1,5 +1,4 @@
 ﻿import React, { useState } from "react";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
@@ -95,8 +94,6 @@ const Contact = () => {
         <div className="min-h-screen bg-white text-slate-900">
 
             {/* ================= HEADER ================= */}
-            <Header />
-
             <main>
 
                 {/* ================= HERO ================= */}

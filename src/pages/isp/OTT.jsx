@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const ottFeatures = [
@@ -40,9 +39,6 @@ const ottFeatures = [
 const OTT = () => {
     return (
         <div className="min-h-screen bg-white text-slate-900">
-
-            <Header />
-
             {/* =====================================================
                 HERO
             ====================================================== */}
