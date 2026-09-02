@@ -98,12 +98,6 @@ function App() {
     <div className="site-shell relative min-h-screen bg-white text-slate-900">
       <Header />
 
-      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-[999998] h-0">
-        <div className="pointer-events-auto relative">
-          <AutoScroll />
-        </div>
-      </div>
-
       <Routes>
 
         {/* ================= HOME ================= */}
@@ -244,6 +238,8 @@ function App() {
         />
       </Routes>
 
+
+      <AutoScroll />
 
       <a
         href="https://wa.me/919509612559"

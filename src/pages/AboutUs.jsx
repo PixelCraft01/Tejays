@@ -77,7 +77,7 @@ export default function AboutUs() {
     ];
 
     return (
-        <div className="relative min-h-screen overflow-x-visible bg-white isolate">
+        <div className="relative min-h-screen overflow-x-visible bg-white">
 
             {/* =====================================================
                 HERO
