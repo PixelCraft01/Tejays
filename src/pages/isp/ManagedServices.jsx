@@ -432,7 +432,7 @@ export default function ManagedServices() {
                                     <div className="relative overflow-hidden rounded-2xl">
 
                                         <img
-                                            src="/Tejays/assets/managed-services.jpg"
+                                            src={`${import.meta.env.BASE_URL}assets/managed-services.jpg`}
                                             alt="TEJAYS Managed Services"
                                             className="
                                 h-[300px]

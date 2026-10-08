@@ -748,7 +748,7 @@ export default function Broadband() {
                             <div className="relative overflow-hidden">
 
                                 <img
-                                    src="/Tejays/assets/broadband.jpg"
+                                    src={`${import.meta.env.BASE_URL}assets/broadband.jpg`}
                                     alt="TEJAYS Broadband"
                                     className="
                                         h-[360px]
@@ -1314,7 +1314,7 @@ export default function Broadband() {
                     IMAGE
                 ================================================== */}
                             <img
-                                src="/Tejays/assets/broadband-infrastructure.jpg"
+                                src={`${import.meta.env.BASE_URL}assets/broadband-infrastructure.jpg`}
                                 alt="Broadband Infrastructure"
                                 className="
                         h-[400px]

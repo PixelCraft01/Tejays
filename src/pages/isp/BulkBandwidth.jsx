@@ -300,7 +300,7 @@ export default function BulkBandwidth() {
                         <div className="group relative overflow-hidden rounded-3xl bg-[#07111f] shadow-[0_30px_80px_rgba(15,23,42,0.16)]">
 
                             <img
-                                src="/Tejays/assets/bulk-bandwidth.jpg"
+                                src={`${import.meta.env.BASE_URL}assets/bulk-bandwidth.jpg`}
                                 alt="TEJAYS Bulk Bandwidth Infrastructure"
                                 className="
                                     h-[380px]

@@ -443,7 +443,7 @@ export default function Peering() {
                                 >
 
                                     <img
-                                        src="/Tejays/assets/peering1.jpg"
+                                        src={`${import.meta.env.BASE_URL}assets/peering1.jpg`}
                                         alt="TEJAYS network peering connectivity"
                                         className="
                             relative

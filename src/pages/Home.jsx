@@ -1,27 +1,27 @@
 import {
-    ArrowRight,
-    CheckCircle2,
-    Globe2,
-    Network,
-    ShieldCheck,
-    Zap,
-    Award,
-    Users,
-    MapPinned,
-    Headphones,
-    ChevronLeft,
-    ChevronRight,
-    Monitor,
-    Building2,
-    Factory,
-    Hospital,
-    Hotel,
-    Landmark,
-    GraduationCap,
-    Warehouse,
-    ShoppingBag,
-    Store,
-    Rocket,
+  ArrowRight,
+  CheckCircle2,
+  Globe2,
+  Network,
+  ShieldCheck,
+  Zap,
+  Award,
+  Users,
+  MapPinned,
+  Headphones,
+  ChevronLeft,
+  ChevronRight,
+  Monitor,
+  Building2,
+  Factory,
+  Hospital,
+  Hotel,
+  Landmark,
+  GraduationCap,
+  Warehouse,
+  ShoppingBag,
+  Store,
+  Rocket,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
@@ -29,332 +29,273 @@ import { useEffect, useState } from "react";
 
 import Footer from "../components/Footer";
 
-
 // =========================================================
 // SERVICES
 // =========================================================
 
 const services = [
-    {
-        title: "Bulk Bandwidth",
-        description:
-            "High-capacity bandwidth solutions designed for demanding network requirements.",
-        icon: Network,
-        path: "/bulk-bandwidth",
-    },
-    {
-        title: "Broadband",
-        description:
-            "Reliable and high-performance broadband connectivity for modern businesses.",
-        icon: Globe2,
-        path: "/broadband",
-    },
-    {
-        title: "Point To Point Lease Line",
-        description:
-            "Dedicated connectivity for secure and dependable business communication.",
-        icon: Zap,
-        path: "/point-to-point-lease-line",
-    },
-    {
-        title: "Managed Services",
-        description:
-            "Professionally managed network solutions with dependable support.",
-        icon: ShieldCheck,
-        path: "/managed-services",
-    },
-    {
-        title: "Peering",
-        description:
-            "Efficient network interconnection for improved routing and performance.",
-        icon: Network,
-        path: "/peering",
-    },
-    {
-        title: "IPTV",
-        description:
-            "Professional IPTV connectivity solutions built for modern networks.",
-        icon: Globe2,
-        path: "/iptv",
-    },
-    {
-        title: "OTT",
-        description:
-            "Network solutions designed to support high-quality digital content delivery.",
-        icon: Zap,
-        path: "/ott",
-    },
+  {
+    title: "Bulk Bandwidth",
+    description:
+      "High-capacity bandwidth solutions designed for demanding network requirements.",
+    icon: Network,
+    path: "/bulk-bandwidth",
+  },
+  {
+    title: "Broadband",
+    description:
+      "Reliable and high-performance broadband connectivity for modern businesses.",
+    icon: Globe2,
+    path: "/broadband",
+  },
+  {
+    title: "Point To Point Lease Line",
+    description:
+      "Dedicated connectivity for secure and dependable business communication.",
+    icon: Zap,
+    path: "/point-to-point-lease-line",
+  },
+  {
+    title: "Managed Services",
+    description:
+      "Professionally managed network solutions with dependable support.",
+    icon: ShieldCheck,
+    path: "/managed-services",
+  },
+  {
+    title: "Peering",
+    description:
+      "Efficient network interconnection for improved routing and performance.",
+    icon: Network,
+    path: "/peering",
+  },
+  {
+    title: "IPTV",
+    description:
+      "Professional IPTV connectivity solutions built for modern networks.",
+    icon: Globe2,
+    path: "/iptv",
+  },
+  {
+    title: "OTT",
+    description:
+      "Network solutions designed to support high-quality digital content delivery.",
+    icon: Zap,
+    path: "/ott",
+  },
 ];
-
 
 // =========================================================
 // BENEFITS
 // =========================================================
 
 const benefits = [
-    "Cost Effective & Uninterrupted Connectivity",
-    "Superior Speed and Performance",
-    "SLA of 99.5% Uptime",
-    "24/7 Proactive support available",
+  "Cost Effective & Uninterrupted Connectivity",
+  "Superior Speed and Performance",
+  "SLA of 99.5% Uptime",
+  "24/7 Proactive support available",
 ];
-
 
 // =========================================================
 // STATS
 // =========================================================
 
 const stats = [
-    {
-        value: "Class 'A'",
-        label: "Service Provider",
-        icon: Award,
-    },
-    {
-        value: "10K+",
-        label: "Own Subscribers",
-        icon: Users,
-    },
-    {
-        value: "18",
-        label: "PoPs Across India",
-        icon: MapPinned,
-    },
-    {
-        value: "24/7",
-        label: "Proactive Support",
-        icon: Headphones,
-    },
+  {
+    value: "Class 'A'",
+    label: "Service Provider",
+    icon: Award,
+  },
+  {
+    value: "10K+",
+    label: "Own Subscribers",
+    icon: Users,
+  },
+  {
+    value: "18",
+    label: "PoPs Across India",
+    icon: MapPinned,
+  },
+  {
+    value: "24/7",
+    label: "Proactive Support",
+    icon: Headphones,
+  },
 ];
-
 
 // =========================================================
 // INDUSTRIES
 // =========================================================
 
 const industries = [
-    { name: "IT Companies", icon: Monitor },
-    { name: "Corporate Offices", icon: Building2 },
-    { name: "Manufacturing", icon: Factory },
-    { name: "Hospitals", icon: Hospital },
-    { name: "Hotels", icon: Hotel },
-    { name: "Banks", icon: Landmark },
-    { name: "Schools & Colleges", icon: GraduationCap },
-    { name: "Warehouses", icon: Warehouse },
-    { name: "Retail Chains", icon: ShoppingBag },
-    { name: "Shopping Malls", icon: Store },
-    { name: "Startups", icon: Rocket },
-    { name: "Government", icon: Landmark },
-    { name: "BPO & Call Centers", icon: Headphones },
-    { name: "Factories", icon: Factory },
-    { name: "Apartment Communities", icon: Building2 },
+  { name: "IT Companies", icon: Monitor },
+  { name: "Corporate Offices", icon: Building2 },
+  { name: "Manufacturing", icon: Factory },
+  { name: "Hospitals", icon: Hospital },
+  { name: "Hotels", icon: Hotel },
+  { name: "Banks", icon: Landmark },
+  { name: "Schools & Colleges", icon: GraduationCap },
+  { name: "Warehouses", icon: Warehouse },
+  { name: "Retail Chains", icon: ShoppingBag },
+  { name: "Shopping Malls", icon: Store },
+  { name: "Startups", icon: Rocket },
+  { name: "Government", icon: Landmark },
+  { name: "BPO & Call Centers", icon: Headphones },
+  { name: "Factories", icon: Factory },
+  { name: "Apartment Communities", icon: Building2 },
 ];
-
 
 // =========================================================
 // BRANDS
 // =========================================================
 
 const brands = [
-    {
-        id: 1,
-        image: "/Tejays/assets/brands/brand-1.png",
-        name: "Brand 1",
-    },
-    {
-        id: 2,
-        image: "/Tejays/assets/brands/brand-2.png",
-        name: "Brand 2",
-    },
-    {
-        id: 3,
-        image: "/Tejays/assets/brands/brand-3.png",
-        name: "Brand 3",
-    },
-    {
-        id: 4,
-        image: "/Tejays/assets/brands/brand-4.png",
-        name: "Brand 4",
-    },
-    {
-        id: 5,
-        image: "/Tejays/assets/brands/brand-5.png",
-        name: "Brand 5",
-    },
-    {
-        id: 6,
-        image: "/Tejays/assets/brands/brand-6.png",
-        name: "Brand 6",
-    },
-    {
-        id: 7,
-        image: "/Tejays/assets/brands/brand-7.png",
-        name: "Brand 7",
-    },
-    {
-        id: 8,
-        image: "/Tejays/assets/brands/brand-8.png",
-        name: "Brand 8",
-    },
-    {
-        id: 9,
-        image: "/Tejays/assets/brands/brand-9.png",
-        name: "Brand 9",
-    },
+  {
+    id: 1,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-1.png`,
+    name: "Brand 1",
+  },
+  {
+    id: 2,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-2.png`,
+    name: "Brand 2",
+  },
+  {
+    id: 3,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-3.png`,
+    name: "Brand 3",
+  },
+  {
+    id: 4,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-4.png`,
+    name: "Brand 4",
+  },
+  {
+    id: 5,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-5.png`,
+    name: "Brand 5",
+  },
+  {
+    id: 6,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-6.png`,
+    name: "Brand 6",
+  },
+  {
+    id: 7,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-7.png`,
+    name: "Brand 7",
+  },
+  {
+    id: 8,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-8.png`,
+    name: "Brand 8",
+  },
+  {
+    id: 9,
+    image: `${import.meta.env.BASE_URL}assets/brands/brand-9.png`,
+    name: "Brand 9",
+  },
 ];
-
 
 // =========================================================
 // HOME
 // =========================================================
 
 export default function Home() {
+  // =====================================================
+  // BRAND SLIDER STATE
+  // =====================================================
 
-    // =====================================================
-    // BRAND SLIDER STATE
-    // =====================================================
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleSlides, setVisibleSlides] = useState(6);
 
-    const [visibleSlides, setVisibleSlides] = useState(6);
+  // =====================================================
+  // RESPONSIVE SLIDES
+  // =====================================================
 
-    // =====================================================
-    // RESPONSIVE SLIDES
-    // =====================================================
+  useEffect(() => {
+    const updateSlides = () => {
+      const nextVisibleSlides =
+        window.innerWidth < 640 ? 2 : window.innerWidth < 1024 ? 3 : 6;
 
-    useEffect(() => {
+      setVisibleSlides(nextVisibleSlides);
 
-        const updateSlides = () => {
+      const maxIndex = Math.max(brands.length - nextVisibleSlides, 0);
 
-            const nextVisibleSlides = window.innerWidth < 640
-                ? 2
-                : window.innerWidth < 1024
-                    ? 3
-                    : 6;
-
-            setVisibleSlides(nextVisibleSlides);
-
-            const maxIndex = Math.max(brands.length - nextVisibleSlides, 0);
-
-            setCurrentIndex((previous) => Math.min(previous, maxIndex));
-
-        };
-
-
-        updateSlides();
-
-
-        window.addEventListener(
-            "resize",
-            updateSlides
-        );
-
-
-        return () => {
-
-            window.removeEventListener(
-                "resize",
-                updateSlides
-            );
-
-        };
-
-    }, []);
-
-
-    // =====================================================
-    // AUTO BRAND SLIDER
-    // =====================================================
-
-    useEffect(() => {
-
-        const interval = setInterval(() => {
-
-            setCurrentIndex((previous) => {
-
-                const maxIndex = Math.max(brands.length - visibleSlides, 0);
-
-
-                if (previous >= maxIndex) {
-
-                    return 0;
-
-                }
-
-
-                return previous + 1;
-
-            });
-
-        }, 3000);
-
-
-        return () => {
-
-            clearInterval(interval);
-
-        };
-
-    }, [
-        visibleSlides,
-    ]);
-
-
-    // =====================================================
-    // NEXT BRAND
-    // =====================================================
-
-    const nextSlide = () => {
-
-        setCurrentIndex((previous) => {
-
-            const maxIndex = Math.max(brands.length - visibleSlides, 0);
-
-
-            if (previous >= maxIndex) {
-
-                return 0;
-
-            }
-
-            return previous + 1;
-
-        });
-
+      setCurrentIndex((previous) => Math.min(previous, maxIndex));
     };
 
+    updateSlides();
 
-    // =====================================================
-    // PREVIOUS BRAND
-    // =====================================================
+    window.addEventListener("resize", updateSlides);
 
-    const prevSlide = () => {
-
-        setCurrentIndex((previous) => {
-
-            const maxIndex = Math.max(brands.length - visibleSlides, 0);
-
-
-            if (previous <= 0) {
-
-                return maxIndex;
-
-            }
-
-
-            return previous - 1;
-
-        });
-
+    return () => {
+      window.removeEventListener("resize", updateSlides);
     };
+  }, []);
 
-    return (
-        <div className="min-h-screen overflow-x-clip bg-white text-slate-900">
-            {/* ========    PREMIUM HERO     ======== */}
-            <section className="relative isolate min-h-[650px] overflow-hidden bg-[#07111f]">
+  // =====================================================
+  // AUTO BRAND SLIDER
+  // =====================================================
 
-                {/* Background Image */}
-                <div
-                    className="
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((previous) => {
+        const maxIndex = Math.max(brands.length - visibleSlides, 0);
+
+        if (previous >= maxIndex) {
+          return 0;
+        }
+
+        return previous + 1;
+      });
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [visibleSlides]);
+
+  // =====================================================
+  // NEXT BRAND
+  // =====================================================
+
+  const nextSlide = () => {
+    setCurrentIndex((previous) => {
+      const maxIndex = Math.max(brands.length - visibleSlides, 0);
+
+      if (previous >= maxIndex) {
+        return 0;
+      }
+
+      return previous + 1;
+    });
+  };
+
+  // =====================================================
+  // PREVIOUS BRAND
+  // =====================================================
+
+  const prevSlide = () => {
+    setCurrentIndex((previous) => {
+      const maxIndex = Math.max(brands.length - visibleSlides, 0);
+
+      if (previous <= 0) {
+        return maxIndex;
+      }
+
+      return previous - 1;
+    });
+  };
+
+  return (
+    <div className="min-h-screen overflow-x-clip bg-white text-slate-900">
+      {/* ========    PREMIUM HERO     ======== */}
+      <section className="relative isolate min-h-[650px] overflow-hidden bg-[#07111f]">
+        {/* Background Image */}
+        <div
+          className="
             absolute
             inset-0
             bg-cover
@@ -365,41 +306,41 @@ export default function Home() {
             ease-out
             hover:scale-110
         "
-                    style={{
-                        // backgroundImage: "url('/Tejays/assets/bulk-bandwidth.jpg')",
-                        backgroundImage: "url('/Tejays/assets/broadband-hero.jpg')",
-                        // backgroundImage: "url('/Tejays/assets/home-hero.jpg')",
-                        // backgroundImage: "url('/Tejays/assets/bg-img2.jpg')",
-                        // backgroundImage: "url('/Tejays/assets/bg-img4.jpg')",
-                        // backgroundImage: "url('/Tejays/assets/bg-img5.jpg')",
-                        // backgroundImage: "url('/Tejays/assets/bg-img6.jpg')",
-                    }}
-                />
+          style={{
+            // backgroundImage: `url('${import.meta.env.BASE_URL}assets/bulk-bandwidth.jpg')`,
+            backgroundImage: `url('${import.meta.env.BASE_URL}assets/broadband-hero.jpg')`,
+            // backgroundImage: `url('${import.meta.env.BASE_URL}assets/home-hero.jpg')`,
+            // backgroundImage: `url('${import.meta.env.BASE_URL}assets/bg-img2.jpg')`,
+            // backgroundImage: `url('${import.meta.env.BASE_URL}assets/bg-img4.jpg')`,
+            // backgroundImage: `url('${import.meta.env.BASE_URL}assets/bg-img5.jpg')`,
+            // backgroundImage: `url('${import.meta.env.BASE_URL}assets/bg-img6.jpg')`,
+          }}
+        />
 
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-[#1503062c]" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-[#1503062c]" />
 
-                {/* Red Gradient Accent */}
-                <div className="absolute inset-y-0 left-0 w-1 bg-[#e3292f]" />
+        {/* Red Gradient Accent */}
+        <div className="absolute inset-y-0 left-0 w-1 bg-[#e3292f]" />
 
-                {/* Subtle Grid */}
-                <div className="absolute inset-0 opacity-[0.06]">
-                    <div
-                        className="h-full w-full"
-                        style={{
-                            backgroundImage:
-                                "linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px)",
-                            backgroundSize: "70px 70px",
-                        }}
-                    />
-                </div>
+        {/* Subtle Grid */}
+        <div className="absolute inset-0 opacity-[0.06]">
+          <div
+            className="h-full w-full"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px)",
+              backgroundSize: "70px 70px",
+            }}
+          />
+        </div>
 
-                {/* Decorative Glow */}
-                <div className="absolute -right-32 top-20 h-80 w-80 rounded-full bg-[#e3292f]/10 blur-3xl" />
+        {/* Decorative Glow */}
+        <div className="absolute -right-32 top-20 h-80 w-80 rounded-full bg-[#e3292f]/10 blur-3xl" />
 
-                {/* Content */}
-                <div
-                    className="
+        {/* Content */}
+        <div
+          className="
             relative
             mx-auto
             flex
@@ -415,15 +356,13 @@ export default function Home() {
             lg:px-8
             lg:text-left
         "
-                >
-
-                    <div className="w-full max-w-3xl">
-
-                        {/* Small Brand Label */}
-                        <div
-                            data-aos="fade-down"
-                            data-aos-duration="800"
-                            className="
+        >
+          <div className="w-full max-w-3xl">
+            {/* Small Brand Label */}
+            <div
+              data-aos="fade-down"
+              data-aos-duration="800"
+              className="
                     mx-auto
                     inline-flex
                     items-center
@@ -436,19 +375,19 @@ export default function Home() {
                     backdrop-blur-md
                     lg:mx-0
                 "
-                        >
-                            <span
-                                className="
+            >
+              <span
+                className="
                         h-2
                         w-2
                         rounded-full
                         bg-[#e3292f]
                         shadow-[0_0_18px_rgba(227,41,47,0.9)]
                     "
-                            />
+              />
 
-                            <span
-                                className="
+              <span
+                className="
                         text-[10px]
                         font-semibold
                         uppercase
@@ -456,17 +395,17 @@ export default function Home() {
                         text-white/80
                         sm:text-xs
                     "
-                            >
-                                TEJAYS Dynamic Ltd.
-                            </span>
-                        </div>
+              >
+                TEJAYS Dynamic Ltd.
+              </span>
+            </div>
 
-                        {/* Main Heading */}
-                        <h1
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            data-aos-duration="900"
-                            className="
+            {/* Main Heading */}
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="900"
+              className="
                     mt-7
                     text-4xl
                     font-bold
@@ -477,25 +416,24 @@ export default function Home() {
                     md:text-6xl
                     lg:text-7xl
                 "
-                        >
-                            We Enable
-
-                            <span
-                                className="
+            >
+              We Enable
+              <span
+                className="
                         block
                         text-[#e3292f]
                     "
-                            >
-                                Network Anywhere...
-                            </span>
-                        </h1>
+              >
+                Network Anywhere...
+              </span>
+            </h1>
 
-                        {/* Description */}
-                        <p
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                            data-aos-duration="900"
-                            className="
+            {/* Description */}
+            <p
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="900"
+              className="
                     mx-auto
                     mt-7
                     max-w-2xl
@@ -507,18 +445,17 @@ export default function Home() {
                     lg:mx-0
                     lg:text-lg
                 "
-                        >
-                            Enterprise-grade connectivity and network infrastructure
-                            solutions designed for reliable, secure and
-                            high-performance communication.
-                        </p>
+            >
+              Enterprise-grade connectivity and network infrastructure solutions
+              designed for reliable, secure and high-performance communication.
+            </p>
 
-                        {/* Buttons */}
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            data-aos-duration="900"
-                            className="
+            {/* Buttons */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="900"
+              className="
                     mt-9
                     flex
                     flex-col
@@ -528,12 +465,11 @@ export default function Home() {
                     sm:flex-row
                     lg:justify-start
                 "
-                        >
-
-                            {/* Quick Pay */}
-                            <Link
-                                to="/quick-pay"
-                                className="
+            >
+              {/* Quick Pay */}
+              <Link
+                to="/quick-pay"
+                className="
                         group
                         inline-flex
                         w-full
@@ -555,23 +491,22 @@ export default function Home() {
                         hover:shadow-[0_20px_45px_rgba(227,41,47,0.4)]
                         sm:w-auto
                     "
-                            >
-                                Quick Pay
-
-                                <ArrowRight
-                                    size={17}
-                                    className="
+              >
+                Quick Pay
+                <ArrowRight
+                  size={17}
+                  className="
                             transition-transform
                             duration-300
                             group-hover:translate-x-1
                         "
-                                />
-                            </Link>
+                />
+              </Link>
 
-                            {/* Contact */}
-                            <Link
-                                to="/contact-us"
-                                className="
+              {/* Contact */}
+              <Link
+                to="/contact-us"
+                className="
                         group
                         inline-flex
                         w-full
@@ -596,26 +531,24 @@ export default function Home() {
                         hover:text-[#07111f]
                         sm:w-auto
                     "
-                            >
-                                Contact Us
-
-                                <ArrowRight
-                                    size={17}
-                                    className="
+              >
+                Contact Us
+                <ArrowRight
+                  size={17}
+                  className="
                             transition-transform
                             duration-300
                             group-hover:translate-x-1
                         "
-                                />
-                            </Link>
+                />
+              </Link>
+            </div>
 
-                        </div>
-
-                        {/* Bottom Mini Trust */}
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="450"
-                            className="
+            {/* Bottom Mini Trust */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="450"
+              className="
                     mx-auto
                     mt-10
                     flex
@@ -629,24 +562,23 @@ export default function Home() {
                     lg:mx-0
                     lg:justify-start
                 "
-                        >
-                            <span>Enterprise Connectivity</span>
+            >
+              <span>Enterprise Connectivity</span>
 
-                            <span className="hidden h-1 w-1 rounded-full bg-[#e3292f] sm:block" />
+              <span className="hidden h-1 w-1 rounded-full bg-[#e3292f] sm:block" />
 
-                            <span>Network Infrastructure</span>
+              <span>Network Infrastructure</span>
 
-                            <span className="hidden h-1 w-1 rounded-full bg-[#e3292f] sm:block" />
+              <span className="hidden h-1 w-1 rounded-full bg-[#e3292f] sm:block" />
 
-                            <span>24/7 Support</span>
-                        </div>
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
 
-                    </div>
-                </div>
-
-                {/* Bottom Fade */}
-                <div
-                    className="
+        {/* Bottom Fade */}
+        <div
+          className="
             absolute
             bottom-0
             left-0
@@ -656,52 +588,46 @@ export default function Home() {
             from-[#07111f]
             to-transparent
         "
-                />
+        />
+      </section>
 
-            </section>
-
-
-
-            {/* ================================================================
+      {/* ================================================================
     TEJAYS NETWORK — PREMIUM CORPORATE SECTION
 ================================================================ */}
 
-            <section className="relative overflow-hidden bg-[#f8fafc] py-20 sm:py-24 lg:py-32">
-
-                {/* ============================================================
+      <section className="relative overflow-hidden bg-[#f8fafc] py-20 sm:py-24 lg:py-32">
+        {/* ============================================================
                     BACKGROUND DECORATION
                                ============================================================ */}
-                <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-                    {/* Red glow */}
-                    <div
-                        className="
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          {/* Red glow */}
+          <div
+            className="
                 absolute -right-40 -top-40
                 h-[520px] w-[520px]
                 rounded-full
                 bg-red-100/70
                 blur-[110px]
             "
-                    />
+          />
 
-                    {/* Blue/Navy glow */}
-                    <div
-                        className="
+          {/* Blue/Navy glow */}
+          <div
+            className="
                 absolute -bottom-48 -left-40
                 h-[500px] w-[500px]
                 rounded-full
                 bg-slate-200/70
                 blur-[120px]
             "
-                    />
-                </div>
+          />
+        </div>
 
-
-                {/* ============================================================
+        {/* ============================================================
         MAIN CONTAINER
     ============================================================ */}
-                <div
-                    className="
+        <div
+          className="
             relative z-10
             mx-auto
             grid
@@ -714,21 +640,18 @@ export default function Home() {
             lg:gap-20
             lg:px-8
         "
-                >
-
-
-                    {/* ========================================================
+        >
+          {/* ========================================================
             LEFT — IMAGE / NETWORK VISUAL
         ======================================================== */}
-                    <div
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        className="group relative mx-auto w-full max-w-xl lg:mx-0"
-                    >
-
-                        {/* Decorative red line */}
-                        <div
-                            className="
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="group relative mx-auto w-full max-w-xl lg:mx-0"
+          >
+            {/* Decorative red line */}
+            <div
+              className="
                     absolute
                     -left-4
                     top-10
@@ -738,11 +661,11 @@ export default function Home() {
                     bg-[#e3292f]
                     sm:block
                 "
-                        />
+            />
 
-                        {/* Decorative square */}
-                        <div
-                            className="
+            {/* Decorative square */}
+            <div
+              className="
                     absolute
                     -right-4
                     -top-4
@@ -755,11 +678,11 @@ export default function Home() {
                     group-hover:-right-6
                     group-hover:-top-6
                 "
-                        />
+            />
 
-                        {/* Main image frame */}
-                        <div
-                            className="
+            {/* Main image frame */}
+            <div
+              className="
                     relative
                     overflow-hidden
                     rounded-2xl
@@ -774,23 +697,21 @@ export default function Home() {
                     group-hover:shadow-[0_35px_100px_rgba(15,23,42,0.18)]
                     sm:p-3
                 "
-                        >
-
-                            {/* Image */}
-                            <div
-                                className="
+            >
+              {/* Image */}
+              <div
+                className="
                         relative
                         aspect-[4/4.6]
                         overflow-hidden
                         rounded-xl
                         bg-slate-100
                     "
-                            >
-
-                                <img
-                                    src="/Tejays/assets/network.jpg"
-                                    alt="TEJAYS Network Infrastructure"
-                                    className="
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/network.jpg`}
+                  alt="TEJAYS Network Infrastructure"
+                  className="
                             h-full
                             w-full
                             object-cover
@@ -799,11 +720,11 @@ export default function Home() {
                             ease-out
                             group-hover:scale-[1.07]
                         "
-                                />
+                />
 
-                                {/* Image gradient */}
-                                <div
-                                    className="
+                {/* Image gradient */}
+                <div
+                  className="
                             pointer-events-none
                             absolute
                             inset-0
@@ -812,11 +733,11 @@ export default function Home() {
                             via-transparent
                             to-transparent
                         "
-                                />
+                />
 
-                                {/* Top status */}
-                                <div
-                                    className="
+                {/* Top status */}
+                <div
+                  className="
                             absolute
                             left-5
                             top-5
@@ -831,10 +752,10 @@ export default function Home() {
                             py-2
                             backdrop-blur-md
                         "
-                                >
-                                    <span className="relative flex h-2.5 w-2.5">
-                                        <span
-                                            className="
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span
+                      className="
                                     absolute
                                     inline-flex
                                     h-full
@@ -844,9 +765,9 @@ export default function Home() {
                                     bg-green-400
                                     opacity-75
                                 "
-                                        />
-                                        <span
-                                            className="
+                    />
+                    <span
+                      className="
                                     relative
                                     inline-flex
                                     h-2.5
@@ -854,26 +775,25 @@ export default function Home() {
                                     rounded-full
                                     bg-green-400
                                 "
-                                        />
-                                    </span>
+                    />
+                  </span>
 
-                                    <span
-                                        className="
+                  <span
+                    className="
                                 text-[10px]
                                 font-bold
                                 uppercase
                                 tracking-[0.18em]
                                 text-white
                             "
-                                    >
-                                        Network Active
-                                    </span>
-                                </div>
+                  >
+                    Network Active
+                  </span>
+                </div>
 
-
-                                {/* Bottom information */}
-                                <div
-                                    className="
+                {/* Bottom information */}
+                <div
+                  className="
                             absolute
                             bottom-5
                             left-5
@@ -889,26 +809,23 @@ export default function Home() {
                             group-hover:translate-y-[-4px]
                             sm:p-5
                         "
-                                >
-
-                                    <div className="flex items-end justify-between gap-4">
-
-                                        <div>
-
-                                            <p
-                                                className="
+                >
+                  <div className="flex items-end justify-between gap-4">
+                    <div>
+                      <p
+                        className="
                                         text-[10px]
                                         font-bold
                                         uppercase
                                         tracking-[0.22em]
                                         text-white/60
                                     "
-                                            >
-                                                TEJAYS NETWORK
-                                            </p>
+                      >
+                        TEJAYS NETWORK
+                      </p>
 
-                                            <h3
-                                                className="
+                      <h3
+                        className="
                                         mt-1
                                         text-lg
                                         font-bold
@@ -916,14 +833,13 @@ export default function Home() {
                                         text-white
                                         sm:text-xl
                                     "
-                                            >
-                                                Reliable Connectivity
-                                            </h3>
+                      >
+                        Reliable Connectivity
+                      </h3>
+                    </div>
 
-                                        </div>
-
-                                        <div
-                                            className="
+                    <div
+                      className="
                                     flex
                                     h-11
                                     w-11
@@ -939,26 +855,19 @@ export default function Home() {
                                     group-hover:rotate-6
                                     group-hover:scale-110
                                 "
-                                        >
-                                            <Network
-                                                size={20}
-                                                strokeWidth={1.8}
-                                            />
-                                        </div>
+                    >
+                      <Network size={20} strokeWidth={1.8} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        {/* ====================================================
+            {/* ====================================================
                 FLOATING STATS CARD
             ==================================================== */}
-                        <div
-                            className="
+            <div
+              className="
                     absolute
                     -bottom-7
                     -right-3
@@ -975,12 +884,10 @@ export default function Home() {
                     group-hover:-translate-y-2
                     sm:block
                 "
-                        >
-
-                            <div className="flex items-center gap-4">
-
-                                <div
-                                    className="
+            >
+              <div className="flex items-center gap-4">
+                <div
+                  className="
                             flex
                             h-11
                             w-11
@@ -989,73 +896,65 @@ export default function Home() {
                             rounded-xl
                             bg-red-50
                         "
-                                >
-                                    <ShieldCheck
-                                        size={22}
-                                        strokeWidth={1.8}
-                                        className="text-[#e3292f]"
-                                    />
-                                </div>
+                >
+                  <ShieldCheck
+                    size={22}
+                    strokeWidth={1.8}
+                    className="text-[#e3292f]"
+                  />
+                </div>
 
-                                <div>
-
-                                    <p
-                                        className="
+                <div>
+                  <p
+                    className="
                                 text-[10px]
                                 font-bold
                                 uppercase
                                 tracking-[0.16em]
                                 text-slate-400
                             "
-                                    >
-                                        Connectivity
-                                    </p>
+                  >
+                    Connectivity
+                  </p>
 
-                                    <p
-                                        className="
+                  <p
+                    className="
                                 mt-0.5
                                 text-sm
                                 font-bold
                                 text-slate-900
                             "
-                                    >
-                                        Built for Business
-                                    </p>
+                  >
+                    Built for Business
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {/* ========================================================
+          {/* ========================================================
             RIGHT — CONTENT
         ======================================================== */}
-                    <div
-                        data-aos="fade-left"
-                        data-aos-duration="1000"
-                        className="text-center lg:text-left"
-                    >
-
-                        {/* Eyebrow */}
-                        <div
-                            data-aos="fade-up"
-                            className="
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="text-center lg:text-left"
+          >
+            {/* Eyebrow */}
+            <div
+              data-aos="fade-up"
+              className="
                     flex
                     items-center
                     justify-center
                     gap-3
                     lg:justify-start
                 "
-                        >
+            >
+              <span className="h-[2px] w-9 bg-[#e3292f]" />
 
-                            <span className="h-[2px] w-9 bg-[#e3292f]" />
-
-                            <span
-                                className="
+              <span
+                className="
                         text-[11px]
                         font-extrabold
                         uppercase
@@ -1063,20 +962,18 @@ export default function Home() {
                         text-[#e3292f]
                         sm:text-xs
                     "
-                            >
-                                Our Network
-                            </span>
+              >
+                Our Network
+              </span>
 
-                            <span className="h-[2px] w-9 bg-[#e3292f] lg:hidden" />
+              <span className="h-[2px] w-9 bg-[#e3292f] lg:hidden" />
+            </div>
 
-                        </div>
-
-
-                        {/* Heading */}
-                        <h2
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            className="
+            {/* Heading */}
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="
                     mx-auto
                     mt-5
                     max-w-2xl
@@ -1090,26 +987,24 @@ export default function Home() {
                     lg:text-[52px]
                     xl:text-[58px]
                 "
-                        >
-                            Connectivity that keeps your
-
-                            <span
-                                className="
+            >
+              Connectivity that keeps your
+              <span
+                className="
                         mt-1
                         block
                         text-[#e3292f]
                     "
-                            >
-                                business moving.
-                            </span>
-                        </h2>
+              >
+                business moving.
+              </span>
+            </h2>
 
-
-                        {/* Description */}
-                        <p
-                            data-aos="fade-up"
-                            data-aos-delay="180"
-                            className="
+            {/* Description */}
+            <p
+              data-aos="fade-up"
+              data-aos-delay="180"
+              className="
                     mx-auto
                     mt-6
                     max-w-xl
@@ -1120,20 +1015,19 @@ export default function Home() {
                     sm:leading-8
                     lg:mx-0
                 "
-                        >
-                            TEJAYS delivers professional connectivity and network
-                            infrastructure solutions engineered for performance,
-                            reliability and uninterrupted business continuity.
-                        </p>
+            >
+              TEJAYS delivers professional connectivity and network
+              infrastructure solutions engineered for performance, reliability
+              and uninterrupted business continuity.
+            </p>
 
-
-                        {/* ====================================================
+            {/* ====================================================
                 QUICK STATS
             ==================================================== */}
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="250"
-                            className="
+            <div
+              data-aos="fade-up"
+              data-aos-delay="250"
+              className="
                     mx-auto
                     mt-8
                     grid
@@ -1146,24 +1040,22 @@ export default function Home() {
                     py-5
                     lg:mx-0
                 "
-                        >
-
-                            <div className="px-3 text-center lg:text-left">
-
-                                <p
-                                    className="
+            >
+              <div className="px-3 text-center lg:text-left">
+                <p
+                  className="
                             text-xl
                             font-black
                             tracking-tight
                             text-slate-950
                             sm:text-2xl
                         "
-                                >
-                                    99.9%
-                                </p>
+                >
+                  99.9%
+                </p>
 
-                                <p
-                                    className="
+                <p
+                  className="
                             mt-1
                             text-[9px]
                             font-bold
@@ -1172,29 +1064,26 @@ export default function Home() {
                             text-slate-400
                             sm:text-[10px]
                         "
-                                >
-                                    Reliability
-                                </p>
+                >
+                  Reliability
+                </p>
+              </div>
 
-                            </div>
-
-
-                            <div className="px-3 text-center lg:text-left">
-
-                                <p
-                                    className="
+              <div className="px-3 text-center lg:text-left">
+                <p
+                  className="
                             text-xl
                             font-black
                             tracking-tight
                             text-slate-950
                             sm:text-2xl
                         "
-                                >
-                                    24×7
-                                </p>
+                >
+                  24×7
+                </p>
 
-                                <p
-                                    className="
+                <p
+                  className="
                             mt-1
                             text-[9px]
                             font-bold
@@ -1203,29 +1092,26 @@ export default function Home() {
                             text-slate-400
                             sm:text-[10px]
                         "
-                                >
-                                    Support
-                                </p>
+                >
+                  Support
+                </p>
+              </div>
 
-                            </div>
-
-
-                            <div className="px-3 text-center lg:text-left">
-
-                                <p
-                                    className="
+              <div className="px-3 text-center lg:text-left">
+                <p
+                  className="
                             text-xl
                             font-black
                             tracking-tight
                             text-slate-950
                             sm:text-2xl
                         "
-                                >
-                                    B2B
-                                </p>
+                >
+                  B2B
+                </p>
 
-                                <p
-                                    className="
+                <p
+                  className="
                             mt-1
                             text-[9px]
                             font-bold
@@ -1234,20 +1120,17 @@ export default function Home() {
                             text-slate-400
                             sm:text-[10px]
                         "
-                                >
-                                    Solutions
-                                </p>
+                >
+                  Solutions
+                </p>
+              </div>
+            </div>
 
-                            </div>
-
-                        </div>
-
-
-                        {/* ====================================================
+            {/* ====================================================
     BENEFITS
 ==================================================== */}
-                        <div
-                            className="
+            <div
+              className="
         mx-auto
         mt-7
         grid
@@ -1256,14 +1139,13 @@ export default function Home() {
         gap-3
         lg:mx-0
     "
-                        >
-                            {benefits.map((benefit, index) => (
-
-                                <div
-                                    key={benefit}
-                                    data-aos="fade-up"
-                                    data-aos-delay={300 + index * 80}
-                                    className="
+            >
+              {benefits.map((benefit, index) => (
+                <div
+                  key={benefit}
+                  data-aos="fade-up"
+                  data-aos-delay={300 + index * 80}
+                  className="
                 group
                 flex
                 items-center
@@ -1285,11 +1167,10 @@ export default function Home() {
                 sm:px-4
                 sm:py-3.5
             "
-                                >
-
-                                    {/* Icon */}
-                                    <div
-                                        className="
+                >
+                  {/* Icon */}
+                  <div
+                    className="
                     flex
                     h-8
                     w-8
@@ -1304,11 +1185,11 @@ export default function Home() {
                     sm:h-9
                     sm:w-9
                 "
-                                    >
-                                        <CheckCircle2
-                                            size={16}
-                                            strokeWidth={2}
-                                            className="
+                  >
+                    <CheckCircle2
+                      size={16}
+                      strokeWidth={2}
+                      className="
                         text-[#e3292f]
                         transition-colors
                         duration-300
@@ -1316,12 +1197,12 @@ export default function Home() {
                         sm:h-[18px]
                         sm:w-[18px]
                     "
-                                        />
-                                    </div>
+                    />
+                  </div>
 
-                                    {/* Text */}
-                                    <span
-                                        className="
+                  {/* Text */}
+                  <span
+                    className="
                     min-w-0
                     text-xs
                     font-semibold
@@ -1332,23 +1213,20 @@ export default function Home() {
                     group-hover:text-slate-950
                     sm:text-sm
                 "
-                                    >
-                                        {benefit}
-                                    </span>
+                  >
+                    {benefit}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-                                </div>
-
-                            ))}
-                        </div>
-
-
-                        {/* ====================================================
+            {/* ====================================================
                 CTA BUTTONS
             ==================================================== */}
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="600"
-                            className="
+            <div
+              data-aos="fade-up"
+              data-aos-delay="600"
+              className="
         mt-9
         flex
         w-full
@@ -1361,11 +1239,11 @@ export default function Home() {
         lg:justify-start
         lg:items-start
     "
-                        >
-                            {/* Primary */}
-                            <Link
-                                to="/about-us"
-                                className="
+            >
+              {/* Primary */}
+              <Link
+                to="/about-us"
+                className="
             group
             inline-flex
             w-full
@@ -1388,25 +1266,23 @@ export default function Home() {
             hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
             sm:w-auto
         "
-                            >
-                                Discover More
-
-                                <ArrowRight
-                                    size={17}
-                                    strokeWidth={2}
-                                    className="
+              >
+                Discover More
+                <ArrowRight
+                  size={17}
+                  strokeWidth={2}
+                  className="
                 transition-transform
                 duration-300
                 group-hover:translate-x-1
             "
-                                />
-                            </Link>
+                />
+              </Link>
 
-
-                            {/* Secondary */}
-                            <Link
-                                to="/services"
-                                className="
+              {/* Secondary */}
+              <Link
+                to="/services"
+                className="
             inline-flex
             w-full
             max-w-[220px]
@@ -1428,24 +1304,20 @@ export default function Home() {
             hover:border-slate-300
             hover:bg-slate-50
         "
-                            >
-                                Explore Services
-                            </Link>
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            {/* =========================================================
+      {/* =========================================================
                PREMIUM STATISTICS — REDESIGNED
             ========================================================= */}
 
-            <section
-                className="
+      <section
+        className="
         relative
         overflow-hidden
         bg-slate-100
@@ -1453,13 +1325,13 @@ export default function Home() {
         sm:py-16
         lg:py-20
     "
-            >
-                {/* =====================================================
+      >
+        {/* =====================================================
         BACKGROUND AMBIENT EFFECTS
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             -left-48
@@ -1471,10 +1343,10 @@ export default function Home() {
             bg-[#e3292f]/[0.035]
             blur-[140px]
         "
-                />
+        />
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             -right-48
@@ -1486,25 +1358,24 @@ export default function Home() {
             bg-blue-500/[0.025]
             blur-[140px]
         "
-                />
+        />
 
-                {/* =====================================================
+        {/* =====================================================
         SUBTLE GRID
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             inset-0
             opacity-[0.025]
         "
-                >
-                    <div
-                        className="h-full w-full"
-                        style={{
-                            backgroundImage:
-                                `
+        >
+          <div
+            className="h-full w-full"
+            style={{
+              backgroundImage: `
                     linear-gradient(
                         rgba(15,23,42,0.35) 1px,
                         transparent 1px
@@ -1515,18 +1386,17 @@ export default function Home() {
                         transparent 1px
                     )
                     `,
-                            backgroundSize: "60px 60px",
-                        }}
-                    />
-                </div>
+              backgroundSize: "60px 60px",
+            }}
+          />
+        </div>
 
-
-                {/* =====================================================
+        {/* =====================================================
         TOP LABEL
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             relative
             mx-auto
             mb-8
@@ -1538,20 +1408,20 @@ export default function Home() {
 
             sm:mb-10
         "
-                    data-aos="fade-up"
-                    data-aos-duration="700"
-                >
-                    <span
-                        className="
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <span
+            className="
                 h-px
                 w-8
                 bg-[#e3292f]/40
                 sm:w-12
             "
-                    />
+          />
 
-                    <span
-                        className="
+          <span
+            className="
                 text-[9px]
                 font-bold
                 uppercase
@@ -1560,30 +1430,29 @@ export default function Home() {
 
                 sm:text-[10px]
             "
-                    >
-                        Our Numbers
-                    </span>
+          >
+            Our Numbers
+          </span>
 
-                    <span
-                        className="
+          <span
+            className="
                 h-px
                 w-8
                 bg-[#e3292f]/40
                 sm:w-12
             "
-                    />
-                </div>
+          />
+        </div>
 
-
-                {/* =====================================================
+        {/* =====================================================
         STATS GRID
 
         MOBILE  : 2 × 2
         DESKTOP : 4 × 1
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             relative
             mx-auto
             grid
@@ -1607,21 +1476,17 @@ export default function Home() {
 
             lg:grid-cols-4
         "
-                >
+        >
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
 
-                    {stats.map((stat, index) => {
-
-                        const Icon = stat.icon;
-
-                        return (
-                            <div
-                                key={stat.label}
-
-                                data-aos="fade-up"
-                                data-aos-delay={index * 100}
-                                data-aos-duration="800"
-
-                                className="
+            return (
+              <div
+                key={stat.label}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                data-aos-duration="800"
+                className="
                         group
                         relative
 
@@ -1653,14 +1518,13 @@ export default function Home() {
 
                         lg:min-h-[240px]
                     "
-                            >
-
-                                {/* =================================================
+              >
+                {/* =================================================
                         HOVER GLOW
                     ================================================= */}
 
-                                <div
-                                    className="
+                <div
+                  className="
                             pointer-events-none
                             absolute
                             -right-16
@@ -1682,15 +1546,14 @@ export default function Home() {
 
                             group-hover:bg-[#e3292f]/[0.08]
                         "
-                                />
+                />
 
-
-                                {/* =================================================
+                {/* =================================================
                         INDEX
                     ================================================= */}
 
-                                <span
-                                    className="
+                <span
+                  className="
                             absolute
                             right-4
                             top-4
@@ -1710,17 +1573,16 @@ export default function Home() {
                             sm:top-5
                             sm:text-[10px]
                         "
-                                >
-                                    0{index + 1}
-                                </span>
+                >
+                  0{index + 1}
+                </span>
 
-
-                                {/* =================================================
+                {/* =================================================
                         ICON
                     ================================================= */}
 
-                                <div
-                                    className="
+                <div
+                  className="
                             relative
                             z-10
 
@@ -1759,11 +1621,11 @@ export default function Home() {
                             sm:h-13
                             sm:w-13
                         "
-                                >
-                                    <Icon
-                                        size={20}
-                                        strokeWidth={1.7}
-                                        className="
+                >
+                  <Icon
+                    size={20}
+                    strokeWidth={1.7}
+                    className="
                                 transition-transform
                                 duration-500
 
@@ -1772,16 +1634,15 @@ export default function Home() {
                                 sm:h-[23px]
                                 sm:w-[23px]
                             "
-                                    />
-                                </div>
+                  />
+                </div>
 
-
-                                {/* =================================================
+                {/* =================================================
                         VALUE
                     ================================================= */}
 
-                                <h3
-                                    className="
+                <h3
+                  className="
                             relative
                             z-10
 
@@ -1806,17 +1667,16 @@ export default function Home() {
 
                             lg:text-[34px]
                         "
-                                >
-                                    {stat.value}
-                                </h3>
+                >
+                  {stat.value}
+                </h3>
 
-
-                                {/* =================================================
+                {/* =================================================
                         LABEL
                     ================================================= */}
 
-                                <p
-                                    className="
+                <p
+                  className="
                             relative
                             z-10
 
@@ -1843,17 +1703,16 @@ export default function Home() {
 
                             lg:text-[11px]
                         "
-                                >
-                                    {stat.label}
-                                </p>
+                >
+                  {stat.label}
+                </p>
 
-
-                                {/* =================================================
+                {/* =================================================
                         RED ACCENT LINE
                     ================================================= */}
 
-                                <div
-                                    className="
+                <div
+                  className="
                             absolute
                             bottom-0
                             left-1/2
@@ -1877,15 +1736,14 @@ export default function Home() {
 
                             sm:group-hover:w-20
                         "
-                                />
+                />
 
-
-                                {/* =================================================
+                {/* =================================================
                         CORNER ACCENT
                     ================================================= */}
 
-                                <div
-                                    className="
+                <div
+                  className="
                             pointer-events-none
                             absolute
                             bottom-0
@@ -1901,9 +1759,9 @@ export default function Home() {
 
                             group-hover:opacity-100
                         "
-                                >
-                                    <div
-                                        className="
+                >
+                  <div
+                    className="
                                 absolute
                                 bottom-0
                                 right-0
@@ -1913,10 +1771,10 @@ export default function Home() {
 
                                 bg-[#e3292f]/30
                             "
-                                    />
+                  />
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 absolute
                                 bottom-0
                                 right-0
@@ -1926,22 +1784,19 @@ export default function Home() {
 
                                 bg-[#e3292f]/30
                             "
-                                    />
-                                </div>
-
-                            </div>
-                        );
-                    })}
-
+                  />
                 </div>
+              </div>
+            );
+          })}
+        </div>
 
-
-                {/* =====================================================
+        {/* =====================================================
         BOTTOM MICRO LABEL
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             relative
             mx-auto
             mt-7
@@ -1954,17 +1809,17 @@ export default function Home() {
 
             sm:mt-9
         "
-                >
-                    <span
-                        className="
+        >
+          <span
+            className="
                 h-px
                 flex-1
                 bg-slate-200
             "
-                    />
+          />
 
-                    <span
-                        className="
+          <span
+            className="
                 text-[8px]
                 font-semibold
                 uppercase
@@ -1973,28 +1828,26 @@ export default function Home() {
 
                 sm:text-[9px]
             "
-                    >
-                        Built for modern connectivity
-                    </span>
+          >
+            Built for modern connectivity
+          </span>
 
-                    <span
-                        className="
+          <span
+            className="
                 h-px
                 flex-1
                 bg-slate-200
             "
-                    />
-                </div>
+          />
+        </div>
+      </section>
 
-            </section>
-
-
-            {/* =========================================================
+      {/* =========================================================
                  PREMIUM SERVICES SECTION
             ========================================================= */}
-            <section
-                id="services"
-                className="
+      <section
+        id="services"
+        className="
         relative
         overflow-hidden
         bg-red-50/70
@@ -2002,13 +1855,13 @@ export default function Home() {
         sm:py-24
         lg:py-28
     "
-            >
-                {/* =====================================================
+      >
+        {/* =====================================================
         PREMIUM AMBIENT BACKGROUND
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             -right-48
@@ -2019,10 +1872,10 @@ export default function Home() {
             bg-[#e3292f]/[0.055]
             blur-[140px]
         "
-                />
+        />
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             -left-48
@@ -2033,10 +1886,10 @@ export default function Home() {
             bg-blue-500/[0.035]
             blur-[140px]
         "
-                />
+        />
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             left-1/2
@@ -2049,26 +1902,24 @@ export default function Home() {
             bg-[#e3292f]/[0.018]
             blur-[120px]
         "
-                />
+        />
 
-
-                {/* =====================================================
+        {/* =====================================================
         PREMIUM GRID
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             inset-0
             opacity-[0.035]
         "
-                >
-                    <div
-                        className="h-full w-full"
-                        style={{
-                            backgroundImage:
-                                `
+        >
+          <div
+            className="h-full w-full"
+            style={{
+              backgroundImage: `
                     linear-gradient(
                         rgba(15,23,42,0.20) 1px,
                         transparent 1px
@@ -2079,18 +1930,17 @@ export default function Home() {
                         transparent 1px
                     )
                     `,
-                            backgroundSize: "72px 72px",
-                        }}
-                    />
-                </div>
+              backgroundSize: "72px 72px",
+            }}
+          />
+        </div>
 
-
-                {/* =====================================================
+        {/* =====================================================
         DECORATIVE TOP LINE
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             left-1/2
@@ -2103,11 +1953,10 @@ export default function Home() {
             via-[#e3292f]/20
             to-transparent
         "
-                />
+        />
 
-
-                <div
-                    className="
+        <div
+          className="
             relative
             mx-auto
             max-w-7xl
@@ -2115,43 +1964,40 @@ export default function Home() {
             sm:px-6
             lg:px-8
         "
-                >
-
-                    {/* =====================================================
+        >
+          {/* =====================================================
             SECTION HEADER
         ====================================================== */}
 
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        className="
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            className="
                 mx-auto
                 max-w-3xl
                 text-center
             "
-                    >
+          >
+            {/* Label */}
 
-                        {/* Label */}
-
-                        <div
-                            className="
+            <div
+              className="
                     inline-flex
                     items-center
                     gap-3
                 "
-                        >
-
-                            <span
-                                className="
+            >
+              <span
+                className="
                         h-px
                         w-8
                         bg-[#e3292f]
                         sm:w-12
                     "
-                            />
+              />
 
-                            <p
-                                className="
+              <p
+                className="
                         text-[10px]
                         font-bold
                         uppercase
@@ -2159,26 +2005,24 @@ export default function Home() {
                         text-[#e3292f]
                         sm:text-xs
                     "
-                            >
-                                What We Offer
-                            </p>
+              >
+                What We Offer
+              </p>
 
-                            <span
-                                className="
+              <span
+                className="
                         h-px
                         w-8
                         bg-[#e3292f]
                         sm:w-12
                     "
-                            />
+              />
+            </div>
 
-                        </div>
+            {/* Heading */}
 
-
-                        {/* Heading */}
-
-                        <h2
-                            className="
+            <h2
+              className="
                     mt-5
                     text-3xl
                     font-bold
@@ -2188,25 +2032,22 @@ export default function Home() {
                     sm:text-4xl
                     lg:text-5xl
                 "
-                        >
-                            Network solutions
-
-                            <span
-                                className="
+            >
+              Network solutions
+              <span
+                className="
                         block
                         text-[#e3292f]
                     "
-                            >
-                                built around your business.
-                            </span>
+              >
+                built around your business.
+              </span>
+            </h2>
 
-                        </h2>
+            {/* Description */}
 
-
-                        {/* Description */}
-
-                        <p
-                            className="
+            <p
+              className="
                     mx-auto
                     mt-5
                     max-w-2xl
@@ -2215,21 +2056,19 @@ export default function Home() {
                     text-slate-500
                     sm:text-base
                 "
-                        >
-                            Explore TEJAYS connectivity and network services designed
-                            for modern business requirements with performance,
-                            reliability and scalability.
-                        </p>
+            >
+              Explore TEJAYS connectivity and network services designed for
+              modern business requirements with performance, reliability and
+              scalability.
+            </p>
+          </div>
 
-                    </div>
-
-
-                    {/* =====================================================
+          {/* =====================================================
             SERVICES GRID
         ====================================================== */}
 
-                    <div
-                        className="
+          <div
+            className="
                 mt-12
                 grid
                 grid-cols-2
@@ -2241,75 +2080,56 @@ export default function Home() {
                 lg:grid-cols-4
                 lg:gap-5
             "
-                    >
+          >
+            {services.map((service, index) => {
+              const Icon = service.icon;
 
-                        {services.map((service, index) => {
-
-                            const Icon = service.icon;
-
-                            return (
-
-                                <Link
-                                    key={service.title}
-                                    to={service.path}
-
-                                    data-aos="fade-up"
-                                    data-aos-delay={index * 70}
-                                    data-aos-duration="800"
-
-
-                                    /* =================================================
+              return (
+                <Link
+                  key={service.title}
+                  to={service.path}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 70}
+                  data-aos-duration="800"
+                  /* =================================================
                                        CURSOR FOLLOW / 3D TILT
                                     ================================================= */
 
-                                    onMouseMove={(e) => {
+                  onMouseMove={(e) => {
+                    const card = e.currentTarget;
 
-                                        const card = e.currentTarget;
+                    const rect = card.getBoundingClientRect();
 
-                                        const rect =
-                                            card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
 
-                                        const x =
-                                            e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
 
-                                        const y =
-                                            e.clientY - rect.top;
+                    const centerX = rect.width / 2;
 
-                                        const centerX =
-                                            rect.width / 2;
+                    const centerY = rect.height / 2;
 
-                                        const centerY =
-                                            rect.height / 2;
+                    const rotateY = ((x - centerX) / centerX) * 10;
 
-                                        const rotateY =
-                                            ((x - centerX) / centerX) * 10;
+                    const rotateX = ((centerY - y) / centerY) * 10;
 
-                                        const rotateX =
-                                            ((centerY - y) / centerY) * 10;
-
-                                        card.style.transform = `
+                    card.style.transform = `
                                 perspective(1000px)
                                 rotateX(${rotateX}deg)
                                 rotateY(${rotateY}deg)
                                 translateY(-8px)
                                 scale(1.02)
                             `;
-                                    }}
-
-
-                                    onMouseLeave={(e) => {
-
-                                        e.currentTarget.style.transform = `
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = `
                                 perspective(1000px)
                                 rotateX(0deg)
                                 rotateY(0deg)
                                 translateY(0)
                                 scale(1)
                             `;
-                                    }}
-
-
-                                    className="
+                  }}
+                  className="
                             group
                             relative
                             min-h-[245px]
@@ -2344,20 +2164,17 @@ export default function Home() {
                             lg:min-h-[320px]
                             lg:p-7
                         "
-
-
-                                    style={{
-                                        transformStyle: "preserve-3d",
-                                        willChange: "transform",
-                                    }}
-                                >
-
-                                    {/* =================================================
+                  style={{
+                    transformStyle: "preserve-3d",
+                    willChange: "transform",
+                  }}
+                >
+                  {/* =================================================
                             GLASS HIGHLIGHT
                         ================================================= */}
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 pointer-events-none
                                 absolute
                                 inset-x-0
@@ -2369,15 +2186,14 @@ export default function Home() {
                                 to-transparent
                                 opacity-80
                             "
-                                    />
+                  />
 
-
-                                    {/* =================================================
+                  {/* =================================================
                             CARD RED GLOW
                         ================================================= */}
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 pointer-events-none
                                 absolute
                                 -right-20
@@ -2394,15 +2210,14 @@ export default function Home() {
                                 group-hover:scale-150
                                 group-hover:bg-[#e3292f]/[0.10]
                             "
-                                    />
+                  />
 
-
-                                    {/* =================================================
+                  {/* =================================================
                             CARD BLUE GLOW
                         ================================================= */}
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 pointer-events-none
                                 absolute
                                 -bottom-20
@@ -2418,15 +2233,14 @@ export default function Home() {
 
                                 group-hover:scale-125
                             "
-                                    />
+                  />
 
-
-                                    {/* =================================================
+                  {/* =================================================
                             NUMBER
                         ================================================= */}
 
-                                    <span
-                                        className="
+                  <span
+                    className="
                                 absolute
                                 right-4
                                 top-4
@@ -2446,17 +2260,16 @@ export default function Home() {
                                 sm:top-5
                                 sm:text-xs
                             "
-                                    >
-                                        0{index + 1}
-                                    </span>
+                  >
+                    0{index + 1}
+                  </span>
 
-
-                                    {/* =================================================
+                  {/* =================================================
                             ICON
                         ================================================= */}
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 relative
                                 z-10
 
@@ -2497,26 +2310,23 @@ export default function Home() {
                                 sm:h-12
                                 sm:w-12
                             "
-                                    >
-
-                                        <Icon
-                                            size={20}
-                                            strokeWidth={1.7}
-                                            className="
+                  >
+                    <Icon
+                      size={20}
+                      strokeWidth={1.7}
+                      className="
                                     sm:h-[23px]
                                     sm:w-[23px]
                                 "
-                                        />
+                    />
+                  </div>
 
-                                    </div>
-
-
-                                    {/* =================================================
+                  {/* =================================================
                             TITLE
                         ================================================= */}
 
-                                    <h3
-                                        className="
+                  <h3
+                    className="
                                 relative
                                 z-10
 
@@ -2544,17 +2354,16 @@ export default function Home() {
                                 sm:text-lg
                                 sm:leading-6
                             "
-                                    >
-                                        {service.title}
-                                    </h3>
+                  >
+                    {service.title}
+                  </h3>
 
-
-                                    {/* =================================================
+                  {/* =================================================
                             DESCRIPTION
                         ================================================= */}
 
-                                    <p
-                                        className="
+                  <p
+                    className="
                                 relative
                                 z-10
 
@@ -2577,17 +2386,16 @@ export default function Home() {
                                 sm:text-sm
                                 sm:leading-6
                             "
-                                    >
-                                        {service.description}
-                                    </p>
+                  >
+                    {service.description}
+                  </p>
 
-
-                                    {/* =================================================
+                  {/* =================================================
                             EXPLORE
                         ================================================= */}
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 relative
                                 z-10
 
@@ -2618,15 +2426,12 @@ export default function Home() {
 
                                 sm:text-xs
                             "
-                                    >
+                  >
+                    <span>Explore</span>
 
-                                        <span>
-                                            Explore
-                                        </span>
-
-                                        <ArrowRight
-                                            size={13}
-                                            className="
+                    <ArrowRight
+                      size={13}
+                      className="
                                     transition-transform
                                     duration-300
 
@@ -2635,17 +2440,15 @@ export default function Home() {
                                     sm:h-[15px]
                                     sm:w-[15px]
                                 "
-                                        />
+                    />
+                  </div>
 
-                                    </div>
-
-
-                                    {/* =================================================
+                  {/* =================================================
                             BOTTOM RED LINE
                         ================================================= */}
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 absolute
                                 bottom-0
                                 left-1/2
@@ -2666,15 +2469,14 @@ export default function Home() {
 
                                 group-hover:w-[70%]
                             "
-                                    />
+                  />
 
-
-                                    {/* =================================================
+                  {/* =================================================
                             INNER BORDER
                         ================================================= */}
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 pointer-events-none
                                 absolute
                                 inset-0
@@ -2689,31 +2491,27 @@ export default function Home() {
 
                                 group-hover:border-[#e3292f]/[0.08]
                             "
-                                    />
+                  />
+                </Link>
+              );
+            })}
+          </div>
 
-                                </Link>
-                            );
-                        })}
-
-                    </div>
-
-
-                    {/* =====================================================
+          {/* =====================================================
             BOTTOM LABEL
         ====================================================== */}
 
-                    <div
-                        data-aos="fade-up"
-                        data-aos-delay="500"
-                        className="
+          <div
+            data-aos="fade-up"
+            data-aos-delay="500"
+            className="
                 mt-10
                 text-center
                 sm:mt-12
             "
-                    >
-
-                        <div
-                            className="
+          >
+            <div
+              className="
                     mx-auto
                     flex
                     max-w-2xl
@@ -2721,18 +2519,17 @@ export default function Home() {
                     justify-center
                     gap-3
                 "
-                        >
-
-                            <span
-                                className="
+            >
+              <span
+                className="
                         h-px
                         flex-1
                         bg-slate-200
                     "
-                            />
+              />
 
-                            <p
-                                className="
+              <p
+                className="
                         text-[9px]
                         font-semibold
                         uppercase
@@ -2740,31 +2537,27 @@ export default function Home() {
                         text-slate-400
                         sm:text-xs
                     "
-                            >
-                                Enterprise Connectivity
-                            </p>
+              >
+                Enterprise Connectivity
+              </p>
 
-                            <span
-                                className="
+              <span
+                className="
                         h-px
                         flex-1
                         bg-slate-200
                     "
-                            />
+              />
+            </div>
+          </div>
+        </div>
 
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                {/* =====================================================
+        {/* =====================================================
         PREMIUM BOTTOM LINE
     ====================================================== */}
 
-                <div
-                    className="
+        <div
+          className="
             pointer-events-none
             absolute
             bottom-0
@@ -2777,52 +2570,46 @@ export default function Home() {
             via-slate-200
             to-transparent
         "
-                />
+        />
+      </section>
 
-            </section>
-
-
-            {/* =========================================================
+      {/* =========================================================
                 WHY TEJAYS — PREMIUM SECTION
             ========================================================= */}
-            <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+        {/* Background Glows */}
+        <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-50/80 blur-3xl" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-slate-100/80 blur-3xl" />
 
-                {/* Background Glows */}
-                <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-50/80 blur-3xl" />
-                <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-slate-100/80 blur-3xl" />
-
-                <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-
-                    {/* =====================================================
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+          {/* =====================================================
             LEFT CONTENT
         ====================================================== */}
-                    <div
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        className="mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left"
-                    >
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left"
+          >
+            {/* Section Label */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="flex items-center justify-center gap-3 lg:justify-start"
+            >
+              <span className="h-px w-8 bg-[#e3292f]" />
 
-                        {/* Section Label */}
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            className="flex items-center justify-center gap-3 lg:justify-start"
-                        >
-                            <span className="h-px w-8 bg-[#e3292f]" />
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-sm">
+                Why TEJAYS
+              </p>
 
-                            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-sm">
-                                Why TEJAYS
-                            </p>
+              <span className="h-px w-8 bg-[#e3292f] lg:hidden" />
+            </div>
 
-                            <span className="h-px w-8 bg-[#e3292f] lg:hidden" />
-                        </div>
-
-
-                        {/* Heading */}
-                        <h2
-                            data-aos="fade-up"
-                            data-aos-delay="180"
-                            className="
+            {/* Heading */}
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="180"
+              className="
                     mx-auto
                     mt-5
                     max-w-2xl
@@ -2835,24 +2622,17 @@ export default function Home() {
                     lg:mx-0
                     lg:text-5xl
                 "
-                        >
-                            Built around
+            >
+              Built around
+              <span className="text-[#e3292f]"> performance,</span>
+              <span> reliability and support.</span>
+            </h2>
 
-                            <span className="text-[#e3292f]">
-                                {" "}performance,
-                            </span>
-
-                            <span>
-                                {" "}reliability and support.
-                            </span>
-                        </h2>
-
-
-                        {/* Description */}
-                        <p
-                            data-aos="fade-up"
-                            data-aos-delay="260"
-                            className="
+            {/* Description */}
+            <p
+              data-aos="fade-up"
+              data-aos-delay="260"
+              className="
                     mx-auto
                     mt-6
                     max-w-xl
@@ -2863,18 +2643,16 @@ export default function Home() {
                     sm:leading-8
                     lg:mx-0
                 "
-                        >
-                            From connectivity to managed network infrastructure, our
-                            solutions are designed to help organizations stay connected
-                            and productive.
-                        </p>
+            >
+              From connectivity to managed network infrastructure, our solutions
+              are designed to help organizations stay connected and productive.
+            </p>
 
-
-                        {/* =================================================
+            {/* =================================================
                 BENEFIT CARDS
             ================================================= */}
-                        <div
-                            className="
+            <div
+              className="
                     mx-auto
                     mt-9
                     grid
@@ -2884,22 +2662,20 @@ export default function Home() {
                     sm:gap-4
                     lg:mx-0
                 "
-                        >
-
-                            {[
-                                "High Speed Connectivity",
-                                "User Friendly Solutions",
-                                "Flexibility & Scalability",
-                                "Secured & Reliable Network",
-                                "Affordable Pricing",
-                                "Fast Support 24/7",
-                            ].map((item, index) => (
-
-                                <div
-                                    key={item}
-                                    data-aos="fade-up"
-                                    data-aos-delay={index * 80 + 300}
-                                    className="
+            >
+              {[
+                "High Speed Connectivity",
+                "User Friendly Solutions",
+                "Flexibility & Scalability",
+                "Secured & Reliable Network",
+                "Affordable Pricing",
+                "Fast Support 24/7",
+              ].map((item, index) => (
+                <div
+                  key={item}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 80 + 300}
+                  className="
                             group
                             relative
                             overflow-hidden
@@ -2919,11 +2695,10 @@ export default function Home() {
                             sm:px-4
                             sm:py-5
                         "
-                                >
-
-                                    {/* Card Glow */}
-                                    <div
-                                        className="
+                >
+                  {/* Card Glow */}
+                  <div
+                    className="
                                 pointer-events-none
                                 absolute
                                 -right-12
@@ -2938,10 +2713,10 @@ export default function Home() {
                                 duration-500
                                 group-hover:opacity-100
                             "
-                                    />
+                  />
 
-                                    <div
-                                        className="
+                  <div
+                    className="
                                 relative
                                 flex
                                 flex-col
@@ -2952,11 +2727,10 @@ export default function Home() {
                                 sm:justify-start
                                 sm:gap-3
                             "
-                                    >
-
-                                        {/* Icon */}
-                                        <div
-                                            className="
+                  >
+                    {/* Icon */}
+                    <div
+                      className="
                                     flex
                                     h-9
                                     w-9
@@ -2977,18 +2751,17 @@ export default function Home() {
                                     sm:h-10
                                     sm:w-10
                                 "
-                                        >
-                                            <CheckCircle2
-                                                size={18}
-                                                strokeWidth={2}
-                                                className="transition-transform duration-300 group-hover:scale-110"
-                                            />
-                                        </div>
+                    >
+                      <CheckCircle2
+                        size={18}
+                        strokeWidth={2}
+                        className="transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
 
-
-                                        {/* Text */}
-                                        <span
-                                            className="
+                    {/* Text */}
+                    <span
+                      className="
                                     text-[11px]
                                     font-semibold
                                     leading-4
@@ -2999,16 +2772,14 @@ export default function Home() {
                                     sm:text-sm
                                     sm:leading-5
                                 "
-                                        >
-                                            {item}
-                                        </span>
+                    >
+                      {item}
+                    </span>
+                  </div>
 
-                                    </div>
-
-
-                                    {/* Bottom Accent */}
-                                    <div
-                                        className="
+                  {/* Bottom Accent */}
+                  <div
+                    className="
                                 absolute
                                 bottom-0
                                 left-0
@@ -3019,26 +2790,22 @@ export default function Home() {
                                 duration-500
                                 group-hover:w-full
                             "
-                                    />
+                  />
+                </div>
+              ))}
+            </div>
 
-                                </div>
-                            ))}
-
-                        </div>
-
-
-                        {/* =================================================
+            {/* =================================================
                 CTA
             ================================================= */}
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="800"
-                            className="mt-9 flex justify-center lg:justify-start"
-                        >
-
-                            <Link
-                                to="/contact-us"
-                                className="
+            <div
+              data-aos="fade-up"
+              data-aos-delay="800"
+              className="mt-9 flex justify-center lg:justify-start"
+            >
+              <Link
+                to="/contact-us"
+                className="
                         group
                         relative
                         inline-flex
@@ -3058,11 +2825,10 @@ export default function Home() {
                         hover:bg-[#c91f25]
                         hover:shadow-[0_20px_45px_rgba(227,41,47,0.30)]
                     "
-                            >
-
-                                {/* Button Shine */}
-                                <span
-                                    className="
+              >
+                {/* Button Shine */}
+                <span
+                  className="
                             pointer-events-none
                             absolute
                             -left-20
@@ -3075,45 +2841,39 @@ export default function Home() {
                             duration-700
                             group-hover:left-[120%]
                         "
-                                />
+                />
 
-                                <span className="relative">
-                                    Get Started Now
-                                </span>
+                <span className="relative">Get Started Now</span>
 
-                                <ArrowRight
-                                    size={17}
-                                    className="
+                <ArrowRight
+                  size={17}
+                  className="
                             relative
                             transition-transform
                             duration-300
                             group-hover:translate-x-1
                         "
-                                />
+                />
+              </Link>
+            </div>
+          </div>
 
-                            </Link>
-
-                        </div>
-
-                    </div>
-
-
-                    {/* =====================================================
+          {/* =====================================================
             RIGHT — NETWORK TECHNOLOGY VISUAL
         ====================================================== */}
 
-                    <div
-                        data-aos="fade-left"
-                        data-aos-duration="1200"
-                        data-aos-delay="150"
-                        className="mx-auto w-full max-w-[520px]"
-                    >
-                        {/* =================================================
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-delay="150"
+            className="mx-auto w-full max-w-[520px]"
+          >
+            {/* =================================================
         MAIN NETWORK CIRCLE
     ================================================= */}
 
-                        <div
-                            className="
+            <div
+              className="
             group
             relative
             mx-auto
@@ -3138,14 +2898,13 @@ export default function Home() {
             hover:border-red-50
             hover:shadow-[0_35px_100px_rgba(227,41,47,0.30)]
         "
-                        >
-
-                            {/* =================================================
+            >
+              {/* =================================================
             SOFT WHITE GLOW
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 pointer-events-none
                 absolute
                 -right-20
@@ -3166,14 +2925,14 @@ export default function Home() {
                 group-hover:scale-125
                 group-hover:bg-white/15
             "
-                            />
+              />
 
-                            {/* =================================================
+              {/* =================================================
             BOTTOM SOFT GLOW
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 pointer-events-none
                 absolute
                 -bottom-24
@@ -3188,39 +2947,37 @@ export default function Home() {
 
                 blur-3xl
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             SUBTLE GRID
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 pointer-events-none
                 absolute
                 inset-0
 
                 opacity-[0.08]
             "
-                            >
-                                <div
-                                    className="h-full w-full"
-                                    style={{
-                                        backgroundImage:
-                                            "linear-gradient(rgba(255,255,255,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.45) 1px, transparent 1px)",
-                                        backgroundSize: "32px 32px",
-                                    }}
-                                />
-                            </div>
+              >
+                <div
+                  className="h-full w-full"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(rgba(255,255,255,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.45) 1px, transparent 1px)",
+                    backgroundSize: "32px 32px",
+                  }}
+                />
+              </div>
 
-
-                            {/* =================================================
+              {/* =================================================
             OUTER RING
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 absolute
                 inset-[5%]
 
@@ -3235,15 +2992,14 @@ export default function Home() {
 
                 group-hover:rotate-180
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             SECOND RING
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 absolute
                 inset-[12%]
 
@@ -3258,15 +3014,14 @@ export default function Home() {
 
                 group-hover:-rotate-180
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             INNER RING
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 absolute
                 inset-[23%]
 
@@ -3281,15 +3036,14 @@ export default function Home() {
                 group-hover:scale-110
                 group-hover:border-white/50
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             CENTER GLOW
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 pointer-events-none
                 absolute
                 left-1/2
@@ -3313,15 +3067,14 @@ export default function Home() {
                 group-hover:scale-125
                 group-hover:bg-white/15
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             CENTER NETWORK ICON
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 absolute
                 inset-0
 
@@ -3329,10 +3082,9 @@ export default function Home() {
                 items-center
                 justify-center
             "
-                            >
-
-                                <div
-                                    className="
+              >
+                <div
+                  className="
                     relative
 
                     flex
@@ -3364,12 +3116,11 @@ export default function Home() {
                     sm:h-36
                     sm:w-36
                 "
-                                >
+                >
+                  {/* Center Inner Glow */}
 
-                                    {/* Center Inner Glow */}
-
-                                    <div
-                                        className="
+                  <div
+                    className="
                         pointer-events-none
                         absolute
                         inset-3
@@ -3380,12 +3131,12 @@ export default function Home() {
 
                         blur-xl
                     "
-                                    />
+                  />
 
-                                    <Network
-                                        size={55}
-                                        strokeWidth={1.3}
-                                        className="
+                  <Network
+                    size={55}
+                    strokeWidth={1.3}
+                    className="
                         relative
                         z-10
 
@@ -3400,19 +3151,16 @@ export default function Home() {
                         sm:h-[65px]
                         sm:w-[65px]
                     "
-                                    />
+                  />
+                </div>
+              </div>
 
-                                </div>
-
-                            </div>
-
-
-                            {/* =================================================
+              {/* =================================================
             ORBIT DOT 1
         ================================================= */}
 
-                            <span
-                                className="
+              <span
+                className="
                 absolute
 
                 left-[17%]
@@ -3432,15 +3180,14 @@ export default function Home() {
 
                 group-hover:scale-150
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             ORBIT DOT 2
         ================================================= */}
 
-                            <span
-                                className="
+              <span
+                className="
                 absolute
 
                 right-[20%]
@@ -3460,15 +3207,14 @@ export default function Home() {
 
                 group-hover:scale-150
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             ORBIT DOT 3
         ================================================= */}
 
-                            <span
-                                className="
+              <span
+                className="
                 absolute
 
                 bottom-[23%]
@@ -3488,15 +3234,14 @@ export default function Home() {
 
                 group-hover:scale-150
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             ORBIT DOT 4
         ================================================= */}
 
-                            <span
-                                className="
+              <span
+                className="
                 absolute
 
                 bottom-[27%]
@@ -3516,15 +3261,14 @@ export default function Home() {
 
                 group-hover:scale-150
             "
-                            />
+              />
 
-
-                            {/* =================================================
+              {/* =================================================
             NETWORK LABEL
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 absolute
 
                 bottom-8
@@ -3538,10 +3282,9 @@ export default function Home() {
 
                 group-hover:-translate-y-1
             "
-                            >
-
-                                <p
-                                    className="
+              >
+                <p
+                  className="
                     text-[10px]
                     font-semibold
                     uppercase
@@ -3551,12 +3294,12 @@ export default function Home() {
 
                     sm:text-xs
                 "
-                                >
-                                    Network Infrastructure
-                                </p>
+                >
+                  Network Infrastructure
+                </p>
 
-                                <p
-                                    className="
+                <p
+                  className="
                     mt-1
 
                     text-xs
@@ -3564,31 +3307,21 @@ export default function Home() {
 
                     text-white
                 "
-                                >
-                                    Reliable
+                >
+                  Reliable
+                  <span className="mx-1.5 text-white/70">•</span>
+                  Secure
+                  <span className="mx-1.5 text-white/70">•</span>
+                  Scalable
+                </p>
+              </div>
 
-                                    <span className="mx-1.5 text-white/70">
-                                        •
-                                    </span>
-
-                                    Secure
-
-                                    <span className="mx-1.5 text-white/70">
-                                        •
-                                    </span>
-
-                                    Scalable
-                                </p>
-
-                            </div>
-
-
-                            {/* =================================================
+              {/* =================================================
             OUTER HIGHLIGHT
         ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                 pointer-events-none
                 absolute
                 inset-0
@@ -3598,17 +3331,15 @@ export default function Home() {
                 border
                 border-white/20
             "
-                            />
+              />
+            </div>
 
-                        </div>
-
-
-                        {/* =================================================
+            {/* =================================================
         INFO CARDS
     ================================================= */}
 
-                        <div
-                            className="
+            <div
+              className="
             mt-6
 
             grid
@@ -3618,16 +3349,15 @@ export default function Home() {
 
             sm:gap-4
         "
-                        >
-
-                            {/* =================================================
+            >
+              {/* =================================================
             UPTIME CARD
         ================================================= */}
 
-                            <div
-                                data-aos="fade-up"
-                                data-aos-delay="700"
-                                className="
+              <div
+                data-aos="fade-up"
+                data-aos-delay="700"
+                className="
                 group
                 relative
                 overflow-hidden
@@ -3652,12 +3382,11 @@ export default function Home() {
 
                 hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]
             "
-                            >
+              >
+                {/* Top Accent */}
 
-                                {/* Top Accent */}
-
-                                <div
-                                    className="
+                <div
+                  className="
                     absolute
                     left-1/2
                     top-0
@@ -3674,10 +3403,10 @@ export default function Home() {
 
                     group-hover:w-16
                 "
-                                />
+                />
 
-                                <p
-                                    className="
+                <p
+                  className="
                     text-xl
                     font-bold
 
@@ -3688,12 +3417,12 @@ export default function Home() {
 
                     group-hover:scale-110
                 "
-                                >
-                                    99.5%
-                                </p>
+                >
+                  99.5%
+                </p>
 
-                                <p
-                                    className="
+                <p
+                  className="
                     mt-1
 
                     text-[10px]
@@ -3703,21 +3432,19 @@ export default function Home() {
 
                     text-slate-400
                 "
-                                >
-                                    Uptime SLA
-                                </p>
+                >
+                  Uptime SLA
+                </p>
+              </div>
 
-                            </div>
-
-
-                            {/* =================================================
+              {/* =================================================
             SUPPORT CARD
         ================================================= */}
 
-                            <div
-                                data-aos="fade-up"
-                                data-aos-delay="780"
-                                className="
+              <div
+                data-aos="fade-up"
+                data-aos-delay="780"
+                className="
                 group
                 relative
                 overflow-hidden
@@ -3742,12 +3469,11 @@ export default function Home() {
 
                 hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]
             "
-                            >
+              >
+                {/* Top Accent */}
 
-                                {/* Top Accent */}
-
-                                <div
-                                    className="
+                <div
+                  className="
                     absolute
                     left-1/2
                     top-0
@@ -3764,10 +3490,10 @@ export default function Home() {
 
                     group-hover:w-16
                 "
-                                />
+                />
 
-                                <p
-                                    className="
+                <p
+                  className="
                     text-xl
                     font-bold
 
@@ -3778,12 +3504,12 @@ export default function Home() {
 
                     group-hover:scale-110
                 "
-                                >
-                                    24/7
-                                </p>
+                >
+                  24/7
+                </p>
 
-                                <p
-                                    className="
+                <p
+                  className="
                     mt-1
 
                     text-[10px]
@@ -3793,68 +3519,63 @@ export default function Home() {
 
                     text-slate-400
                 "
-                                >
-                                    Support
-                                </p>
+                >
+                  Support
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            {/* =========================================================
+      {/* =========================================================
                 INDUSTRIES WE SERVE
             ========================================================= */}
-            <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
-                <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-50 blur-3xl" />
-                <div className="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-slate-100 blur-3xl" />
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+        <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-50 blur-3xl" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-slate-100 blur-3xl" />
 
-                <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        className="mx-auto max-w-3xl text-center"
-                    >
-                        <div className="flex items-center justify-center gap-3">
-                            <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
-                            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-xs">
-                                Industries We Serve
-                            </p>
-                            <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
-                        </div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            className="mx-auto max-w-3xl text-center"
+          >
+            <div className="flex items-center justify-center gap-3">
+              <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-xs">
+                Industries We Serve
+              </p>
+              <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
+            </div>
 
-                        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                            Trusted Across Every Sector
-                        </h2>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              Trusted Across Every Sector
+            </h2>
 
-                        <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-                            Purpose-built enterprise IT solutions tailored to the operational demands of every industry.
-                        </p>
-                    </div>
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+              Purpose-built enterprise IT solutions tailored to the operational
+              demands of every industry.
+            </p>
+          </div>
 
-                    <div
-                        className="mt-12 grid grid-cols-4 gap-2 sm:gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-5"
-                        data-aos="fade-up"
-                        data-aos-delay="150"
-                    >
-                        {industries.map((industry, index) => {
-                            const Icon = industry.icon;
+          <div
+            className="mt-12 grid grid-cols-4 gap-2 sm:gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-5"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            {industries.map((industry, index) => {
+              const Icon = industry.icon;
 
-                            return (
-                                <div
-                                    key={industry.name}
-                                    data-aos="fade-up"
-                                    data-aos-delay={index * 50}
-                                    className="group min-w-0"
-                                >
-                                    <div
-                                        className="
+              return (
+                <div
+                  key={industry.name}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 50}
+                  className="group min-w-0"
+                >
+                  <div
+                    className="
                                             flex min-h-[104px] flex-col items-center justify-center
                                             rounded-xl border border-slate-200 bg-white p-2 text-center
                                             shadow-[0_8px_24px_rgba(15,23,42,0.04)]
@@ -3864,105 +3585,90 @@ export default function Home() {
                                             md:min-h-[120px] md:p-3
                                             lg:min-h-[128px]
                                         "
-                                    >
-                                        <div
-                                            className="
+                  >
+                    <div
+                      className="
                                                 mb-2 flex h-8 w-8 items-center justify-center rounded-lg border border-red-100 bg-red-50 text-[#e3292f]
                                                 transition-all duration-300 group-hover:border-[#e3292f]/30 group-hover:bg-[#e3292f] group-hover:text-white
                                                 sm:h-9 sm:w-9
                                             "
-                                        >
-                                            <Icon size={15} strokeWidth={1.8} className="sm:h-[18px] sm:w-[18px]" />
-                                        </div>
-
-                                        <p className="min-w-0 text-[9px] font-semibold leading-4 text-slate-700 sm:text-[10px] md:text-[11px] lg:text-xs">
-                                            {industry.name}
-                                        </p>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                    >
+                      <Icon
+                        size={15}
+                        strokeWidth={1.8}
+                        className="sm:h-[18px] sm:w-[18px]"
+                      />
                     </div>
+
+                    <p className="min-w-0 text-[9px] font-semibold leading-4 text-slate-700 sm:text-[10px] md:text-[11px] lg:text-xs">
+                      {industry.name}
+                    </p>
+                  </div>
                 </div>
-            </section>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-
-            {/* =========================================================
+      {/* =========================================================
                 BRANDS SECTION
             ========================================================= */}
-            <section className="relative overflow-hidden bg-slate-100 py-20 sm:py-24 lg:py-28 ">
+      <section className="relative overflow-hidden bg-slate-100 py-20 sm:py-24 lg:py-28 ">
+        {/* Background Glow */}
 
-                {/* Background Glow */}
+        <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-50 blur-3xl" />
 
-                <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-50 blur-3xl" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-slate-200/60 blur-3xl" />
 
-                <div className="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-slate-200/60 blur-3xl" />
-
-
-                <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-
-
-                    {/* =================================================
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          {/* =================================================
                         HEADING
                     ================================================= */}
 
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        className="mx-auto max-w-3xl text-center"
-                    >
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            className="mx-auto max-w-3xl text-center"
+          >
+            <div className="flex items-center justify-center gap-3">
+              <span className="h-px w-10 bg-[#e3292f]" />
 
-                        <div className="flex items-center justify-center gap-3">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-sm">
+                Our Partners
+              </p>
 
-                            <span className="h-px w-10 bg-[#e3292f]" />
+              <span className="h-px w-10 bg-[#e3292f]" />
+            </div>
 
-                            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-sm">
-                                Our Partners
-                            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              Trusted by leading brands
+            </h2>
 
-                            <span className="h-px w-10 bg-[#e3292f]" />
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+              We work with trusted technology and network partners to deliver
+              reliable connectivity and high-performance infrastructure.
+            </p>
+          </div>
 
-                        </div>
-
-
-                        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-
-                            Trusted by leading brands
-
-                        </h2>
-
-
-                        <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-
-                            We work with trusted technology and network partners
-                            to deliver reliable connectivity and high-performance
-                            infrastructure.
-
-                        </p>
-
-                    </div>
-
-
-                    {/* =================================================
+          {/* =================================================
                         SLIDER
                     ================================================= */}
 
-                    <div
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                        className="relative mt-12"
-                    >
-
-
-                        {/* =================================================
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="relative mt-12"
+          >
+            {/* =================================================
                             LEFT BUTTON
                         ================================================= */}
 
-                        <button
-                            type="button"
-                            onClick={prevSlide}
-                            aria-label="Previous brands"
-                            className="
+            <button
+              type="button"
+              onClick={prevSlide}
+              aria-label="Previous brands"
+              className="
                                 absolute
                                 left-0
                                 top-1/2
@@ -3988,22 +3694,19 @@ export default function Home() {
                                 sm:h-11
                                 sm:w-11
                             "
-                        >
+            >
+              <ChevronLeft size={20} />
+            </button>
 
-                            <ChevronLeft size={20} />
-
-                        </button>
-
-
-                        {/* =================================================
+            {/* =================================================
                             RIGHT BUTTON
                         ================================================= */}
 
-                        <button
-                            type="button"
-                            onClick={nextSlide}
-                            aria-label="Next brands"
-                            className="
+            <button
+              type="button"
+              onClick={nextSlide}
+              aria-label="Next brands"
+              className="
                                 absolute
                                 right-0
                                 top-1/2
@@ -4029,52 +3732,44 @@ export default function Home() {
                                 sm:h-11
                                 sm:w-11
                             "
-                        >
+            >
+              <ChevronRight size={20} />
+            </button>
 
-                            <ChevronRight size={20} />
-
-                        </button>
-
-
-                        {/* =================================================
+            {/* =================================================
                             SLIDER VIEWPORT
                         ================================================= */}
 
-                        <div className="mx-12 overflow-hidden sm:mx-14">
-
-
-                            {/* =================================================
+            <div className="mx-12 overflow-hidden sm:mx-14">
+              {/* =================================================
                                 SLIDER TRACK
                             ================================================= */}
 
-                            <div
-                                className="
+              <div
+                className="
                                     flex
                                     transition-transform
                                     duration-700
                                     ease-[cubic-bezier(0.22,1,0.36,1)]
                                 "
-                                style={{
-                                    transform: `translateX(-${(currentIndex * 100) / visibleSlides}%)`,
-                                }}
-                            >
-
-                                {brands.map((brand) => (
-
-                                    <div
-                                        key={brand.id}
-                                        className="shrink-0 px-2 sm:px-3"
-                                        style={{
-                                            width: `${100 / visibleSlides}%`,
-                                        }}
-                                    >
-
-                                        {/* =================================================
+                style={{
+                  transform: `translateX(-${(currentIndex * 100) / visibleSlides}%)`,
+                }}
+              >
+                {brands.map((brand) => (
+                  <div
+                    key={brand.id}
+                    className="shrink-0 px-2 sm:px-3"
+                    style={{
+                      width: `${100 / visibleSlides}%`,
+                    }}
+                  >
+                    {/* =================================================
                                             BRAND CARD
                                         ================================================= */}
 
-                                        <div
-                                            className="
+                    <div
+                      className="
                                                 group
                                                 relative
                                                 flex
@@ -4096,12 +3791,11 @@ export default function Home() {
                                                 sm:h-32
                                                 lg:h-36
                                             "
-                                        >
+                    >
+                      {/* Hover Glow */}
 
-                                            {/* Hover Glow */}
-
-                                            <div
-                                                className="
+                      <div
+                        className="
                                                     pointer-events-none
                                                     absolute
                                                     -right-10
@@ -4116,15 +3810,14 @@ export default function Home() {
                                                     duration-500
                                                     group-hover:opacity-100
                                                 "
-                                            />
+                      />
 
+                      {/* Brand Image */}
 
-                                            {/* Brand Image */}
-
-                                            <img
-                                                src={brand.image}
-                                                alt={brand.name}
-                                                className="
+                      <img
+                        src={brand.image}
+                        alt={brand.name}
+                        className="
                                                     relative
                                                     z-10
                                                     max-h-16
@@ -4139,13 +3832,12 @@ export default function Home() {
                                                     group-hover:grayscale-0
                                                     sm:max-h-20
                                                 "
-                                            />
+                      />
 
+                      {/* Bottom Accent */}
 
-                                            {/* Bottom Accent */}
-
-                                            <span
-                                                className="
+                      <span
+                        className="
                                                     absolute
                                                     bottom-0
                                                     left-1/2
@@ -4157,62 +3849,45 @@ export default function Home() {
                                                     duration-500
                                                     group-hover:w-2/3
                                                 "
-                                            />
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-                                        </div>
-
-                                    </div>
-
-                                ))}
-
-                            </div>
-
-                        </div>
-
-
-                        {/* =================================================
+            {/* =================================================
                             SLIDER DOTS
                         ================================================= */}
 
-                        <div className="mt-7 flex justify-center gap-2">
-
-                            {Array.from({
-                                length: Math.max(
-                                    brands.length - visibleSlides + 1,
-                                    1
-                                ),
-                            }).map((_, index) => (
-
-                                <button
-                                    key={index}
-                                    type="button"
-                                    aria-label={`Go to slide ${index + 1}`}
-                                    onClick={() => setCurrentIndex(index)}
-                                    className={`
+            <div className="mt-7 flex justify-center gap-2">
+              {Array.from({
+                length: Math.max(brands.length - visibleSlides + 1, 1),
+              }).map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  aria-label={`Go to slide ${index + 1}`}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`
                                         h-1.5
                                         rounded-full
                                         transition-all
                                         duration-300
-                                        ${currentIndex === index
+                                        ${
+                                          currentIndex === index
                                             ? "w-7 bg-[#e3292f]"
                                             : "w-1.5 bg-slate-300 hover:bg-slate-400"
                                         }
                                     `}
-                                />
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-                            ))}
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <Footer />
-
-        </div >
-    );
+      <Footer />
+    </div>
+  );
 }

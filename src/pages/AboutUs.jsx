@@ -84,12 +84,12 @@ export default function AboutUs() {
             ====================================================== */}
             <section className="relative overflow-hidden bg-[#07111f] bg-cover bg-no-repeat bg-center py-24 sm:py-28 lg:py-24"
                 style={{
-                    // backgroundImage: "url('/Tejays/assets/about-tejays1-min.png')",
-                    // backgroundImage: "url('/Tejays/assets/about-tejays2-min.png')",
-                    // backgroundImage: "url('/Tejays/assets/ind.jpg')",
-                    backgroundImage: "url('/Tejays/assets/fiber-network1.jpg')",
-                    // backgroundImage: "url('/Tejays/assets/fiber-network.jpg')",
-                    // backgroundImage: "url('/Tejays/assets/inff.jpg')",
+                    // backgroundImage: `url('${import.meta.env.BASE_URL}assets/about-tejays1-min.png')`,
+                    // backgroundImage: `url('${import.meta.env.BASE_URL}assets/about-tejays2-min.png')`,
+                    // backgroundImage: `url('${import.meta.env.BASE_URL}assets/ind.jpg')`,
+                    backgroundImage: `url('${import.meta.env.BASE_URL}assets/fiber-network1.jpg')`,
+                    // backgroundImage: `url('${import.meta.env.BASE_URL}assets/fiber-network.jpg')`,
+                    // backgroundImage: `url('${import.meta.env.BASE_URL}assets/inff.jpg')`,
                 }}>
 
                 <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#e3292f]/10 blur-3xl" />
@@ -259,7 +259,7 @@ export default function AboutUs() {
                                 <div className="relative overflow-hidden">
 
                                     <img
-                                        src="/Tejays/assets/about-tejays3-min.png"
+                                        src={`${import.meta.env.BASE_URL}assets/about-tejays3-min.png`}
                                         alt="About TEJAYS"
                                         className="
                                             h-[320px]
@@ -449,7 +449,7 @@ export default function AboutUs() {
                 <div className="absolute inset-0">
 
                     <img
-                        src="/Tejays/assets/india-network-bg.jpg"
+                                src={`${import.meta.env.BASE_URL}assets/india-network-bg.jpg`}
                         alt=""
                         aria-hidden="true"
                         className="

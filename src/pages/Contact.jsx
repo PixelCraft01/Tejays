@@ -100,7 +100,7 @@ const Contact = () => {
                 <section
                     className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-5 py-28 sm:px-6 lg:px-8"
                     style={{
-                        backgroundImage: "url('/Tejays/assets/contact-hero1.jpg')",
+                        backgroundImage: `url('${import.meta.env.BASE_URL}assets/contact-hero1.jpg')`,
                     }}
                 >
 
