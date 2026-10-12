@@ -1,9 +1,18 @@
 ﻿import React, { useState } from "react";
 import Footer from "../components/Footer";
+import {
+  Phone,
+  Mail,
+  CalendarDays,
+  ChevronRight,
+  MessageCircle,
+} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
 
 const Contact = () => {
+  const [contactWidgetOpen, setContactWidgetOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -492,6 +501,140 @@ const Contact = () => {
           </div>
         </section>
       </main>
+
+      {/* FLOATING CONTACT WIDGET — DESKTOP / TABLET */}
+      <div className="fixed right-0 top-1/2 z-[999] hidden -translate-y-1/2 items-center md:flex">
+        {/* CONTACT ICONS PANEL */}
+        <div
+          className={`absolute right-full mr-3 flex flex-col items-center gap-3 rounded-[26px] border border-slate-200/80 bg-white/95 p-3 shadow-[-12px_8px_35px_rgba(15,23,42,0.12)] backdrop-blur-xl transition-all duration-500 ease-in-out ${
+            contactWidgetOpen
+              ? "visible translate-x-0 opacity-100"
+              : "invisible translate-x-4 opacity-0 pointer-events-none"
+          }`}
+        >
+          {/* PHONE */}
+          <a
+            href="tel:01414556633"
+            aria-label="Call TEJAYS"
+            title="Call Us"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-red-100 bg-red-50 text-[#e3292f] transition-all duration-300 hover:scale-110 hover:bg-[#e3292f] hover:text-white hover:shadow-md hover:shadow-red-200"
+          >
+            <Phone size={18} strokeWidth={1.8} />
+          </a>
+
+          {/* WHATSAPP */}
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            title="WhatsApp"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-emerald-100 bg-emerald-50 text-[#16a34a] transition-all duration-300 hover:scale-110 hover:bg-[#16a34a] hover:text-white hover:shadow-md hover:shadow-green-200"
+          >
+            <FaWhatsapp size={20} />
+          </a>
+
+          {/* EMAIL */}
+          <a
+            href="mailto:sales@tejays.in"
+            aria-label="Email TEJAYS"
+            title="Email Us"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-red-100 bg-red-50 text-[#e3292f] transition-all duration-300 hover:scale-110 hover:bg-[#e3292f] hover:text-white hover:shadow-md hover:shadow-red-200"
+          >
+            <Mail size={18} strokeWidth={1.8} />
+          </a>
+
+          {/* BOOK A MEETING */}
+          <a
+            href="mailto:sales@tejays.in?subject=Meeting%20Request"
+            aria-label="Request a meeting"
+            title="Book a Meeting"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-amber-200 bg-[#e3bd46] text-[#151515] transition-all duration-300 hover:scale-110 hover:border-[#e3292f] hover:bg-[#e3292f] hover:text-white hover:shadow-md hover:shadow-red-200"
+          >
+            <CalendarDays size={18} strokeWidth={1.8} />
+          </a>
+        </div>
+
+        {/* VERTICAL CONTACT TAB */}
+        <button
+          type="button"
+          onClick={() => setContactWidgetOpen((prev) => !prev)}
+          aria-label={
+            contactWidgetOpen ? "Close contact widget" : "Open contact widget"
+          }
+          aria-expanded={contactWidgetOpen}
+          className="group relative flex min-h-[176px] w-[54px] shrink-0 flex-col items-center justify-center gap-3 rounded-l-[26px] border border-r-0 border-red-700/20 bg-[#e3292f] px-2 py-4 text-white shadow-[-8px_8px_28px_rgba(227,41,47,0.20)] transition-colors duration-300 hover:bg-[#c91f25]"
+        >
+          {/* PHONE ICON */}
+          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition-all duration-300 group-hover:rotate-[-12deg] group-hover:bg-white/20">
+            <Phone size={17} strokeWidth={1.8} />
+          </span>
+
+          {/* VERTICAL CONTACT TEXT */}
+          <span className="flex flex-col items-center text-[11px] font-extrabold uppercase leading-[14px] tracking-[2.5px]">
+            {"CONTACT".split("").map((letter, index) => (
+              <span key={`${letter}-${index}`}>{letter}</span>
+            ))}
+          </span>
+
+          {/* TOGGLE ARROW */}
+          <span className="absolute -left-[17px] top-1/2 flex h-[34px] w-[34px] -translate-y-1/2 items-center justify-center rounded-full border border-red-100 bg-white text-[#e3292f] shadow-md transition-all duration-300 group-hover:scale-110">
+            <ChevronRight
+              size={19}
+              strokeWidth={2}
+              className={`transition-transform duration-500 ${
+                contactWidgetOpen ? "rotate-0" : "rotate-180"
+              }`}
+            />
+          </span>
+        </button>
+      </div>
+      {/* MOBILE FIXED CONTACT BAR */}
+      <div className="fixed inset-x-0 bottom-0 z-[9999] border-t border-white/20 bg-[#e3292f] px-2 pt-2 pb-[calc(8px+env(safe-area-inset-bottom))] shadow-[0_-8px_25px_rgba(227,41,47,0.20)] md:hidden">
+        <div className="flex h-[52px] items-center justify-around gap-1">
+          {/* CALL */}
+          <a
+            href="tel:01414556633"
+            aria-label="Call TEJAYS"
+            className="flex flex-1 flex-col items-center justify-center gap-1 text-white transition-opacity hover:opacity-80"
+          >
+            <Phone size={19} strokeWidth={1.8} />
+            <span className="text-[10px] font-semibold">Call</span>
+          </a>
+
+          {/* WHATSAPP */}
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="flex flex-1 flex-col items-center justify-center gap-1 text-white transition-opacity hover:opacity-80"
+          >
+           <FaWhatsapp size={21} />
+            <span className="text-[10px] font-semibold">WhatsApp</span>
+          </a>
+
+          {/* EMAIL */}
+          <a
+            href="mailto:sales@tejays.in"
+            aria-label="Email TEJAYS"
+            className="flex flex-1 flex-col items-center justify-center gap-1 text-white transition-opacity hover:opacity-80"
+          >
+            <Mail size={19} strokeWidth={1.8} />
+            <span className="text-[10px]  font-semibold">Email</span>
+          </a>
+
+          {/* CONSULT */}
+          <a
+            href="mailto:sales@tejays.in?subject=Consultation%20Request"
+            aria-label="Request a consultation"
+            className="flex h-[44px] flex-1 items-center justify-center gap-2 rounded-full bg-[#e3bd46] text-[#151515] shadow-md transition-all duration-300 hover:bg-[#f0cf62]"
+          >
+            <CalendarDays size={17} strokeWidth={1.8} />
+            <span className="text-[11px] font-bold">Consult</span>
+          </a>
+        </div>
+      </div>
 
       {/* ================= FOOTER ================= */}
       <Footer />
