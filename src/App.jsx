@@ -36,9 +36,7 @@ import { FaWhatsapp } from "react-icons/fa";
 function PageLayout({ children }) {
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
@@ -51,9 +49,7 @@ function PageLayout({ children }) {
 function ServicePage({ title }) {
   return (
     <PageLayout>
-
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-white px-5 py-20 text-center sm:px-6">
-
         {/* Background Glow */}
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-50 blur-3xl sm:h-96 sm:w-96" />
 
@@ -62,7 +58,6 @@ function ServicePage({ title }) {
           data-aos-duration="900"
           className="relative mx-auto max-w-4xl"
         >
-
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f] sm:text-sm">
             TEJAYS SERVICES
           </p>
@@ -74,133 +69,74 @@ function ServicePage({ title }) {
           <div className="mx-auto mt-6 h-1 w-16 bg-[#e3292f] transition-all duration-500 hover:w-28" />
 
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-            Professional connectivity and network solutions
-            designed for reliable, secure and high-performance
-            business communication.
+            Professional connectivity and network solutions designed for
+            reliable, secure and high-performance business communication.
           </p>
-
         </div>
-
       </section>
-
     </PageLayout>
   );
 }
-
 
 /* =========================================================
    APP ROUTER
 ========================================================= */
 
 function App() {
-
   return (
     <div className="site-shell relative min-h-screen bg-white text-slate-900">
       <Header />
 
       <Routes>
-
         {/* ================= HOME ================= */}
 
-        <Route
-          path="/"
-          element={<Home />}
-        />
-
+        <Route path="/" element={<Home />} />
 
         {/* ================= MAIN PAGES ================= */}
 
-        <Route
-          path="/about-us"
-          element={<AboutUs />}
-        />
+        <Route path="/about-us" element={<AboutUs />} />
 
-        <Route
-          path="/contact-us"
-          element={<Contact />}
-        />
+        <Route path="/contact-us" element={<Contact />} />
 
-        <Route
-          path="/quick-pay"
-          element={<QuickPay />}
-        />
+        <Route path="/quick-pay" element={<QuickPay />} />
 
-        <Route
-          path="/terms-conditions-tc/"
-          element={<TermsConditions />}
-        />
+        <Route path="/terms-conditions-tc/" element={<TermsConditions />} />
 
-        <Route
-          path="/privacy-policy-2/"
-          element={<PrivacyPolicy />}
-        />
+        <Route path="/privacy-policy-2/" element={<PrivacyPolicy />} />
 
         <Route
           path="/refund-return-cancellation-policy/"
           element={<RefundCancellationPolicy />}
         />
 
-        <Route
-          path="/iso-certification/"
-          element={<ISOCertification />}
-        />
-
+        <Route path="/iso-certification/" element={<ISOCertification />} />
 
         {/* ================= ISP SERVICES ================= */}
 
-        <Route
-          path="/broadband"
-          element={<Broadband />}
-        />
+        <Route path="/broadband" element={<Broadband />} />
 
-        <Route
-          path="/bulk-bandwidth"
-          element={<BulkBandwidth />
-          }
-        />
+        <Route path="/bulk-bandwidth" element={<BulkBandwidth />} />
 
         <Route
           path="/point-to-point-lease-line"
           element={<ISPPointToPointLeaseLine />}
         />
 
-        <Route
-          path="/managed-services"
-          element={<ISPManagedServices />}
-        />
+        <Route path="/managed-services" element={<ISPManagedServices />} />
 
-        <Route
-          path="/peering"
-          element={<Peering />}
-        />
+        <Route path="/peering" element={<Peering />} />
 
-        <Route
-          path="/iptv"
-          element={<IPTV />}
-        />
+        <Route path="/iptv" element={<IPTV />} />
 
-        <Route
-          path="/ott"
-          element={<OTT />}
-        />
-
+        <Route path="/ott" element={<OTT />} />
 
         {/* ================= CORPORATE SERVICES ================= */}
 
-        <Route
-          path="/internet-lease-line"
-          element={<InternetLeaseLine />}
-        />
+        <Route path="/internet-lease-line" element={<InternetLeaseLine />} />
 
-        <Route
-          path="/corporate-broadband"
-          element={<CorporateBroadband />}
-        />
+        <Route path="/corporate-broadband" element={<CorporateBroadband />} />
 
-        <Route
-          path="/mpls-vpn"
-          element={<MPLSVPN />}
-        />
+        <Route path="/mpls-vpn" element={<MPLSVPN />} />
 
         <Route
           path="/point-to-point-lease-line-for-corporate"
@@ -212,32 +148,19 @@ function App() {
           element={<CorporateManagedServices />}
         />
 
-        <Route
-          path="/fiber-on-lease"
-          element={<FiberOnLease />}
-        />
+        <Route path="/fiber-on-lease" element={<FiberOnLease />} />
 
         <Route
           path="/security-and-surveillance"
           element={<SecurityAndSurveillance />}
         />
 
-        <Route
-          path="/wifi-solutions"
-          element={<WifiSolutions />}
-        />
+        <Route path="/wifi-solutions" element={<WifiSolutions />} />
 
-        <Route
-          path="/networking-solutions"
-          element={<NetworkingSolutions />}
-        />
+        <Route path="/networking-solutions" element={<NetworkingSolutions />} />
 
-        <Route
-          path="*"
-          element={<Navigate to="/" replace />}
-        />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-
 
       <AutoScroll />
 
@@ -250,7 +173,6 @@ function App() {
       >
         <FaWhatsapp className="h-6 w-6" />
       </a>
-
     </div>
   );
 }

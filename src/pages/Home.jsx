@@ -295,17 +295,7 @@ export default function Home() {
       <section className="relative isolate min-h-[650px] overflow-hidden bg-[#07111f]">
         {/* Background Image */}
         <div
-          className="
-            absolute
-            inset-0
-            bg-cover
-            bg-center
-            scale-105
-            transition-transform
-            duration-[8000ms]
-            ease-out
-            hover:scale-110
-        "
+          className="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-[8000ms] ease-out hover:scale-110"
           style={{
             // backgroundImage: `url('${import.meta.env.BASE_URL}assets/bulk-bandwidth.jpg')`,
             backgroundImage: `url('${import.meta.env.BASE_URL}assets/broadband-hero.jpg')`,
@@ -339,63 +329,17 @@ export default function Home() {
         <div className="absolute -right-32 top-20 h-80 w-80 rounded-full bg-[#e3292f]/10 blur-3xl" />
 
         {/* Content */}
-        <div
-          className="
-            relative
-            mx-auto
-            flex
-            min-h-[650px]
-            max-w-7xl
-            items-center
-            justify-center
-            px-5
-            py-20
-            text-center
-            sm:px-6
-            lg:justify-start
-            lg:px-8
-            lg:text-left
-        "
-        >
+        <div className="relative mx-auto flex min-h-[650px] max-w-7xl items-center justify-center px-5 py-20 text-center sm:px-6 lg:justify-start lg:px-8 lg:text-left">
           <div className="w-full max-w-3xl">
             {/* Small Brand Label */}
             <div
               data-aos="fade-down"
               data-aos-duration="800"
-              className="
-                    mx-auto
-                    inline-flex
-                    items-center
-                    gap-3
-                    border
-                    border-white/15
-                    bg-white/[0.06]
-                    px-5
-                    py-2.5
-                    backdrop-blur-md
-                    lg:mx-0
-                "
+              className="mx-auto inline-flex items-center gap-3 border border-white/15 bg-white/[0.06] px-5 py-2.5 backdrop-blur-md lg:mx-0"
             >
-              <span
-                className="
-                        h-2
-                        w-2
-                        rounded-full
-                        bg-[#e3292f]
-                        shadow-[0_0_18px_rgba(227,41,47,0.9)]
-                    "
-              />
+              <span className="h-2 w-2 rounded-full bg-[#e3292f] shadow-[0_0_18px_rgba(227,41,47,0.9)]" />
 
-              <span
-                className="
-                        text-[10px]
-                        font-semibold
-                        uppercase
-                        tracking-[0.28em]
-                        text-white/80
-                        sm:text-xs
-                    "
-              >
+              <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/80 sm:text-xs">
                 TEJAYS Dynamic Ltd.
               </span>
             </div>
@@ -405,27 +349,10 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="100"
               data-aos-duration="900"
-              className="
-                    mt-7
-                    text-4xl
-                    font-bold
-                    leading-[1.08]
-                    tracking-tight
-                    text-white
-                    sm:text-5xl
-                    md:text-6xl
-                    lg:text-7xl
-                "
+              className="mt-7 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
             >
               We Enable
-              <span
-                className="
-                        block
-                        text-[#e3292f]
-                    "
-              >
-                Network Anywhere...
-              </span>
+              <span className="block text-[#e3292f]">Network Anywhere...</span>
             </h1>
 
             {/* Description */}
@@ -433,18 +360,7 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="200"
               data-aos-duration="900"
-              className="
-                    mx-auto
-                    mt-7
-                    max-w-2xl
-                    text-sm
-                    leading-7
-                    text-slate-300
-                    sm:text-base
-                    sm:leading-8
-                    lg:mx-0
-                    lg:text-lg
-                "
+              className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base sm:leading-8 lg:mx-0 lg:text-lg"
             >
               Enterprise-grade connectivity and network infrastructure solutions
               designed for reliable, secure and high-performance communication.
@@ -455,16 +371,7 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-duration="900"
-              className="
-                    mt-9
-                    flex
-                    flex-col
-                    items-center
-                    justify-center
-                    gap-4
-                    sm:flex-row
-                    lg:justify-start
-                "
+              className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
             >
               {/* Quick Pay */}
               <Link
@@ -495,11 +402,7 @@ export default function Home() {
                 Quick Pay
                 <ArrowRight
                   size={17}
-                  className="
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                        "
+                  className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
 
@@ -535,11 +438,7 @@ export default function Home() {
                 Contact Us
                 <ArrowRight
                   size={17}
-                  className="
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                        "
+                  className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
             </div>
@@ -548,20 +447,7 @@ export default function Home() {
             <div
               data-aos="fade-up"
               data-aos-delay="450"
-              className="
-                    mx-auto
-                    mt-10
-                    flex
-                    flex-wrap
-                    items-center
-                    justify-center
-                    gap-x-6
-                    gap-y-3
-                    text-xs
-                    text-white/50
-                    lg:mx-0
-                    lg:justify-start
-                "
+              className="mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-white/50 lg:mx-0 lg:justify-start"
             >
               <span>Enterprise Connectivity</span>
 
@@ -577,18 +463,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Fade */}
-        <div
-          className="
-            absolute
-            bottom-0
-            left-0
-            h-28
-            w-full
-            bg-gradient-to-t
-            from-[#07111f]
-            to-transparent
-        "
-        />
+        <div className="absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-[#07111f] to-transparent" />
       </section>
 
       {/* ================================================================
@@ -601,46 +476,16 @@ export default function Home() {
                                ============================================================ */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           {/* Red glow */}
-          <div
-            className="
-                absolute -right-40 -top-40
-                h-[520px] w-[520px]
-                rounded-full
-                bg-red-100/70
-                blur-[110px]
-            "
-          />
+          <div className="absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-red-100/70 blur-[110px]" />
 
           {/* Blue/Navy glow */}
-          <div
-            className="
-                absolute -bottom-48 -left-40
-                h-[500px] w-[500px]
-                rounded-full
-                bg-slate-200/70
-                blur-[120px]
-            "
-          />
+          <div className="absolute -bottom-48 -left-40 h-[500px] w-[500px] rounded-full bg-slate-200/70 blur-[120px]" />
         </div>
 
         {/* ============================================================
         MAIN CONTAINER
     ============================================================ */}
-        <div
-          className="
-            relative z-10
-            mx-auto
-            grid
-            max-w-7xl
-            items-center
-            gap-14
-            px-5
-            sm:px-6
-            lg:grid-cols-[0.95fr_1.05fr]
-            lg:gap-20
-            lg:px-8
-        "
-        >
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-8">
           {/* ========================================================
             LEFT — IMAGE / NETWORK VISUAL
         ======================================================== */}
@@ -650,35 +495,10 @@ export default function Home() {
             className="group relative mx-auto w-full max-w-xl lg:mx-0"
           >
             {/* Decorative red line */}
-            <div
-              className="
-                    absolute
-                    -left-4
-                    top-10
-                    hidden
-                    h-32
-                    w-[3px]
-                    bg-[#e3292f]
-                    sm:block
-                "
-            />
+            <div className="absolute -left-4 top-10 hidden h-32 w-[3px] bg-[#e3292f] sm:block" />
 
             {/* Decorative square */}
-            <div
-              className="
-                    absolute
-                    -right-4
-                    -top-4
-                    h-24
-                    w-24
-                    border
-                    border-[#e3292f]/20
-                    transition-all
-                    duration-700
-                    group-hover:-right-6
-                    group-hover:-top-6
-                "
-            />
+            <div className="absolute -right-4 -top-4 h-24 w-24 border border-[#e3292f]/20 transition-all duration-700 group-hover:-right-6 group-hover:-top-6" />
 
             {/* Main image frame */}
             <div
@@ -699,163 +519,42 @@ export default function Home() {
                 "
             >
               {/* Image */}
-              <div
-                className="
-                        relative
-                        aspect-[4/4.6]
-                        overflow-hidden
-                        rounded-xl
-                        bg-slate-100
-                    "
-              >
+              <div className="relative aspect-[4/4.6] overflow-hidden rounded-xl bg-slate-100">
                 <img
                   src={`${import.meta.env.BASE_URL}assets/network.jpg`}
                   alt="TEJAYS Network Infrastructure"
-                  className="
-                            h-full
-                            w-full
-                            object-cover
-                            transition-transform
-                            duration-[1400ms]
-                            ease-out
-                            group-hover:scale-[1.07]
-                        "
+                  className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.07]"
                 />
 
                 {/* Image gradient */}
-                <div
-                  className="
-                            pointer-events-none
-                            absolute
-                            inset-0
-                            bg-gradient-to-t
-                            from-[#020617]/70
-                            via-transparent
-                            to-transparent
-                        "
-                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#020617]/70 via-transparent to-transparent" />
 
                 {/* Top status */}
-                <div
-                  className="
-                            absolute
-                            left-5
-                            top-5
-                            flex
-                            items-center
-                            gap-2
-                            rounded-full
-                            border
-                            border-white/20
-                            bg-black/30
-                            px-3.5
-                            py-2
-                            backdrop-blur-md
-                        "
-                >
+                <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3.5 py-2 backdrop-blur-md">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span
-                      className="
-                                    absolute
-                                    inline-flex
-                                    h-full
-                                    w-full
-                                    animate-ping
-                                    rounded-full
-                                    bg-green-400
-                                    opacity-75
-                                "
-                    />
-                    <span
-                      className="
-                                    relative
-                                    inline-flex
-                                    h-2.5
-                                    w-2.5
-                                    rounded-full
-                                    bg-green-400
-                                "
-                    />
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400" />
                   </span>
 
-                  <span
-                    className="
-                                text-[10px]
-                                font-bold
-                                uppercase
-                                tracking-[0.18em]
-                                text-white
-                            "
-                  >
+                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white">
                     Network Active
                   </span>
                 </div>
 
                 {/* Bottom information */}
-                <div
-                  className="
-                            absolute
-                            bottom-5
-                            left-5
-                            right-5
-                            rounded-xl
-                            border
-                            border-white/15
-                            bg-black/30
-                            p-4
-                            backdrop-blur-lg
-                            transition-all
-                            duration-500
-                            group-hover:translate-y-[-4px]
-                            sm:p-5
-                        "
-                >
+                <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/15 bg-black/30 p-4 backdrop-blur-lg transition-all duration-500 group-hover:translate-y-[-4px] sm:p-5">
                   <div className="flex items-end justify-between gap-4">
                     <div>
-                      <p
-                        className="
-                                        text-[10px]
-                                        font-bold
-                                        uppercase
-                                        tracking-[0.22em]
-                                        text-white/60
-                                    "
-                      >
+                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/60">
                         TEJAYS NETWORK
                       </p>
 
-                      <h3
-                        className="
-                                        mt-1
-                                        text-lg
-                                        font-bold
-                                        tracking-tight
-                                        text-white
-                                        sm:text-xl
-                                    "
-                      >
+                      <h3 className="mt-1 text-lg font-bold tracking-tight text-white sm:text-xl">
                         Reliable Connectivity
                       </h3>
                     </div>
 
-                    <div
-                      className="
-                                    flex
-                                    h-11
-                                    w-11
-                                    shrink-0
-                                    items-center
-                                    justify-center
-                                    rounded-xl
-                                    bg-[#e3292f]
-                                    text-white
-                                    shadow-lg
-                                    transition-all
-                                    duration-500
-                                    group-hover:rotate-6
-                                    group-hover:scale-110
-                                "
-                    >
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e3292f] text-white shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
                       <Network size={20} strokeWidth={1.8} />
                     </div>
                   </div>
@@ -886,17 +585,7 @@ export default function Home() {
                 "
             >
               <div className="flex items-center gap-4">
-                <div
-                  className="
-                            flex
-                            h-11
-                            w-11
-                            items-center
-                            justify-center
-                            rounded-xl
-                            bg-red-50
-                        "
-                >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-red-50">
                   <ShieldCheck
                     size={22}
                     strokeWidth={1.8}
@@ -905,26 +594,11 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <p
-                    className="
-                                text-[10px]
-                                font-bold
-                                uppercase
-                                tracking-[0.16em]
-                                text-slate-400
-                            "
-                  >
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">
                     Connectivity
                   </p>
 
-                  <p
-                    className="
-                                mt-0.5
-                                text-sm
-                                font-bold
-                                text-slate-900
-                            "
-                  >
+                  <p className="mt-0.5 text-sm font-bold text-slate-900">
                     Built for Business
                   </p>
                 </div>
@@ -943,26 +617,11 @@ export default function Home() {
             {/* Eyebrow */}
             <div
               data-aos="fade-up"
-              className="
-                    flex
-                    items-center
-                    justify-center
-                    gap-3
-                    lg:justify-start
-                "
+              className="flex items-center justify-center gap-3 lg:justify-start"
             >
               <span className="h-[2px] w-9 bg-[#e3292f]" />
 
-              <span
-                className="
-                        text-[11px]
-                        font-extrabold
-                        uppercase
-                        tracking-[0.28em]
-                        text-[#e3292f]
-                        sm:text-xs
-                    "
-              >
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#e3292f] sm:text-xs">
                 Our Network
               </span>
 
@@ -973,29 +632,10 @@ export default function Home() {
             <h2
               data-aos="fade-up"
               data-aos-delay="100"
-              className="
-                    mx-auto
-                    mt-5
-                    max-w-2xl
-                    text-4xl
-                    font-black
-                    leading-[1.08]
-                    tracking-[-0.04em]
-                    text-slate-950
-                    sm:text-5xl
-                    lg:mx-0
-                    lg:text-[52px]
-                    xl:text-[58px]
-                "
+              className="mx-auto mt-5 max-w-2xl text-4xl font-black leading-[1.08] tracking-[-0.04em] text-slate-950 sm:text-5xl lg:mx-0 lg:text-[52px] xl:text-[58px]"
             >
               Connectivity that keeps your
-              <span
-                className="
-                        mt-1
-                        block
-                        text-[#e3292f]
-                    "
-              >
+              <span className="mt-1 block text-[#e3292f]">
                 business moving.
               </span>
             </h2>
@@ -1004,17 +644,7 @@ export default function Home() {
             <p
               data-aos="fade-up"
               data-aos-delay="180"
-              className="
-                    mx-auto
-                    mt-6
-                    max-w-xl
-                    text-[15px]
-                    leading-7
-                    text-slate-600
-                    sm:text-base
-                    sm:leading-8
-                    lg:mx-0
-                "
+              className="mx-auto mt-6 max-w-xl text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8 lg:mx-0"
             >
               TEJAYS delivers professional connectivity and network
               infrastructure solutions engineered for performance, reliability
@@ -1027,100 +657,34 @@ export default function Home() {
             <div
               data-aos="fade-up"
               data-aos-delay="250"
-              className="
-                    mx-auto
-                    mt-8
-                    grid
-                    max-w-xl
-                    grid-cols-3
-                    divide-x
-                    divide-slate-200
-                    border-y
-                    border-slate-200
-                    py-5
-                    lg:mx-0
-                "
+              className="mx-auto mt-8 grid max-w-xl grid-cols-3 divide-x divide-slate-200 border-y border-slate-200 py-5 lg:mx-0"
             >
               <div className="px-3 text-center lg:text-left">
-                <p
-                  className="
-                            text-xl
-                            font-black
-                            tracking-tight
-                            text-slate-950
-                            sm:text-2xl
-                        "
-                >
+                <p className="text-xl font-black tracking-tight text-slate-950 sm:text-2xl">
                   99.9%
                 </p>
 
-                <p
-                  className="
-                            mt-1
-                            text-[9px]
-                            font-bold
-                            uppercase
-                            tracking-[0.15em]
-                            text-slate-400
-                            sm:text-[10px]
-                        "
-                >
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400 sm:text-[10px]">
                   Reliability
                 </p>
               </div>
 
               <div className="px-3 text-center lg:text-left">
-                <p
-                  className="
-                            text-xl
-                            font-black
-                            tracking-tight
-                            text-slate-950
-                            sm:text-2xl
-                        "
-                >
+                <p className="text-xl font-black tracking-tight text-slate-950 sm:text-2xl">
                   24×7
                 </p>
 
-                <p
-                  className="
-                            mt-1
-                            text-[9px]
-                            font-bold
-                            uppercase
-                            tracking-[0.15em]
-                            text-slate-400
-                            sm:text-[10px]
-                        "
-                >
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400 sm:text-[10px]">
                   Support
                 </p>
               </div>
 
               <div className="px-3 text-center lg:text-left">
-                <p
-                  className="
-                            text-xl
-                            font-black
-                            tracking-tight
-                            text-slate-950
-                            sm:text-2xl
-                        "
-                >
+                <p className="text-xl font-black tracking-tight text-slate-950 sm:text-2xl">
                   B2B
                 </p>
 
-                <p
-                  className="
-                            mt-1
-                            text-[9px]
-                            font-bold
-                            uppercase
-                            tracking-[0.15em]
-                            text-slate-400
-                            sm:text-[10px]
-                        "
-                >
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400 sm:text-[10px]">
                   Solutions
                 </p>
               </div>
@@ -1129,17 +693,7 @@ export default function Home() {
             {/* ====================================================
     BENEFITS
 ==================================================== */}
-            <div
-              className="
-        mx-auto
-        mt-7
-        grid
-        max-w-xl
-        grid-cols-2
-        gap-3
-        lg:mx-0
-    "
-            >
+            <div className="mx-auto mt-7 grid max-w-xl grid-cols-2 gap-3 lg:mx-0">
               {benefits.map((benefit, index) => (
                 <div
                   key={benefit}
@@ -1169,51 +723,16 @@ export default function Home() {
             "
                 >
                   {/* Icon */}
-                  <div
-                    className="
-                    flex
-                    h-8
-                    w-8
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-lg
-                    bg-red-50
-                    transition-all
-                    duration-300
-                    group-hover:bg-[#e3292f]
-                    sm:h-9
-                    sm:w-9
-                "
-                  >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-red-50 transition-all duration-300 group-hover:bg-[#e3292f] sm:h-9 sm:w-9">
                     <CheckCircle2
                       size={16}
                       strokeWidth={2}
-                      className="
-                        text-[#e3292f]
-                        transition-colors
-                        duration-300
-                        group-hover:text-white
-                        sm:h-[18px]
-                        sm:w-[18px]
-                    "
+                      className="text-[#e3292f] transition-colors duration-300 group-hover:text-white sm:h-[18px] sm:w-[18px]"
                     />
                   </div>
 
                   {/* Text */}
-                  <span
-                    className="
-                    min-w-0
-                    text-xs
-                    font-semibold
-                    leading-5
-                    text-slate-700
-                    transition-colors
-                    duration-300
-                    group-hover:text-slate-950
-                    sm:text-sm
-                "
-                  >
+                  <span className="min-w-0 text-xs font-semibold leading-5 text-slate-700 transition-colors duration-300 group-hover:text-slate-950 sm:text-sm">
                     {benefit}
                   </span>
                 </div>
@@ -1226,19 +745,7 @@ export default function Home() {
             <div
               data-aos="fade-up"
               data-aos-delay="600"
-              className="
-        mt-9
-        flex
-        w-full
-        flex-col
-        items-center
-        justify-center
-        gap-3
-        sm:flex-row
-        sm:justify-center
-        lg:justify-start
-        lg:items-start
-    "
+              className="mt-9 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:justify-center lg:justify-start lg:items-start"
             >
               {/* Primary */}
               <Link
@@ -1271,11 +778,7 @@ export default function Home() {
                 <ArrowRight
                   size={17}
                   strokeWidth={2}
-                  className="
-                transition-transform
-                duration-300
-                group-hover:translate-x-1
-            "
+                  className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
 
@@ -1316,62 +819,20 @@ export default function Home() {
                PREMIUM STATISTICS — REDESIGNED
             ========================================================= */}
 
-      <section
-        className="
-        relative
-        overflow-hidden
-        bg-slate-100
-        py-12
-        sm:py-16
-        lg:py-20
-    "
-      >
+      <section className="relative overflow-hidden bg-slate-100 py-12 sm:py-16 lg:py-20">
         {/* =====================================================
         BACKGROUND AMBIENT EFFECTS
     ====================================================== */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -left-48
-            top-1/2
-            h-[520px]
-            w-[520px]
-            -translate-y-1/2
-            rounded-full
-            bg-[#e3292f]/[0.035]
-            blur-[140px]
-        "
-        />
+        <div className="pointer-events-none absolute -left-48 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[#e3292f]/[0.035] blur-[140px]" />
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -right-48
-            top-1/2
-            h-[520px]
-            w-[520px]
-            -translate-y-1/2
-            rounded-full
-            bg-blue-500/[0.025]
-            blur-[140px]
-        "
-        />
+        <div className="pointer-events-none absolute -right-48 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-blue-500/[0.025] blur-[140px]" />
 
         {/* =====================================================
         SUBTLE GRID
     ====================================================== */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            inset-0
-            opacity-[0.025]
-        "
-        >
+        <div className="pointer-events-none absolute inset-0 opacity-[0.025]">
           <div
             className="h-full w-full"
             style={{
@@ -1396,52 +857,17 @@ export default function Home() {
     ====================================================== */}
 
         <div
-          className="
-            relative
-            mx-auto
-            mb-8
-            flex
-            items-center
-            justify-center
-            gap-3
-            px-4
-
-            sm:mb-10
-        "
+          className="relative mx-auto mb-8 flex items-center justify-center gap-3 px-4 sm:mb-10"
           data-aos="fade-up"
           data-aos-duration="700"
         >
-          <span
-            className="
-                h-px
-                w-8
-                bg-[#e3292f]/40
-                sm:w-12
-            "
-          />
+          <span className="h-px w-8 bg-[#e3292f]/40 sm:w-12" />
 
-          <span
-            className="
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.28em]
-                text-[#e3292f]
-
-                sm:text-[10px]
-            "
-          >
+          <span className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#e3292f] sm:text-[10px]">
             Our Numbers
           </span>
 
-          <span
-            className="
-                h-px
-                w-8
-                bg-[#e3292f]/40
-                sm:w-12
-            "
-          />
+          <span className="h-px w-8 bg-[#e3292f]/40 sm:w-12" />
         </div>
 
         {/* =====================================================
@@ -1552,28 +978,7 @@ export default function Home() {
                         INDEX
                     ================================================= */}
 
-                <span
-                  className="
-                            absolute
-                            right-4
-                            top-4
-
-                            text-[9px]
-                            font-bold
-                            tracking-[0.2em]
-
-                            text-slate-300
-
-                            transition-colors
-                            duration-300
-
-                            group-hover:text-[#e3292f]/40
-
-                            sm:right-5
-                            sm:top-5
-                            sm:text-[10px]
-                        "
-                >
+                <span className="absolute right-4 top-4 text-[9px] font-bold tracking-[0.2em] text-slate-300 transition-colors duration-300 group-hover:text-[#e3292f]/40 sm:right-5 sm:top-5 sm:text-[10px]">
                   0{index + 1}
                 </span>
 
@@ -1625,15 +1030,7 @@ export default function Home() {
                   <Icon
                     size={20}
                     strokeWidth={1.7}
-                    className="
-                                transition-transform
-                                duration-500
-
-                                group-hover:scale-105
-
-                                sm:h-[23px]
-                                sm:w-[23px]
-                            "
+                    className="transition-transform duration-500 group-hover:scale-105 sm:h-[23px] sm:w-[23px]"
                   />
                 </div>
 
@@ -1742,49 +1139,10 @@ export default function Home() {
                         CORNER ACCENT
                     ================================================= */}
 
-                <div
-                  className="
-                            pointer-events-none
-                            absolute
-                            bottom-0
-                            right-0
+                <div className="pointer-events-none absolute bottom-0 right-0 h-12 w-12 opacity-0 transition-all duration-500 group-hover:opacity-100">
+                  <div className="absolute bottom-0 right-0 h-px w-8 bg-[#e3292f]/30" />
 
-                            h-12
-                            w-12
-
-                            opacity-0
-
-                            transition-all
-                            duration-500
-
-                            group-hover:opacity-100
-                        "
-                >
-                  <div
-                    className="
-                                absolute
-                                bottom-0
-                                right-0
-
-                                h-px
-                                w-8
-
-                                bg-[#e3292f]/30
-                            "
-                  />
-
-                  <div
-                    className="
-                                absolute
-                                bottom-0
-                                right-0
-
-                                h-8
-                                w-px
-
-                                bg-[#e3292f]/30
-                            "
-                  />
+                  <div className="absolute bottom-0 right-0 h-8 w-px bg-[#e3292f]/30" />
                 </div>
               </div>
             );
@@ -1795,50 +1153,14 @@ export default function Home() {
         BOTTOM MICRO LABEL
     ====================================================== */}
 
-        <div
-          className="
-            relative
-            mx-auto
-            mt-7
-            flex
-            max-w-2xl
-            items-center
-            justify-center
-            gap-3
-            px-4
+        <div className="relative mx-auto mt-7 flex max-w-2xl items-center justify-center gap-3 px-4 sm:mt-9">
+          <span className="h-px flex-1 bg-slate-200" />
 
-            sm:mt-9
-        "
-        >
-          <span
-            className="
-                h-px
-                flex-1
-                bg-slate-200
-            "
-          />
-
-          <span
-            className="
-                text-[8px]
-                font-semibold
-                uppercase
-                tracking-[0.22em]
-                text-slate-400
-
-                sm:text-[9px]
-            "
-          >
+          <span className="text-[8px] font-semibold uppercase tracking-[0.22em] text-slate-400 sm:text-[9px]">
             Built for modern connectivity
           </span>
 
-          <span
-            className="
-                h-px
-                flex-1
-                bg-slate-200
-            "
-          />
+          <span className="h-px flex-1 bg-slate-200" />
         </div>
       </section>
 
@@ -1847,75 +1169,23 @@ export default function Home() {
             ========================================================= */}
       <section
         id="services"
-        className="
-        relative
-        overflow-hidden
-        bg-red-50/70
-        py-20
-        sm:py-24
-        lg:py-28
-    "
+        className="relative overflow-hidden bg-red-50/70 py-20 sm:py-24 lg:py-28"
       >
         {/* =====================================================
         PREMIUM AMBIENT BACKGROUND
     ====================================================== */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -right-48
-            -top-40
-            h-[600px]
-            w-[600px]
-            rounded-full
-            bg-[#e3292f]/[0.055]
-            blur-[140px]
-        "
-        />
+        <div className="pointer-events-none absolute -right-48 -top-40 h-[600px] w-[600px] rounded-full bg-[#e3292f]/[0.055] blur-[140px]" />
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -left-48
-            bottom-[-120px]
-            h-[520px]
-            w-[520px]
-            rounded-full
-            bg-blue-500/[0.035]
-            blur-[140px]
-        "
-        />
+        <div className="pointer-events-none absolute -left-48 bottom-[-120px] h-[520px] w-[520px] rounded-full bg-blue-500/[0.035] blur-[140px]" />
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            left-1/2
-            top-1/2
-            h-[420px]
-            w-[420px]
-            -translate-x-1/2
-            -translate-y-1/2
-            rounded-full
-            bg-[#e3292f]/[0.018]
-            blur-[120px]
-        "
-        />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e3292f]/[0.018] blur-[120px]" />
 
         {/* =====================================================
         PREMIUM GRID
     ====================================================== */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            inset-0
-            opacity-[0.035]
-        "
-        >
+        <div className="pointer-events-none absolute inset-0 opacity-[0.035]">
           <div
             className="h-full w-full"
             style={{
@@ -1939,32 +1209,9 @@ export default function Home() {
         DECORATIVE TOP LINE
     ====================================================== */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            left-1/2
-            top-0
-            h-px
-            w-[85%]
-            -translate-x-1/2
-            bg-gradient-to-r
-            from-transparent
-            via-[#e3292f]/20
-            to-transparent
-        "
-        />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-px w-[85%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#e3292f]/20 to-transparent" />
 
-        <div
-          className="
-            relative
-            mx-auto
-            max-w-7xl
-            px-4
-            sm:px-6
-            lg:px-8
-        "
-        >
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* =====================================================
             SECTION HEADER
         ====================================================== */}
@@ -1972,91 +1219,32 @@ export default function Home() {
           <div
             data-aos="fade-up"
             data-aos-duration="900"
-            className="
-                mx-auto
-                max-w-3xl
-                text-center
-            "
+            className="mx-auto max-w-3xl text-center"
           >
             {/* Label */}
 
-            <div
-              className="
-                    inline-flex
-                    items-center
-                    gap-3
-                "
-            >
-              <span
-                className="
-                        h-px
-                        w-8
-                        bg-[#e3292f]
-                        sm:w-12
-                    "
-              />
+            <div className="inline-flex items-center gap-3">
+              <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
 
-              <p
-                className="
-                        text-[10px]
-                        font-bold
-                        uppercase
-                        tracking-[0.28em]
-                        text-[#e3292f]
-                        sm:text-xs
-                    "
-              >
+              <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#e3292f] sm:text-xs">
                 What We Offer
               </p>
 
-              <span
-                className="
-                        h-px
-                        w-8
-                        bg-[#e3292f]
-                        sm:w-12
-                    "
-              />
+              <span className="h-px w-8 bg-[#e3292f] sm:w-12" />
             </div>
 
             {/* Heading */}
 
-            <h2
-              className="
-                    mt-5
-                    text-3xl
-                    font-bold
-                    leading-[1.12]
-                    tracking-tight
-                    text-[#111827]
-                    sm:text-4xl
-                    lg:text-5xl
-                "
-            >
+            <h2 className="mt-5 text-3xl font-bold leading-[1.12] tracking-tight text-[#111827] sm:text-4xl lg:text-5xl">
               Network solutions
-              <span
-                className="
-                        block
-                        text-[#e3292f]
-                    "
-              >
+              <span className="block text-[#e3292f]">
                 built around your business.
               </span>
             </h2>
 
             {/* Description */}
 
-            <p
-              className="
-                    mx-auto
-                    mt-5
-                    max-w-2xl
-                    text-sm
-                    leading-7
-                    text-slate-500
-                    sm:text-base
-                "
-            >
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base">
               Explore TEJAYS connectivity and network services designed for
               modern business requirements with performance, reliability and
               scalability.
@@ -2067,20 +1255,7 @@ export default function Home() {
             SERVICES GRID
         ====================================================== */}
 
-          <div
-            className="
-                mt-12
-                grid
-                grid-cols-2
-                gap-3
-
-                sm:mt-14
-                sm:gap-5
-
-                lg:grid-cols-4
-                lg:gap-5
-            "
-          >
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-5 lg:grid-cols-4 lg:gap-5">
             {services.map((service, index) => {
               const Icon = service.icon;
 
@@ -2173,20 +1348,7 @@ export default function Home() {
                             GLASS HIGHLIGHT
                         ================================================= */}
 
-                  <div
-                    className="
-                                pointer-events-none
-                                absolute
-                                inset-x-0
-                                top-0
-                                h-px
-                                bg-gradient-to-r
-                                from-transparent
-                                via-white
-                                to-transparent
-                                opacity-80
-                            "
-                  />
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-80" />
 
                   {/* =================================================
                             CARD RED GLOW
@@ -2216,51 +1378,13 @@ export default function Home() {
                             CARD BLUE GLOW
                         ================================================= */}
 
-                  <div
-                    className="
-                                pointer-events-none
-                                absolute
-                                -bottom-20
-                                -left-20
-                                h-40
-                                w-40
-                                rounded-full
-                                bg-blue-500/[0.025]
-                                blur-3xl
-
-                                transition-all
-                                duration-500
-
-                                group-hover:scale-125
-                            "
-                  />
+                  <div className="pointer-events-none absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-blue-500/[0.025] blur-3xl transition-all duration-500 group-hover:scale-125" />
 
                   {/* =================================================
                             NUMBER
                         ================================================= */}
 
-                  <span
-                    className="
-                                absolute
-                                right-4
-                                top-4
-
-                                text-[10px]
-                                font-bold
-                                tracking-[0.2em]
-
-                                text-slate-300
-
-                                transition-all
-                                duration-300
-
-                                group-hover:text-[#e3292f]/40
-
-                                sm:right-5
-                                sm:top-5
-                                sm:text-xs
-                            "
-                  >
+                  <span className="absolute right-4 top-4 text-[10px] font-bold tracking-[0.2em] text-slate-300 transition-all duration-300 group-hover:text-[#e3292f]/40 sm:right-5 sm:top-5 sm:text-xs">
                     0{index + 1}
                   </span>
 
@@ -2314,10 +1438,7 @@ export default function Home() {
                     <Icon
                       size={20}
                       strokeWidth={1.7}
-                      className="
-                                    sm:h-[23px]
-                                    sm:w-[23px]
-                                "
+                      className="sm:h-[23px] sm:w-[23px]"
                     />
                   </div>
 
@@ -2362,31 +1483,7 @@ export default function Home() {
                             DESCRIPTION
                         ================================================= */}
 
-                  <p
-                    className="
-                                relative
-                                z-10
-
-                                mt-2
-
-                                text-center
-                                text-[11px]
-                                leading-5
-
-                                text-slate-500
-
-                                transition-colors
-                                duration-300
-
-                                group-hover:text-slate-600
-
-                                sm:mt-3
-
-                                sm:text-left
-                                sm:text-sm
-                                sm:leading-6
-                            "
-                  >
+                  <p className="relative z-10 mt-2 text-center text-[11px] leading-5 text-slate-500 transition-colors duration-300 group-hover:text-slate-600 sm:mt-3 sm:text-left sm:text-sm sm:leading-6">
                     {service.description}
                   </p>
 
@@ -2431,15 +1528,7 @@ export default function Home() {
 
                     <ArrowRight
                       size={13}
-                      className="
-                                    transition-transform
-                                    duration-300
-
-                                    group-hover:translate-x-1
-
-                                    sm:h-[15px]
-                                    sm:w-[15px]
-                                "
+                      className="transition-transform duration-300 group-hover:translate-x-1 sm:h-[15px] sm:w-[15px]"
                     />
                   </div>
 
@@ -2447,51 +1536,13 @@ export default function Home() {
                             BOTTOM RED LINE
                         ================================================= */}
 
-                  <div
-                    className="
-                                absolute
-                                bottom-0
-                                left-1/2
-
-                                h-[2px]
-                                w-0
-
-                                -translate-x-1/2
-
-                                rounded-full
-
-                                bg-[#e3292f]
-
-                                shadow-[0_0_15px_rgba(227,41,47,0.30)]
-
-                                transition-all
-                                duration-300
-
-                                group-hover:w-[70%]
-                            "
-                  />
+                  <div className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-[#e3292f] shadow-[0_0_15px_rgba(227,41,47,0.30)] transition-all duration-300 group-hover:w-[70%]" />
 
                   {/* =================================================
                             INNER BORDER
                         ================================================= */}
 
-                  <div
-                    className="
-                                pointer-events-none
-                                absolute
-                                inset-0
-
-                                rounded-2xl
-
-                                border
-                                border-transparent
-
-                                transition-all
-                                duration-300
-
-                                group-hover:border-[#e3292f]/[0.08]
-                            "
-                  />
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl border border-transparent transition-all duration-300 group-hover:border-[#e3292f]/[0.08]" />
                 </Link>
               );
             })}
@@ -2504,50 +1555,16 @@ export default function Home() {
           <div
             data-aos="fade-up"
             data-aos-delay="500"
-            className="
-                mt-10
-                text-center
-                sm:mt-12
-            "
+            className="mt-10 text-center sm:mt-12"
           >
-            <div
-              className="
-                    mx-auto
-                    flex
-                    max-w-2xl
-                    items-center
-                    justify-center
-                    gap-3
-                "
-            >
-              <span
-                className="
-                        h-px
-                        flex-1
-                        bg-slate-200
-                    "
-              />
+            <div className="mx-auto flex max-w-2xl items-center justify-center gap-3">
+              <span className="h-px flex-1 bg-slate-200" />
 
-              <p
-                className="
-                        text-[9px]
-                        font-semibold
-                        uppercase
-                        tracking-[0.22em]
-                        text-slate-400
-                        sm:text-xs
-                    "
-              >
+              <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-slate-400 sm:text-xs">
                 Enterprise Connectivity
               </p>
 
-              <span
-                className="
-                        h-px
-                        flex-1
-                        bg-slate-200
-                    "
-              />
+              <span className="h-px flex-1 bg-slate-200" />
             </div>
           </div>
         </div>
@@ -2556,21 +1573,7 @@ export default function Home() {
         PREMIUM BOTTOM LINE
     ====================================================== */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            bottom-0
-            left-1/2
-            h-px
-            w-[85%]
-            -translate-x-1/2
-            bg-gradient-to-r
-            from-transparent
-            via-slate-200
-            to-transparent
-        "
-        />
+        <div className="pointer-events-none absolute bottom-0 left-1/2 h-px w-[85%] -translate-x-1/2 bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       </section>
 
       {/* =========================================================
@@ -2609,19 +1612,7 @@ export default function Home() {
             <h2
               data-aos="fade-up"
               data-aos-delay="180"
-              className="
-                    mx-auto
-                    mt-5
-                    max-w-2xl
-                    text-3xl
-                    font-bold
-                    leading-[1.12]
-                    tracking-tight
-                    text-slate-900
-                    sm:text-4xl
-                    lg:mx-0
-                    lg:text-5xl
-                "
+              className="mx-auto mt-5 max-w-2xl text-3xl font-bold leading-[1.12] tracking-tight text-slate-900 sm:text-4xl lg:mx-0 lg:text-5xl"
             >
               Built around
               <span className="text-[#e3292f]"> performance,</span>
@@ -2632,17 +1623,7 @@ export default function Home() {
             <p
               data-aos="fade-up"
               data-aos-delay="260"
-              className="
-                    mx-auto
-                    mt-6
-                    max-w-xl
-                    text-sm
-                    leading-7
-                    text-slate-600
-                    sm:text-base
-                    sm:leading-8
-                    lg:mx-0
-                "
+              className="mx-auto mt-6 max-w-xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:mx-0"
             >
               From connectivity to managed network infrastructure, our solutions
               are designed to help organizations stay connected and productive.
@@ -2651,18 +1632,7 @@ export default function Home() {
             {/* =================================================
                 BENEFIT CARDS
             ================================================= */}
-            <div
-              className="
-                    mx-auto
-                    mt-9
-                    grid
-                    max-w-2xl
-                    grid-cols-2
-                    gap-3
-                    sm:gap-4
-                    lg:mx-0
-                "
-            >
+            <div className="mx-auto mt-9 grid max-w-2xl grid-cols-2 gap-3 sm:gap-4 lg:mx-0">
               {[
                 "High Speed Connectivity",
                 "User Friendly Solutions",
@@ -2697,37 +1667,9 @@ export default function Home() {
                         "
                 >
                   {/* Card Glow */}
-                  <div
-                    className="
-                                pointer-events-none
-                                absolute
-                                -right-12
-                                -top-12
-                                h-24
-                                w-24
-                                rounded-full
-                                bg-red-50
-                                opacity-0
-                                blur-2xl
-                                transition-all
-                                duration-500
-                                group-hover:opacity-100
-                            "
-                  />
+                  <div className="pointer-events-none absolute -right-12 -top-12 h-24 w-24 rounded-full bg-red-50 opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-100" />
 
-                  <div
-                    className="
-                                relative
-                                flex
-                                flex-col
-                                items-center
-                                justify-center
-                                gap-2
-                                sm:flex-row
-                                sm:justify-start
-                                sm:gap-3
-                            "
-                  >
+                  <div className="relative flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-start sm:gap-3">
                     {/* Icon */}
                     <div
                       className="
@@ -2760,37 +1702,13 @@ export default function Home() {
                     </div>
 
                     {/* Text */}
-                    <span
-                      className="
-                                    text-[11px]
-                                    font-semibold
-                                    leading-4
-                                    text-slate-700
-                                    transition-colors
-                                    duration-300
-                                    group-hover:text-slate-900
-                                    sm:text-sm
-                                    sm:leading-5
-                                "
-                    >
+                    <span className="text-[11px] font-semibold leading-4 text-slate-700 transition-colors duration-300 group-hover:text-slate-900 sm:text-sm sm:leading-5">
                       {item}
                     </span>
                   </div>
 
                   {/* Bottom Accent */}
-                  <div
-                    className="
-                                absolute
-                                bottom-0
-                                left-0
-                                h-0.5
-                                w-0
-                                bg-[#e3292f]
-                                transition-all
-                                duration-500
-                                group-hover:w-full
-                            "
-                  />
+                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-[#e3292f] transition-all duration-500 group-hover:w-full" />
                 </div>
               ))}
             </div>
@@ -2827,32 +1745,13 @@ export default function Home() {
                     "
               >
                 {/* Button Shine */}
-                <span
-                  className="
-                            pointer-events-none
-                            absolute
-                            -left-20
-                            top-0
-                            h-full
-                            w-12
-                            rotate-12
-                            bg-white/20
-                            transition-all
-                            duration-700
-                            group-hover:left-[120%]
-                        "
-                />
+                <span className="pointer-events-none absolute -left-20 top-0 h-full w-12 rotate-12 bg-white/20 transition-all duration-700 group-hover:left-[120%]" />
 
                 <span className="relative">Get Started Now</span>
 
                 <ArrowRight
                   size={17}
-                  className="
-                            relative
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                        "
+                  className="relative transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
             </div>
@@ -2903,65 +1802,19 @@ export default function Home() {
             SOFT WHITE GLOW
         ================================================= */}
 
-              <div
-                className="
-                pointer-events-none
-                absolute
-                -right-20
-                -top-20
-
-                h-72
-                w-72
-
-                rounded-full
-
-                bg-white/10
-
-                blur-3xl
-
-                transition-all
-                duration-700
-
-                group-hover:scale-125
-                group-hover:bg-white/15
-            "
-              />
+              <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-white/15" />
 
               {/* =================================================
             BOTTOM SOFT GLOW
         ================================================= */}
 
-              <div
-                className="
-                pointer-events-none
-                absolute
-                -bottom-24
-                -left-24
-
-                h-72
-                w-72
-
-                rounded-full
-
-                bg-black/10
-
-                blur-3xl
-            "
-              />
+              <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-black/10 blur-3xl" />
 
               {/* =================================================
             SUBTLE GRID
         ================================================= */}
 
-              <div
-                className="
-                pointer-events-none
-                absolute
-                inset-0
-
-                opacity-[0.08]
-            "
-              >
+              <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
                 <div
                   className="h-full w-full"
                   style={{
@@ -2976,67 +1829,19 @@ export default function Home() {
             OUTER RING
         ================================================= */}
 
-              <div
-                className="
-                absolute
-                inset-[5%]
-
-                rounded-full
-
-                border
-                border-white/30
-
-                transition-transform
-                duration-[2000ms]
-                ease-out
-
-                group-hover:rotate-180
-            "
-              />
+              <div className="absolute inset-[5%] rounded-full border border-white/30 transition-transform duration-[2000ms] ease-out group-hover:rotate-180" />
 
               {/* =================================================
             SECOND RING
         ================================================= */}
 
-              <div
-                className="
-                absolute
-                inset-[12%]
-
-                rounded-full
-
-                border
-                border-white/20
-
-                transition-transform
-                duration-[1600ms]
-                ease-out
-
-                group-hover:-rotate-180
-            "
-              />
+              <div className="absolute inset-[12%] rounded-full border border-white/20 transition-transform duration-[1600ms] ease-out group-hover:-rotate-180" />
 
               {/* =================================================
             INNER RING
         ================================================= */}
 
-              <div
-                className="
-                absolute
-                inset-[23%]
-
-                rounded-full
-
-                border
-                border-white/30
-
-                transition-all
-                duration-700
-
-                group-hover:scale-110
-                group-hover:border-white/50
-            "
-              />
+              <div className="absolute inset-[23%] rounded-full border border-white/30 transition-all duration-700 group-hover:scale-110 group-hover:border-white/50" />
 
               {/* =================================================
             CENTER GLOW
@@ -3073,16 +1878,7 @@ export default function Home() {
             CENTER NETWORK ICON
         ================================================= */}
 
-              <div
-                className="
-                absolute
-                inset-0
-
-                flex
-                items-center
-                justify-center
-            "
-              >
+              <div className="absolute inset-0 flex items-center justify-center">
                 <div
                   className="
                     relative
@@ -3119,38 +1915,12 @@ export default function Home() {
                 >
                   {/* Center Inner Glow */}
 
-                  <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        inset-3
-
-                        rounded-full
-
-                        bg-[#e3292f]/5
-
-                        blur-xl
-                    "
-                  />
+                  <div className="pointer-events-none absolute inset-3 rounded-full bg-[#e3292f]/5 blur-xl" />
 
                   <Network
                     size={55}
                     strokeWidth={1.3}
-                    className="
-                        relative
-                        z-10
-
-                        text-[#e3292f]
-
-                        transition-all
-                        duration-700
-
-                        group-hover:rotate-12
-                        group-hover:scale-110
-
-                        sm:h-[65px]
-                        sm:w-[65px]
-                    "
+                    className="relative z-10 text-[#e3292f] transition-all duration-700 group-hover:rotate-12 group-hover:scale-110 sm:h-[65px] sm:w-[65px]"
                   />
                 </div>
               </div>
@@ -3159,155 +1929,36 @@ export default function Home() {
             ORBIT DOT 1
         ================================================= */}
 
-              <span
-                className="
-                absolute
-
-                left-[17%]
-                top-[27%]
-
-                h-2.5
-                w-2.5
-
-                rounded-full
-
-                bg-white
-
-                shadow-[0_0_20px_rgba(255,255,255,0.75)]
-
-                transition-transform
-                duration-500
-
-                group-hover:scale-150
-            "
-              />
+              <span className="absolute left-[17%] top-[27%] h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_20px_rgba(255,255,255,0.75)] transition-transform duration-500 group-hover:scale-150" />
 
               {/* =================================================
             ORBIT DOT 2
         ================================================= */}
 
-              <span
-                className="
-                absolute
-
-                right-[20%]
-                top-[24%]
-
-                h-2
-                w-2
-
-                rounded-full
-
-                bg-white/70
-
-                shadow-[0_0_12px_rgba(255,255,255,0.45)]
-
-                transition-transform
-                duration-500
-
-                group-hover:scale-150
-            "
-              />
+              <span className="absolute right-[20%] top-[24%] h-2 w-2 rounded-full bg-white/70 shadow-[0_0_12px_rgba(255,255,255,0.45)] transition-transform duration-500 group-hover:scale-150" />
 
               {/* =================================================
             ORBIT DOT 3
         ================================================= */}
 
-              <span
-                className="
-                absolute
-
-                bottom-[23%]
-                left-[23%]
-
-                h-2
-                w-2
-
-                rounded-full
-
-                bg-white/70
-
-                shadow-[0_0_12px_rgba(255,255,255,0.45)]
-
-                transition-transform
-                duration-500
-
-                group-hover:scale-150
-            "
-              />
+              <span className="absolute bottom-[23%] left-[23%] h-2 w-2 rounded-full bg-white/70 shadow-[0_0_12px_rgba(255,255,255,0.45)] transition-transform duration-500 group-hover:scale-150" />
 
               {/* =================================================
             ORBIT DOT 4
         ================================================= */}
 
-              <span
-                className="
-                absolute
-
-                bottom-[27%]
-                right-[18%]
-
-                h-2.5
-                w-2.5
-
-                rounded-full
-
-                bg-white
-
-                shadow-[0_0_20px_rgba(255,255,255,0.75)]
-
-                transition-transform
-                duration-500
-
-                group-hover:scale-150
-            "
-              />
+              <span className="absolute bottom-[27%] right-[18%] h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_20px_rgba(255,255,255,0.75)] transition-transform duration-500 group-hover:scale-150" />
 
               {/* =================================================
             NETWORK LABEL
         ================================================= */}
 
-              <div
-                className="
-                absolute
-
-                bottom-8
-                left-0
-                right-0
-
-                text-center
-
-                transition-transform
-                duration-500
-
-                group-hover:-translate-y-1
-            "
-              >
-                <p
-                  className="
-                    text-[10px]
-                    font-semibold
-                    uppercase
-                    tracking-[0.25em]
-
-                    text-white/75
-
-                    sm:text-xs
-                "
-                >
+              <div className="absolute bottom-8 left-0 right-0 text-center transition-transform duration-500 group-hover:-translate-y-1">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/75 sm:text-xs">
                   Network Infrastructure
                 </p>
 
-                <p
-                  className="
-                    mt-1
-
-                    text-xs
-                    font-bold
-
-                    text-white
-                "
-                >
+                <p className="mt-1 text-xs font-bold text-white">
                   Reliable
                   <span className="mx-1.5 text-white/70">•</span>
                   Secure
@@ -3320,36 +1971,14 @@ export default function Home() {
             OUTER HIGHLIGHT
         ================================================= */}
 
-              <div
-                className="
-                pointer-events-none
-                absolute
-                inset-0
-
-                rounded-full
-
-                border
-                border-white/20
-            "
-              />
+              <div className="pointer-events-none absolute inset-0 rounded-full border border-white/20" />
             </div>
 
             {/* =================================================
         INFO CARDS
     ================================================= */}
 
-            <div
-              className="
-            mt-6
-
-            grid
-            grid-cols-2
-
-            gap-3
-
-            sm:gap-4
-        "
-            >
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
               {/* =================================================
             UPTIME CARD
         ================================================= */}
@@ -3385,54 +2014,13 @@ export default function Home() {
               >
                 {/* Top Accent */}
 
-                <div
-                  className="
-                    absolute
-                    left-1/2
-                    top-0
+                <div className="absolute left-1/2 top-0 h-[2px] w-0 -translate-x-1/2 bg-[#e3292f] transition-all duration-500 group-hover:w-16" />
 
-                    h-[2px]
-                    w-0
-
-                    -translate-x-1/2
-
-                    bg-[#e3292f]
-
-                    transition-all
-                    duration-500
-
-                    group-hover:w-16
-                "
-                />
-
-                <p
-                  className="
-                    text-xl
-                    font-bold
-
-                    text-[#e3292f]
-
-                    transition-transform
-                    duration-300
-
-                    group-hover:scale-110
-                "
-                >
+                <p className="text-xl font-bold text-[#e3292f] transition-transform duration-300 group-hover:scale-110">
                   99.5%
                 </p>
 
-                <p
-                  className="
-                    mt-1
-
-                    text-[10px]
-                    font-semibold
-                    uppercase
-                    tracking-widest
-
-                    text-slate-400
-                "
-                >
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
                   Uptime SLA
                 </p>
               </div>
@@ -3472,54 +2060,13 @@ export default function Home() {
               >
                 {/* Top Accent */}
 
-                <div
-                  className="
-                    absolute
-                    left-1/2
-                    top-0
+                <div className="absolute left-1/2 top-0 h-[2px] w-0 -translate-x-1/2 bg-[#e3292f] transition-all duration-500 group-hover:w-16" />
 
-                    h-[2px]
-                    w-0
-
-                    -translate-x-1/2
-
-                    bg-[#e3292f]
-
-                    transition-all
-                    duration-500
-
-                    group-hover:w-16
-                "
-                />
-
-                <p
-                  className="
-                    text-xl
-                    font-bold
-
-                    text-[#e3292f]
-
-                    transition-transform
-                    duration-300
-
-                    group-hover:scale-110
-                "
-                >
+                <p className="text-xl font-bold text-[#e3292f] transition-transform duration-300 group-hover:scale-110">
                   24/7
                 </p>
 
-                <p
-                  className="
-                    mt-1
-
-                    text-[10px]
-                    font-semibold
-                    uppercase
-                    tracking-widest
-
-                    text-slate-400
-                "
-                >
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
                   Support
                 </p>
               </div>
@@ -3746,12 +2293,7 @@ export default function Home() {
                             ================================================= */}
 
               <div
-                className="
-                                    flex
-                                    transition-transform
-                                    duration-700
-                                    ease-[cubic-bezier(0.22,1,0.36,1)]
-                                "
+                className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                 style={{
                   transform: `translateX(-${(currentIndex * 100) / visibleSlides}%)`,
                 }}
@@ -3794,62 +2336,19 @@ export default function Home() {
                     >
                       {/* Hover Glow */}
 
-                      <div
-                        className="
-                                                    pointer-events-none
-                                                    absolute
-                                                    -right-10
-                                                    -top-10
-                                                    h-24
-                                                    w-24
-                                                    rounded-full
-                                                    bg-red-50
-                                                    opacity-0
-                                                    blur-2xl
-                                                    transition-all
-                                                    duration-500
-                                                    group-hover:opacity-100
-                                                "
-                      />
+                      <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-red-50 opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-100" />
 
                       {/* Brand Image */}
 
                       <img
                         src={brand.image}
                         alt={brand.name}
-                        className="
-                                                    relative
-                                                    z-10
-                                                    max-h-16
-                                                    max-w-[85%]
-                                                    object-contain
-                                                    opacity-80
-                                                    grayscale
-                                                    transition-all
-                                                    duration-500
-                                                    group-hover:scale-110
-                                                    group-hover:opacity-100
-                                                    group-hover:grayscale-0
-                                                    sm:max-h-20
-                                                "
+                        className="relative z-10 max-h-16 max-w-[85%] object-contain opacity-80 grayscale transition-all duration-500 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-20"
                       />
 
                       {/* Bottom Accent */}
 
-                      <span
-                        className="
-                                                    absolute
-                                                    bottom-0
-                                                    left-1/2
-                                                    h-0.5
-                                                    w-0
-                                                    -translate-x-1/2
-                                                    bg-[#e3292f]
-                                                    transition-all
-                                                    duration-500
-                                                    group-hover:w-2/3
-                                                "
-                      />
+                      <span className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 bg-[#e3292f] transition-all duration-500 group-hover:w-2/3" />
                     </div>
                   </div>
                 ))}

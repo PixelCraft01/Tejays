@@ -20,4 +20,3 @@ export default defineConfig(({ command }) => ({
     port: 4173,
   },
 }));
-

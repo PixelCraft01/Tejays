@@ -147,34 +147,12 @@ export default function PointToPointLeaseLine() {
       {/* =====================================================
                 HERO
             ====================================================== */}
-      <section
-        className="
-        relative
-        overflow-hidden
-        bg-red-100
-        py-20
-        sm:py-24
-        lg:py-28
-        xl:py-32
-    "
-      >
+      <section className="relative overflow-hidden bg-red-100 py-20 sm:py-24 lg:py-28 xl:py-32">
         {/* =====================================================
         DECORATIVE BACKGROUND
     ====================================================== */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -left-40
-            top-0
-            h-96
-            w-96
-            rounded-full
-            bg-[#e3292f]/10
-            blur-[120px]
-        "
-        />
+        <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-[#e3292f]/10 blur-[120px]" />
 
         {/* Grid */}
 
@@ -189,73 +167,17 @@ export default function PointToPointLeaseLine() {
     "
         />
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -right-40
-            bottom-0
-            h-96
-            w-96
-            rounded-full
-            bg-slate-200/70
-            blur-[120px]
-        "
-        />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-slate-200/70 blur-[120px]" />
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            right-[8%]
-            top-[15%]
-            hidden
-            h-64
-            w-64
-            rounded-full
-            border
-            border-[#e3292f]/10
-            lg:block
-        "
-        />
+        <div className="pointer-events-none absolute right-[8%] top-[15%] hidden h-64 w-64 rounded-full border border-[#e3292f]/10 lg:block" />
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            right-[12%]
-            top-[21%]
-            hidden
-            h-44
-            w-44
-            rounded-full
-            border
-            border-[#e3292f]/10
-            lg:block
-        "
-        />
+        <div className="pointer-events-none absolute right-[12%] top-[21%] hidden h-44 w-44 rounded-full border border-[#e3292f]/10 lg:block" />
 
         {/* =====================================================
         MAIN CONTAINER
     ====================================================== */}
 
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            grid
-            max-w-7xl
-            items-center
-            gap-12
-            px-5
-            sm:px-6
-            lg:grid-cols-2
-            lg:gap-16
-            lg:px-8
-            xl:gap-20
-        "
-        >
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 xl:gap-20">
           {/* =================================================
             LEFT CONTENT
         ================================================== */}
@@ -263,41 +185,14 @@ export default function PointToPointLeaseLine() {
           <div
             data-aos="fade-right"
             data-aos-duration="900"
-            className="
-                mx-auto
-                max-w-3xl
-                text-center
-                lg:mx-0
-                lg:text-left
-            "
+            className="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left"
           >
             {/* Label */}
 
-            <div
-              className="
-                    inline-flex
-                    items-center
-                    gap-3
-                    border
-                    border-[#e3292f]/15
-                    bg-white
-                    px-4
-                    py-2
-                    shadow-sm
-                "
-            >
+            <div className="inline-flex items-center gap-3 border border-[#e3292f]/15 bg-white px-4 py-2 shadow-sm">
               <Network size={15} className="text-[#e3292f]" />
 
-              <span
-                className="
-                        text-[10px]
-                        font-bold
-                        uppercase
-                        tracking-[0.25em]
-                        text-slate-600
-                        sm:text-xs
-                    "
-              >
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-600 sm:text-xs">
                 Point-to-Point Connectivity
               </span>
             </div>
@@ -307,17 +202,7 @@ export default function PointToPointLeaseLine() {
             <h1
               data-aos="fade-up"
               data-aos-delay="100"
-              className="
-                    mt-6
-                    text-4xl
-                    font-black
-                    leading-[1.08]
-                    tracking-tight
-                    text-slate-900
-                    sm:text-5xl
-                    lg:text-6xl
-                    xl:text-7xl
-                "
+              className="mt-6 text-4xl font-black leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl"
             >
               Dedicated Connectivity.
               <span className="block text-[#e3292f]">Built for Business.</span>
@@ -328,17 +213,7 @@ export default function PointToPointLeaseLine() {
             <p
               data-aos="fade-up"
               data-aos-delay="200"
-              className="
-                    mx-auto
-                    mt-6
-                    max-w-2xl
-                    text-sm
-                    leading-7
-                    text-slate-600
-                    sm:text-base
-                    sm:leading-8
-                    lg:mx-0
-                "
+              className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:mx-0"
             >
               Private, high-performance connectivity designed to securely
               connect business locations with consistent speed, reliability and
@@ -350,16 +225,7 @@ export default function PointToPointLeaseLine() {
             <div
               data-aos="fade-up"
               data-aos-delay="300"
-              className="
-                    mt-9
-                    flex
-                    flex-col
-                    items-center
-                    justify-center
-                    gap-3
-                    sm:flex-row
-                    lg:justify-start
-                "
+              className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start"
             >
               <Link
                 to="/contact-us"
@@ -388,11 +254,7 @@ export default function PointToPointLeaseLine() {
                 Get Connected
                 <ArrowRight
                   size={17}
-                  className="
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                        "
+                  className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
 
@@ -425,11 +287,7 @@ export default function PointToPointLeaseLine() {
                 Talk To Our Team
                 <ArrowRight
                   size={17}
-                  className="
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                        "
+                  className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
             </div>
@@ -442,11 +300,7 @@ export default function PointToPointLeaseLine() {
           <div
             data-aos="fade-left"
             data-aos-duration="1000"
-            className="
-                mx-auto
-                w-full
-                max-w-xl
-            "
+            className="mx-auto w-full max-w-xl"
           >
             <div
               className="
@@ -473,146 +327,43 @@ export default function PointToPointLeaseLine() {
                 <img
                   src={`${import.meta.env.BASE_URL}assets/point-to-point1.jpg`}
                   alt="TEJAYS Point-to-Point Connectivity"
-                  className="
-                            h-[300px]
-                            w-full
-                            object-cover
-                            transition-transform
-                            duration-700
-                            group-hover:scale-105
-                            sm:h-[380px]
-                            lg:h-[490px]
-                        "
+                  className="h-[300px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[380px] lg:h-[490px]"
                 />
 
                 {/* Image Overlay */}
 
-                <div
-                  className="
-                            pointer-events-none
-                            absolute
-                            inset-0
-                            bg-gradient-to-t
-                            from-[#07111f]/75
-                            via-[#07111f]/10
-                            to-transparent
-                        "
-                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07111f]/75 via-[#07111f]/10 to-transparent" />
 
                 {/* Red Glow */}
 
-                <div
-                  className="
-                            pointer-events-none
-                            absolute
-                            -right-20
-                            -top-20
-                            h-56
-                            w-56
-                            rounded-full
-                            bg-[#e3292f]/20
-                            blur-3xl
-                            transition-transform
-                            duration-700
-                            group-hover:scale-125
-                        "
-                />
+                <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#e3292f]/20 blur-3xl transition-transform duration-700 group-hover:scale-125" />
 
                 {/* Status */}
 
-                <div
-                  className="
-                            absolute
-                            right-4
-                            top-4
-                            flex
-                            items-center
-                            gap-2
-                            rounded-full
-                            border
-                            border-white/20
-                            bg-[#07111f]/65
-                            px-3
-                            py-2
-                            backdrop-blur-md
-                            sm:right-5
-                            sm:top-5
-                            sm:px-4
-                        "
-                >
-                  <span
-                    className="
-                                h-2
-                                w-2
-                                rounded-full
-                                bg-[#e3292f]
-                                shadow-[0_0_12px_rgba(227,41,47,0.9)]
-                            "
-                  />
+                <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full border border-white/20 bg-[#07111f]/65 px-3 py-2 backdrop-blur-md sm:right-5 sm:top-5 sm:px-4">
+                  <span className="h-2 w-2 rounded-full bg-[#e3292f] shadow-[0_0_12px_rgba(227,41,47,0.9)]" />
 
-                  <span
-                    className="
-                                text-[8px]
-                                font-bold
-                                uppercase
-                                tracking-[0.18em]
-                                text-white/90
-                                sm:text-[10px]
-                            "
-                  >
+                  <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-white/90 sm:text-[10px]">
                     Dedicated Network
                   </span>
                 </div>
 
                 {/* Bottom Content */}
 
-                <div
-                  className="
-                            absolute
-                            bottom-0
-                            left-0
-                            right-0
-                            p-5
-                            sm:p-7
-                        "
-                >
+                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
                   <div className="mb-3 flex items-center gap-3">
                     <span className="h-px w-8 bg-[#e3292f] sm:w-10" />
 
-                    <span
-                      className="
-                                    text-[8px]
-                                    font-bold
-                                    uppercase
-                                    tracking-[0.22em]
-                                    text-white/75
-                                    sm:text-[10px]
-                                "
-                    >
+                    <span className="text-[8px] font-bold uppercase tracking-[0.22em] text-white/75 sm:text-[10px]">
                       TEJAYS CONNECTIVITY
                     </span>
                   </div>
 
-                  <h3
-                    className="
-                                text-xl
-                                font-bold
-                                text-white
-                                sm:text-2xl
-                            "
-                  >
+                  <h3 className="text-xl font-bold text-white sm:text-2xl">
                     Point-to-Point Network
                   </h3>
 
-                  <p
-                    className="
-                                mt-2
-                                text-xs
-                                font-medium
-                                text-white/70
-                                sm:text-sm
-                            "
-                  >
+                  <p className="mt-2 text-xs font-medium text-white/70 sm:text-sm">
                     Private
                     <span className="mx-2 text-[#e3292f]">•</span>
                     Secure
@@ -624,19 +375,7 @@ export default function PointToPointLeaseLine() {
 
               {/* Bottom Red Line */}
 
-              <div
-                className="
-                        absolute
-                        bottom-0
-                        left-0
-                        h-[3px]
-                        w-0
-                        bg-[#e3292f]
-                        transition-all
-                        duration-500
-                        group-hover:w-full
-                    "
-              />
+              <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#e3292f] transition-all duration-500 group-hover:w-full" />
             </div>
           </div>
         </div>
@@ -645,45 +384,10 @@ export default function PointToPointLeaseLine() {
       {/* =====================================================
                 INTRODUCTION
             ====================================================== */}
-      <section
-        className="
-                    relative
-                    overflow-hidden
-                    bg-white
-                    py-20
-                    sm:py-24
-                    lg:py-28
-                "
-      >
-        <div
-          className="
-                        pointer-events-none
-                        absolute
-                        -right-40
-                        top-10
-                        h-96
-                        w-96
-                        rounded-full
-                        bg-red-50
-                        blur-3xl
-                    "
-        />
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+        <div className="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full bg-red-50 blur-3xl" />
 
-        <div
-          className="
-                        relative
-                        mx-auto
-                        grid
-                        max-w-7xl
-                        items-center
-                        gap-12
-                        px-5
-                        sm:px-6
-                        lg:grid-cols-2
-                        lg:gap-20
-                        lg:px-8
-                    "
-        >
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
           {/* IMAGE */}
 
           <div
@@ -711,70 +415,18 @@ export default function PointToPointLeaseLine() {
                 <img
                   src={`${import.meta.env.BASE_URL}assets/lease-line.jpg`}
                   alt="TEJAYS Point-to-Point Lease Line"
-                  className="
-                                        h-[330px]
-                                        w-full
-                                        object-cover
-                                        transition-transform
-                                        duration-1000
-                                        group-hover:scale-105
-                                        sm:h-[490px]
-                                    "
+                  className="h-[330px] w-full object-cover transition-transform duration-1000 group-hover:scale-105 sm:h-[490px]"
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}
                 />
 
-                <div
-                  className="
-                                        absolute
-                                        inset-0
-                                        bg-gradient-to-t
-                                        from-slate-900/70
-                                        via-transparent
-                                        to-transparent
-                                    "
-                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
 
-                <div
-                  className="
-                                        absolute
-                                        bottom-0
-                                        left-0
-                                        h-1
-                                        w-24
-                                        bg-[#e3292f]
-                                        transition-all
-                                        duration-700
-                                        group-hover:w-48
-                                    "
-                />
+                <div className="absolute bottom-0 left-0 h-1 w-24 bg-[#e3292f] transition-all duration-700 group-hover:w-48" />
 
-                <div
-                  className="
-                                        absolute
-                                        bottom-5
-                                        left-5
-                                        right-5
-                                        border
-                                        border-white/20
-                                        bg-slate-900/40
-                                        px-4
-                                        py-3
-                                        text-center
-                                        backdrop-blur-md
-                                        sm:text-left
-                                    "
-                >
-                  <p
-                    className="
-                                            text-[9px]
-                                            font-semibold
-                                            uppercase
-                                            tracking-[0.25em]
-                                            text-white/60
-                                        "
-                  >
+                <div className="absolute bottom-5 left-5 right-5 border border-white/20 bg-slate-900/40 px-4 py-3 text-center backdrop-blur-md sm:text-left">
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/60">
                     TEJAYS CONNECTIVITY
                   </p>
 
@@ -793,63 +445,22 @@ export default function PointToPointLeaseLine() {
             data-aos-duration="1000"
             className="text-center lg:text-left"
           >
-            <p
-              className="
-                                text-xs
-                                font-bold
-                                uppercase
-                                tracking-[0.25em]
-                                text-[#e3292f]
-                            "
-            >
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f]">
               Dedicated Connectivity
             </p>
 
-            <h2
-              className="
-                                mt-4
-                                text-3xl
-                                font-bold
-                                leading-tight
-                                text-slate-900
-                                sm:text-4xl
-                                lg:text-5xl
-                            "
-            >
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
               Dedicated connectivity between your business locations.
             </h2>
 
-            <p
-              className="
-                                mx-auto
-                                mt-6
-                                max-w-xl
-                                text-sm
-                                leading-7
-                                text-slate-600
-                                sm:text-base
-                                sm:leading-8
-                                lg:mx-0
-                            "
-            >
+            <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:mx-0">
               TEJAYS Point-to-Point Lease Line connectivity provides a dedicated
               communication path between two locations, helping organizations
               maintain reliable and predictable connectivity for critical
               business operations.
             </p>
 
-            <p
-              className="
-                                mx-auto
-                                mt-4
-                                max-w-xl
-                                text-sm
-                                leading-7
-                                text-slate-600
-                                sm:text-base
-                                lg:mx-0
-                            "
-            >
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base lg:mx-0">
               Designed for organizations that require dependable communication,
               dedicated bandwidth and consistent network performance between
               important locations.
@@ -857,17 +468,7 @@ export default function PointToPointLeaseLine() {
 
             {/* Benefits */}
 
-            <div
-              className="
-                                mx-auto
-                                mt-8
-                                grid
-                                max-w-xl
-                                grid-cols-2
-                                gap-3
-                                lg:mx-0
-                            "
-            >
+            <div className="mx-auto mt-8 grid max-w-xl grid-cols-2 gap-3 lg:mx-0">
               {leaseLineBenefits.map((item, index) => (
                 <div
                   key={item}
@@ -913,18 +514,7 @@ export default function PointToPointLeaseLine() {
                     <CheckCircle2 size={16} strokeWidth={2} />
                   </div>
 
-                  <span
-                    className="
-                                            text-[11px]
-                                            font-semibold
-                                            leading-5
-                                            text-slate-700
-                                            transition-colors
-                                            duration-300
-                                            group-hover:text-slate-900
-                                            sm:text-xs
-                                        "
-                  >
+                  <span className="text-[11px] font-semibold leading-5 text-slate-700 transition-colors duration-300 group-hover:text-slate-900 sm:text-xs">
                     {item}
                   </span>
                 </div>
@@ -933,28 +523,12 @@ export default function PointToPointLeaseLine() {
 
             <Link
               to="/contact-us"
-              className="
-                                group
-                                mt-8
-                                inline-flex
-                                items-center
-                                gap-3
-                                text-sm
-                                font-bold
-                                text-slate-900
-                                transition-colors
-                                duration-300
-                                hover:text-[#e3292f]
-                            "
+              className="group mt-8 inline-flex items-center gap-3 text-sm font-bold text-slate-900 transition-colors duration-300 hover:text-[#e3292f]"
             >
               Talk To Our Team
               <ArrowRight
                 size={17}
-                className="
-                                    transition-transform
-                                    duration-300
-                                    group-hover:translate-x-1
-                                "
+                className="transition-transform duration-300 group-hover:translate-x-1"
               />
             </Link>
           </div>
@@ -964,104 +538,27 @@ export default function PointToPointLeaseLine() {
       {/* =====================================================
                 FEATURES
             ====================================================== */}
-      <section
-        className="
-                    relative
-                    overflow-hidden
-                    bg-red-50
-                    py-20
-                    sm:py-24
-                    lg:py-28
-                "
-      >
-        <div
-          className="
-                        pointer-events-none
-                        absolute
-                        -left-40
-                        top-10
-                        h-96
-                        w-96
-                        rounded-full
-                        bg-[#e3292f]/5
-                        blur-3xl
-                    "
-        />
+      <section className="relative overflow-hidden bg-red-50 py-20 sm:py-24 lg:py-28">
+        <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-[#e3292f]/5 blur-3xl" />
 
-        <div
-          className="
-                        pointer-events-none
-                        absolute
-                        -right-40
-                        bottom-0
-                        h-96
-                        w-96
-                        rounded-full
-                        bg-[#e3292f]/5
-                        blur-3xl
-                    "
-        />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#e3292f]/5 blur-3xl" />
 
-        <div
-          className="
-                        relative
-                        mx-auto
-                        max-w-7xl
-                        px-5
-                        sm:px-6
-                        lg:px-8
-                    "
-        >
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           {/* Header */}
 
-          <div
-            data-aos="fade-up"
-            className="
-                            mx-auto
-                            max-w-3xl
-                            text-center
-                        "
-          >
-            <p
-              className="
-                                text-xs
-                                font-bold
-                                uppercase
-                                tracking-[0.25em]
-                                text-[#e3292f]
-                            "
-            >
+          <div data-aos="fade-up" className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f]">
               Why TEJAYS
             </p>
 
-            <h2
-              className="
-                                mt-4
-                                text-3xl
-                                font-bold
-                                leading-tight
-                                text-slate-900
-                                sm:text-4xl
-                                lg:text-5xl
-                            "
-            >
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
               Connectivity designed for
               <span className="block text-[#e3292f]">
                 critical business communication.
               </span>
             </h2>
 
-            <p
-              className="
-                                mx-auto
-                                mt-5
-                                max-w-2xl
-                                text-sm
-                                leading-7
-                                text-slate-600
-                                sm:text-base
-                            "
-            >
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
               Dedicated connectivity solutions designed around reliability,
               performance, security and scalability.
             </p>
@@ -1069,17 +566,7 @@ export default function PointToPointLeaseLine() {
 
           {/* Feature Grid */}
 
-          <div
-            className="
-                            mt-12
-                            grid
-                            grid-cols-2
-                            gap-3
-                            sm:mt-14
-                            sm:gap-5
-                            lg:grid-cols-3
-                        "
-          >
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-5 lg:grid-cols-3">
             {leaseLineFeatures.map((feature, index) => {
               const Icon = feature.icon;
 
@@ -1108,23 +595,7 @@ export default function PointToPointLeaseLine() {
                 >
                   {/* Glow */}
 
-                  <div
-                    className="
-                                            pointer-events-none
-                                            absolute
-                                            -right-10
-                                            -top-10
-                                            h-28
-                                            w-28
-                                            rounded-full
-                                            bg-[#e3292f]/5
-                                            blur-3xl
-                                            transition-all
-                                            duration-300
-                                            group-hover:scale-150
-                                            group-hover:bg-[#e3292f]/10
-                                        "
-                  />
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#e3292f]/5 blur-3xl transition-all duration-300 group-hover:scale-150 group-hover:bg-[#e3292f]/10" />
 
                   {/* Icon */}
 
@@ -1163,72 +634,23 @@ export default function PointToPointLeaseLine() {
 
                   {/* Number */}
 
-                  <span
-                    className="
-                                            absolute
-                                            right-4
-                                            top-4
-                                            text-[10px]
-                                            font-bold
-                                            tracking-widest
-                                            text-slate-200
-                                            transition-colors
-                                            duration-300
-                                            group-hover:text-[#e3292f]/30
-                                        "
-                  >
+                  <span className="absolute right-4 top-4 text-[10px] font-bold tracking-widest text-slate-200 transition-colors duration-300 group-hover:text-[#e3292f]/30">
                     0{index + 1}
                   </span>
 
                   {/* Content */}
 
-                  <h3
-                    className="
-                                            relative
-                                            z-10
-                                            mt-4
-                                            text-xs
-                                            font-bold
-                                            leading-5
-                                            text-slate-900
-                                            sm:mt-6
-                                            sm:text-lg
-                                        "
-                  >
+                  <h3 className="relative z-10 mt-4 text-xs font-bold leading-5 text-slate-900 sm:mt-6 sm:text-lg">
                     {feature.title}
                   </h3>
 
-                  <p
-                    className="
-                                            relative
-                                            z-10
-                                            mt-2
-                                            text-[10px]
-                                            leading-5
-                                            text-slate-500
-                                            sm:mt-3
-                                            sm:text-sm
-                                            sm:leading-6
-                                        "
-                  >
+                  <p className="relative z-10 mt-2 text-[10px] leading-5 text-slate-500 sm:mt-3 sm:text-sm sm:leading-6">
                     {feature.text}
                   </p>
 
                   {/* Bottom Line */}
 
-                  <div
-                    className="
-                                            absolute
-                                            bottom-0
-                                            left-0
-                                            h-[2px]
-                                            w-0
-                                            bg-[#e3292f]
-                                            transition-all
-                                            duration-300
-                                            group-hover:w-full
-                                        "
-                  />
+                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#e3292f] transition-all duration-300 group-hover:w-full" />
                 </div>
               );
             })}
@@ -1239,90 +661,25 @@ export default function PointToPointLeaseLine() {
       {/* =====================================================
                 NETWORK INFRASTRUCTURE
             ====================================================== */}
-      <section
-        className="
-                    relative
-                    overflow-hidden
-                    bg-white
-                    py-20
-                    sm:py-24
-                    lg:py-28
-                "
-      >
-        <div
-          className="
-                        pointer-events-none
-                        absolute
-                        -right-40
-                        top-0
-                        h-96
-                        w-96
-                        rounded-full
-                        bg-red-50
-                        blur-[120px]
-                    "
-        />
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+        <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-red-50 blur-[120px]" />
 
-        <div
-          className="
-                        relative
-                        mx-auto
-                        grid
-                        max-w-7xl
-                        items-center
-                        gap-12
-                        px-5
-                        sm:px-6
-                        lg:grid-cols-2
-                        lg:gap-20
-                        lg:px-8
-                    "
-        >
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
           {/* CONTENT */}
 
           <div data-aos="fade-right" className="text-center lg:text-left">
-            <p
-              className="
-                                text-xs
-                                font-bold
-                                uppercase
-                                tracking-[0.25em]
-                                text-[#e3292f]
-                            "
-            >
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f]">
               Network Infrastructure
             </p>
 
-            <h2
-              className="
-                                mt-4
-                                text-3xl
-                                font-bold
-                                leading-tight
-                                text-slate-900
-                                sm:text-4xl
-                                lg:text-5xl
-                            "
-            >
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
               Built for dependable
               <span className="block text-[#e3292f]">
                 business connectivity.
               </span>
             </h2>
 
-            <p
-              className="
-                                mx-auto
-                                mt-6
-                                max-w-xl
-                                text-sm
-                                leading-7
-                                text-slate-600
-                                sm:text-base
-                                sm:leading-8
-                                lg:mx-0
-                            "
-            >
+            <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:mx-0">
               TEJAYS Point-to-Point connectivity is designed to provide
               dependable communication between locations, helping businesses
               maintain reliable access to critical systems and applications.
@@ -1355,16 +712,7 @@ export default function PointToPointLeaseLine() {
                     key={item.title}
                     data-aos="fade-up"
                     data-aos-delay={index * 90}
-                    className="
-                                            group
-                                            flex
-                                            items-start
-                                            gap-4
-                                            border-b
-                                            border-slate-200
-                                            pb-4
-                                            text-left
-                                        "
+                    className="group flex items-start gap-4 border-b border-slate-200 pb-4 text-left"
                   >
                     <div
                       className="
@@ -1388,26 +736,11 @@ export default function PointToPointLeaseLine() {
                     </div>
 
                     <div>
-                      <h3
-                        className="
-                                                    text-sm
-                                                    font-bold
-                                                    text-slate-900
-                                                    sm:text-base
-                                                "
-                      >
+                      <h3 className="text-sm font-bold text-slate-900 sm:text-base">
                         {item.title}
                       </h3>
 
-                      <p
-                        className="
-                                                    mt-1
-                                                    text-xs
-                                                    leading-6
-                                                    text-slate-500
-                                                    sm:text-sm
-                                                "
-                      >
+                      <p className="mt-1 text-xs leading-6 text-slate-500 sm:text-sm">
                         {item.text}
                       </p>
                     </div>
@@ -1442,15 +775,7 @@ export default function PointToPointLeaseLine() {
                 <img
                   src={`${import.meta.env.BASE_URL}assets/lease-line-infrastructure2.jpg`}
                   alt="TEJAYS Lease Line Infrastructure"
-                  className="
-                                        h-[380px]
-                                        w-full
-                                        object-cover
-                                        transition-transform
-                                        duration-700
-                                        group-hover:scale-105
-                                        sm:h-[500px]
-                                    "
+                  className="h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[500px]"
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}
@@ -1458,112 +783,34 @@ export default function PointToPointLeaseLine() {
 
                 {/* Overlay */}
 
-                <div
-                  className="
-                                        absolute
-                                        inset-0
-                                        bg-gradient-to-t
-                                        from-slate-900/75
-                                        via-slate-900/10
-                                        to-transparent
-                                    "
-                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/10 to-transparent" />
 
                 {/* Status */}
 
-                <div
-                  className="
-                                        absolute
-                                        right-4
-                                        top-4
-                                        flex
-                                        items-center
-                                        gap-2
-                                        rounded-full
-                                        border
-                                        border-white/20
-                                        bg-slate-900/40
-                                        px-3
-                                        py-2
-                                        backdrop-blur-md
-                                        sm:right-5
-                                        sm:top-5
-                                    "
-                >
-                  <span
-                    className="
-                                            h-2
-                                            w-2
-                                            rounded-full
-                                            bg-[#e3292f]
-                                            shadow-[0_0_14px_rgba(227,41,47,0.9)]
-                                        "
-                  />
+                <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full border border-white/20 bg-slate-900/40 px-3 py-2 backdrop-blur-md sm:right-5 sm:top-5">
+                  <span className="h-2 w-2 rounded-full bg-[#e3292f] shadow-[0_0_14px_rgba(227,41,47,0.9)]" />
 
-                  <span
-                    className="
-                                            text-[9px]
-                                            font-bold
-                                            uppercase
-                                            tracking-[0.2em]
-                                            text-white/90
-                                        "
-                  >
+                  <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/90">
                     Dedicated Network
                   </span>
                 </div>
 
                 {/* Bottom Content */}
 
-                <div
-                  className="
-                                        absolute
-                                        bottom-0
-                                        left-0
-                                        right-0
-                                        p-5
-                                        text-center
-                                        sm:p-7
-                                        sm:text-left
-                                    "
-                >
+                <div className="absolute bottom-0 left-0 right-0 p-5 text-center sm:p-7 sm:text-left">
                   <div className="mb-3 flex items-center justify-center gap-3 sm:justify-start">
                     <span className="h-px w-8 bg-[#e3292f]" />
 
-                    <span
-                      className="
-                                                text-[9px]
-                                                font-bold
-                                                uppercase
-                                                tracking-[0.25em]
-                                                text-white/80
-                                            "
-                    >
+                    <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/80">
                       TEJAYS CONNECTIVITY
                     </span>
                   </div>
 
-                  <h3
-                    className="
-                                            text-2xl
-                                            font-bold
-                                            text-white
-                                            sm:text-3xl
-                                        "
-                  >
+                  <h3 className="text-2xl font-bold text-white sm:text-3xl">
                     Point-to-Point Network
                   </h3>
 
-                  <p
-                    className="
-                                            mt-2
-                                            text-xs
-                                            font-semibold
-                                            tracking-wide
-                                            text-white/75
-                                            sm:text-sm
-                                        "
-                  >
+                  <p className="mt-2 text-xs font-semibold tracking-wide text-white/75 sm:text-sm">
                     Dedicated
                     <span className="mx-2 text-[#e3292f]">•</span>
                     Reliable
@@ -1580,90 +827,25 @@ export default function PointToPointLeaseLine() {
       {/* =====================================================
                 SUITABLE FOR
             ====================================================== */}
-      <section
-        className="
-                    relative
-                    overflow-hidden
-                    bg-slate-100
-                    py-20
-                    sm:py-24
-                    lg:py-28
-                "
-      >
-        <div
-          className="
-                        pointer-events-none
-                        absolute
-                        -left-40
-                        top-20
-                        h-80
-                        w-80
-                        rounded-full
-                        bg-[#e3292f]/5
-                        blur-[100px]
-                    "
-        />
+      <section className="relative overflow-hidden bg-slate-100 py-20 sm:py-24 lg:py-28">
+        <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#e3292f]/5 blur-[100px]" />
 
-        <div
-          className="
-                        relative
-                        mx-auto
-                        max-w-7xl
-                        px-5
-                        sm:px-6
-                        lg:px-8
-                    "
-        >
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           {/* Header */}
 
-          <div
-            data-aos="fade-up"
-            className="
-                            mx-auto
-                            max-w-3xl
-                            text-center
-                        "
-          >
-            <p
-              className="
-                                text-xs
-                                font-bold
-                                uppercase
-                                tracking-[0.25em]
-                                text-[#e3292f]
-                            "
-            >
+          <div data-aos="fade-up" className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e3292f]">
               Built For
             </p>
 
-            <h2
-              className="
-                                mt-4
-                                text-3xl
-                                font-bold
-                                leading-tight
-                                text-slate-900
-                                sm:text-4xl
-                                lg:text-5xl
-                            "
-            >
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
               Built for organizations
               <span className="block text-[#e3292f]">
                 that depend on connectivity.
               </span>
             </h2>
 
-            <p
-              className="
-                                mx-auto
-                                mt-5
-                                max-w-2xl
-                                text-sm
-                                leading-7
-                                text-slate-600
-                                sm:text-base
-                            "
-            >
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
               Dedicated connectivity designed to support organizations,
               infrastructure and business applications.
             </p>
@@ -1671,17 +853,7 @@ export default function PointToPointLeaseLine() {
 
           {/* Cards */}
 
-          <div
-            className="
-                            mt-12
-                            grid
-                            grid-cols-2
-                            gap-3
-                            sm:mt-16
-                            sm:gap-5
-                            lg:grid-cols-3
-                        "
-          >
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:mt-16 sm:gap-5 lg:grid-cols-3">
             {suitableFor.map((item, index) => {
               const Icon = item.icon;
 
@@ -1710,23 +882,7 @@ export default function PointToPointLeaseLine() {
                 >
                   {/* Glow */}
 
-                  <div
-                    className="
-                                            pointer-events-none
-                                            absolute
-                                            -right-10
-                                            -top-10
-                                            h-24
-                                            w-24
-                                            rounded-full
-                                            bg-[#e3292f]/5
-                                            blur-2xl
-                                            transition-all
-                                            duration-300
-                                            group-hover:scale-150
-                                            group-hover:bg-[#e3292f]/10
-                                        "
-                  />
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#e3292f]/5 blur-2xl transition-all duration-300 group-hover:scale-150 group-hover:bg-[#e3292f]/10" />
 
                   {/* Icon */}
 
@@ -1755,52 +911,17 @@ export default function PointToPointLeaseLine() {
                     <Icon size={20} strokeWidth={1.7} />
                   </div>
 
-                  <h3
-                    className="
-                                            relative
-                                            z-10
-                                            mt-4
-                                            text-xs
-                                            font-bold
-                                            leading-5
-                                            text-slate-900
-                                            sm:mt-5
-                                            sm:text-lg
-                                        "
-                  >
+                  <h3 className="relative z-10 mt-4 text-xs font-bold leading-5 text-slate-900 sm:mt-5 sm:text-lg">
                     {item.title}
                   </h3>
 
-                  <p
-                    className="
-                                            relative
-                                            z-10
-                                            mt-2
-                                            text-[10px]
-                                            leading-5
-                                            text-slate-500
-                                            sm:text-sm
-                                            sm:leading-6
-                                        "
-                  >
+                  <p className="relative z-10 mt-2 text-[10px] leading-5 text-slate-500 sm:text-sm sm:leading-6">
                     {item.text}
                   </p>
 
                   {/* Bottom Line */}
 
-                  <div
-                    className="
-                                            absolute
-                                            bottom-0
-                                            left-0
-                                            h-[2px]
-                                            w-0
-                                            bg-[#e3292f]
-                                            transition-all
-                                            duration-300
-                                            group-hover:w-full
-                                        "
-                  />
+                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#e3292f] transition-all duration-300 group-hover:w-full" />
                 </div>
               );
             })}
@@ -1811,98 +932,25 @@ export default function PointToPointLeaseLine() {
       {/* =====================================================
                 CTA
             ====================================================== */}
-      <section
-        className="
-                    relative
-                    overflow-hidden
-                    bg-[#e3292f]
-                    py-16
-                    sm:py-20
-                "
-      >
-        <div
-          className="
-                        pointer-events-none
-                        absolute
-                        -right-20
-                        -top-20
-                        h-72
-                        w-72
-                        rounded-full
-                        border-[45px]
-                        border-white/10
-                    "
-        />
+      <section className="relative overflow-hidden bg-[#e3292f] py-16 sm:py-20">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border-[45px] border-white/10" />
 
-        <div
-          className="
-                        pointer-events-none
-                        absolute
-                        -bottom-32
-                        -left-20
-                        h-72
-                        w-72
-                        rounded-full
-                        border-[35px]
-                        border-white/10
-                    "
-        />
+        <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full border-[35px] border-white/10" />
 
         <div
           data-aos="fade-up"
-          className="
-                        relative
-                        mx-auto
-                        flex
-                        max-w-7xl
-                        flex-col
-                        items-center
-                        gap-7
-                        px-5
-                        text-center
-                        sm:px-6
-                        lg:flex-row
-                        lg:justify-between
-                        lg:px-8
-                        lg:text-left
-                    "
+          className="relative mx-auto flex max-w-7xl flex-col items-center gap-7 px-5 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:text-left"
         >
           <div>
-            <p
-              className="
-                                text-xs
-                                font-bold
-                                uppercase
-                                tracking-[0.25em]
-                                text-white/70
-                            "
-            >
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/70">
               Let's Connect
             </p>
 
-            <h2
-              className="
-                                mt-3
-                                text-3xl
-                                font-bold
-                                text-white
-                                sm:text-4xl
-                            "
-            >
+            <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
               Ready for dedicated connectivity?
             </h2>
 
-            <p
-              className="
-                                mx-auto
-                                mt-3
-                                max-w-2xl
-                                text-sm
-                                leading-7
-                                text-white/80
-                                lg:mx-0
-                            "
-            >
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-white/80 lg:mx-0">
               Talk to TEJAYS about a Point-to-Point Lease Line solution designed
               around your business requirements.
             </p>
@@ -1910,33 +958,12 @@ export default function PointToPointLeaseLine() {
 
           <Link
             to="/contact-us"
-            className="
-                            group
-                            inline-flex
-                            shrink-0
-                            items-center
-                            justify-center
-                            gap-3
-                            bg-white
-                            px-7
-                            py-3.5
-                            text-sm
-                            font-bold
-                            text-[#e3292f]
-                            transition-all
-                            duration-500
-                            hover:-translate-y-1
-                            hover:shadow-2xl
-                        "
+            className="group inline-flex shrink-0 items-center justify-center gap-3 bg-white px-7 py-3.5 text-sm font-bold text-[#e3292f] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl"
           >
             Contact TEJAYS
             <ArrowRight
               size={17}
-              className="
-                                transition-transform
-                                duration-300
-                                group-hover:translate-x-1
-                            "
+              className="transition-transform duration-300 group-hover:translate-x-1"
             />
           </Link>
         </div>

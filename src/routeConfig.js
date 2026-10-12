@@ -12,7 +12,10 @@ export const corporateServices = [
   { name: "Internet Lease Line", slug: "internet-lease-line" },
   { name: "Corporate Broadband", slug: "corporate-broadband" },
   { name: "MPLS-VPN", slug: "mpls-vpn" },
-  { name: "Point-To-Point Lease Line", slug: "point-to-point-lease-line-for-corporate" },
+  {
+    name: "Point-To-Point Lease Line",
+    slug: "point-to-point-lease-line-for-corporate",
+  },
   { name: "Managed Services", slug: "managed-services-for-corporate" },
   { name: "Fiber On Lease", slug: "fiber-on-lease" },
   { name: "Security and Surveillance", slug: "security-and-surveillance" },
