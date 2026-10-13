@@ -1758,45 +1758,63 @@ export default function Home() {
           </div>
 
           {/* =====================================================
-    RIGHT — NETWORK TECHNOLOGY VISUAL
+    RIGHT — DIGITAL NETWORK GLOBE
 ===================================================== */}
 
           <div
             data-aos="fade-left"
             data-aos-duration="1200"
             data-aos-delay="150"
-            className="mx-auto w-full max-w-[520px]"
+            className="mx-auto w-full max-w-xl"
           >
-            {/* =====================================================
-      NETWORK GLOBE IMAGE
-  ===================================================== */}
+            <div className="group relative overflow-hidden border border-slate-200 bg-slate-50 p-2 shadow-[0_25px_70px_rgba(15,23,42,0.10)]">
+              {/* GLOBE IMAGE */}
 
-            <div className="relative flex w-full items-center justify-center">
-              <img
-                src={`${import.meta.env.BASE_URL}assets/3d-digital-globe.png`}
-                alt="TEJAYS Digital Network Globe"
-                width="400"
-                height="400"
-                loading="lazy"
-                decoding="async"
-                className="h-auto w-full max-w-[400px] object-contain drop-shadow-[0_20px_35px_rgba(227,41,47,0.12)] transition-transform duration-700 hover:scale-[1.03]"
-              />
+              <div className="relative overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/3d-digital-globe.png`}
+                  alt="TEJAYS Digital Network Infrastructure"
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-[320px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[420px]"
+                />
+
+                {/* BOTTOM GRADIENT */}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#101525]/80 via-transparent to-transparent" />
+
+                {/* RED ACCENT LINE */}
+
+                <div className="absolute bottom-0 left-0 h-1 w-24 bg-[#e3292f] transition-all duration-500 group-hover:w-48" />
+
+                {/* IMAGE LABEL */}
+
+                <div className="absolute bottom-5 left-5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/75">
+                    TEJAYS DYNAMIC
+                  </p>
+
+                  <p className="mt-1 text-lg font-bold text-white sm:text-xl">
+                    Global Network Infrastructure
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* =====================================================
-      INFO CARDS — UPTIME SLA & SUPPORT
+      INFO CARDS — KEEP BOTH CARDS
   ===================================================== */}
 
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-7 sm:gap-4">
-              {/* UPTIME SLA CARD */}
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
+              {/* UPTIME SLA */}
 
               <div
                 data-aos="fade-up"
                 data-aos-delay="700"
                 className="group relative overflow-hidden border border-slate-200 bg-white p-4 text-center shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#e3292f]/30 hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]"
               >
-                {/* Top Accent */}
-
                 <div className="absolute left-1/2 top-0 h-[2px] w-0 -translate-x-1/2 bg-[#e3292f] transition-all duration-500 group-hover:w-16" />
 
                 <p className="text-xl font-bold text-[#e3292f] transition-transform duration-300 group-hover:scale-110">
@@ -1808,15 +1826,13 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* SUPPORT CARD */}
+              {/* 24/7 SUPPORT */}
 
               <div
                 data-aos="fade-up"
                 data-aos-delay="780"
                 className="group relative overflow-hidden border border-slate-200 bg-white p-4 text-center shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#e3292f]/30 hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]"
               >
-                {/* Top Accent */}
-
                 <div className="absolute left-1/2 top-0 h-[2px] w-0 -translate-x-1/2 bg-[#e3292f] transition-all duration-500 group-hover:w-16" />
 
                 <p className="text-xl font-bold text-[#e3292f] transition-transform duration-300 group-hover:scale-110">
