@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+﻿import React, { useRef, useState } from "react";
 import Footer from "../components/Footer";
 import {
   Phone,
@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/zindadil042@gmail.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/tejays48@gmail.com";
 
 const Contact = () => {
   const [contactWidgetOpen, setContactWidgetOpen] = useState(false);
@@ -25,7 +25,8 @@ const Contact = () => {
 
   const [sent, setSent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionError, setSubmissionError] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
+  const submissionInProgress = useRef(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,23 +40,24 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (submissionInProgress.current) return;
+
+    submissionInProgress.current = true;
     setIsSubmitting(true);
     setSent(false);
-    setSubmissionError(false);
+    setSubmissionError("");
 
     try {
-      const formData = new FormData();
-      Object.entries(form).forEach(([name, value]) => {
-        formData.append(name, value);
-      });
-      formData.append("_subject", "TEJAYS - New Contact Enquiry");
-
       const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: formData,
+        body: JSON.stringify({
+          ...form,
+          _subject: "TEJAYS - New Contact Enquiry",
+        }),
       });
 
       const responseText = await response.text();
@@ -64,20 +66,39 @@ const Contact = () => {
       try {
         result = JSON.parse(responseText);
       } catch {
-        result = { message: responseText };
+        result = null;
       }
 
       console.log("FormSubmit response:", {
         status: response.status,
         ok: response.ok,
-        body: result,
+        body: result ?? responseText,
       });
 
-      if (
-        !response.ok ||
-        (result.success !== true && result.success !== "true")
-      ) {
-        throw new Error(result.message || "Contact enquiry could not be sent");
+      const successValue = result?.success ?? result?.status;
+      const confirmedSuccess =
+        successValue === true ||
+        (typeof successValue === "string" &&
+          successValue.trim().toLowerCase() === "true") ||
+        (typeof successValue === "string" &&
+          successValue.trim().toLowerCase() === "success") ||
+        (typeof result?.message === "string" &&
+          /^form submitted successfully[.!]?$/i.test(
+            result.message.trim(),
+          ));
+
+      if (!response.ok || !confirmedSuccess) {
+        const activationRequired =
+          typeof result?.message === "string" &&
+          /needs activation|activate form/i.test(result.message);
+        const errorMessage = activationRequired
+          ? "This contact form is awaiting email verification. The site owner must activate it using FormSubmit's verification email before enquiries can be delivered. Please use another contact method for now."
+          : !response.ok
+            ? response.status === 429
+              ? "The form service is receiving too many requests. Please wait a moment and try again."
+              : `The form service could not accept your enquiry (HTTP ${response.status}). Please try again later.`
+            : "The form service did not confirm that your enquiry was submitted. Please try again.";
+        throw new Error(errorMessage);
       }
 
       setSent(true);
@@ -96,8 +117,15 @@ const Contact = () => {
       }, 5000);
     } catch (error) {
       console.error("Contact form submission failed:", error);
-      setSubmissionError(true);
+      setSubmissionError(
+        error instanceof TypeError
+          ? "Unable to connect to the form service. Check your internet connection and try again."
+          : error instanceof Error
+            ? error.message
+            : "Unable to submit your enquiry. Please try again.",
+      );
     } finally {
+      submissionInProgress.current = false;
       setIsSubmitting(false);
     }
   };
@@ -282,14 +310,13 @@ const Contact = () => {
 
                 {submissionError && (
                   <div className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
-                    {typeof submissionError === "string"
-                      ? submissionError
-                      : "Something went wrong while sending your enquiry. Please try again."}
+                    {submissionError}
                   </div>
                 )}
 
                 <form onSubmit={handleSubmit} className="mt-8 space-y-5">
                   {/* ================= NAME + PHONE ================= */}
+
                   <div className="grid gap-5 sm:grid-cols-2">
                     {/* NAME */}
                     <div>
@@ -301,8 +328,21 @@ const Contact = () => {
                         type="text"
                         name="name"
                         value={form.name}
-                        onChange={handleChange}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(
+                            /[^a-zA-Z\s]/g,
+                            "",
+                          );
+
+                          handleChange({
+                            target: {
+                              name: "name",
+                              value,
+                            },
+                          });
+                        }}
                         placeholder="Enter your name"
+                        autoComplete="name"
                         required
                         className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-[#e3292f] focus:bg-white focus:ring-2 focus:ring-red-100"
                       />
@@ -314,15 +354,40 @@ const Contact = () => {
                         Phone Number
                       </label>
 
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={form.phone}
-                        onChange={handleChange}
-                        placeholder="Enter phone number"
-                        required
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-[#e3292f] focus:bg-white focus:ring-2 focus:ring-red-100"
-                      />
+                      <div className="flex w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50 transition focus-within:border-[#e3292f] focus-within:bg-white focus-within:ring-2 focus-within:ring-red-100">
+                        {/* COUNTRY CODE */}
+                        <span className="flex items-center border-r border-slate-200 bg-slate-100 px-4 text-sm font-semibold text-slate-700">
+                          +91
+                        </span>
+
+                        {/* MOBILE NUMBER */}
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={form.phone}
+                          onChange={(e) => {
+                            const value = e.target.value
+                              .replace(/\D/g, "")
+                              .slice(0, 10);
+
+                            handleChange({
+                              target: {
+                                name: "phone",
+                                value,
+                              },
+                            });
+                          }}
+                          placeholder="Enter 10-digit number"
+                          inputMode="numeric"
+                          autoComplete="tel-national"
+                          pattern="[0-9]{10}"
+                          maxLength={10}
+                          minLength={10}
+                          title="Please enter a valid 10-digit mobile number"
+                          required
+                          className="w-full min-w-0 bg-transparent px-4 py-3.5 text-sm outline-none"
+                        />
+                      </div>
                     </div>
                   </div>
 
@@ -344,6 +409,7 @@ const Contact = () => {
                   </div>
 
                   {/* ================= CITY + PIN CODE ================= */}
+
                   <div className="grid gap-5 sm:grid-cols-2">
                     {/* CITY */}
                     <div>
@@ -355,8 +421,21 @@ const Contact = () => {
                         type="text"
                         name="city"
                         value={form.city}
-                        onChange={handleChange}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(
+                            /[^a-zA-Z\s]/g,
+                            "",
+                          );
+
+                          handleChange({
+                            target: {
+                              name: "city",
+                              value,
+                            },
+                          });
+                        }}
                         placeholder="Enter your city"
+                        autoComplete="address-level2"
                         required
                         className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-[#e3292f] focus:bg-white focus:ring-2 focus:ring-red-100"
                       />
@@ -372,11 +451,25 @@ const Contact = () => {
                         type="text"
                         name="pincode"
                         value={form.pincode}
-                        onChange={handleChange}
-                        placeholder="Enter PIN code"
+                        onChange={(e) => {
+                          const value = e.target.value
+                            .replace(/\D/g, "")
+                            .slice(0, 6);
+
+                          handleChange({
+                            target: {
+                              name: "pincode",
+                              value,
+                            },
+                          });
+                        }}
+                        placeholder="Enter 6-digit PIN code"
                         inputMode="numeric"
-                        maxLength="6"
+                        autoComplete="postal-code"
+                        maxLength={6}
                         pattern="[0-9]{6}"
+                        minLength={6}
+                        title="Please enter a valid 6-digit PIN code"
                         required
                         className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-[#e3292f] focus:bg-white focus:ring-2 focus:ring-red-100"
                       />
