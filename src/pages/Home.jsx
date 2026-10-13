@@ -291,7 +291,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-x-clip bg-white text-slate-900">
-      {/* ========    PREMIUM HERO     ======== */}
+      {/* =========================================================
+                PREMIUM HERO
+            ========================================================= */}
       <section className="relative isolate min-h-[650px] overflow-hidden bg-[#07111f]">
         {/* Background Image */}
         <div
@@ -466,10 +468,9 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-[#07111f] to-transparent" />
       </section>
 
-      {/* ================================================================
-    TEJAYS NETWORK — PREMIUM CORPORATE SECTION
-================================================================ */}
-
+      {/* =========================================================
+                TEJAYS NETWORK — PREMIUM CORPORATE SECTION
+            ========================================================= */}
       <section className="relative overflow-hidden bg-[#f8fafc] py-20 sm:py-24 lg:py-32">
         {/* ============================================================
                     BACKGROUND DECORATION
@@ -818,8 +819,7 @@ export default function Home() {
       {/* =========================================================
                PREMIUM STATISTICS — REDESIGNED
             ========================================================= */}
-
-      <section className="relative overflow-hidden bg-slate-100 py-12 sm:py-16 lg:py-20">
+      <section className="relative overflow-hidden bg-[#ffffff] py-12 sm:py-16 lg:py-20">
         {/* =====================================================
         BACKGROUND AMBIENT EFFECTS
     ====================================================== */}
@@ -1758,8 +1758,8 @@ export default function Home() {
           </div>
 
           {/* =====================================================
-            RIGHT — NETWORK TECHNOLOGY VISUAL
-        ====================================================== */}
+    RIGHT — NETWORK TECHNOLOGY VISUAL
+===================================================== */}
 
           <div
             data-aos="fade-left"
@@ -1767,250 +1767,33 @@ export default function Home() {
             data-aos-delay="150"
             className="mx-auto w-full max-w-[520px]"
           >
-            {/* =================================================
-        MAIN NETWORK CIRCLE
-    ================================================= */}
+            {/* =====================================================
+      NETWORK GLOBE IMAGE
+  ===================================================== */}
 
-            <div
-              className="
-            group
-            relative
-            mx-auto
-            aspect-square
-            w-full
-            overflow-hidden
-            rounded-full
-
-            border-[8px]
-            border-gray-800
-
-            bg-gradient-to-br
-            from-[#e3292f]
-            via-[#d9232a]
-            to-[#b91c22]
-
-            shadow-[0_30px_80px_rgba(227,41,47,0.22)]
-
-            transition-all
-            duration-700
-
-            hover:border-red-50
-            hover:shadow-[0_35px_100px_rgba(227,41,47,0.30)]
-        "
-            >
-              {/* =================================================
-            SOFT WHITE GLOW
-        ================================================= */}
-
-              <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-white/15" />
-
-              {/* =================================================
-            BOTTOM SOFT GLOW
-        ================================================= */}
-
-              <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-black/10 blur-3xl" />
-
-              {/* =================================================
-            SUBTLE GRID
-        ================================================= */}
-
-              <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
-                <div
-                  className="h-full w-full"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(rgba(255,255,255,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.45) 1px, transparent 1px)",
-                    backgroundSize: "32px 32px",
-                  }}
-                />
-              </div>
-
-              {/* =================================================
-            OUTER RING
-        ================================================= */}
-
-              <div className="absolute inset-[5%] rounded-full border border-white/30 transition-transform duration-[2000ms] ease-out group-hover:rotate-180" />
-
-              {/* =================================================
-            SECOND RING
-        ================================================= */}
-
-              <div className="absolute inset-[12%] rounded-full border border-white/20 transition-transform duration-[1600ms] ease-out group-hover:-rotate-180" />
-
-              {/* =================================================
-            INNER RING
-        ================================================= */}
-
-              <div className="absolute inset-[23%] rounded-full border border-white/30 transition-all duration-700 group-hover:scale-110 group-hover:border-white/50" />
-
-              {/* =================================================
-            CENTER GLOW
-        ================================================= */}
-
-              <div
-                className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-
-                h-48
-                w-48
-
-                -translate-x-1/2
-                -translate-y-1/2
-
-                rounded-full
-
-                bg-white/10
-
-                blur-3xl
-
-                transition-all
-                duration-700
-
-                group-hover:scale-125
-                group-hover:bg-white/15
-            "
+            <div className="relative flex w-full items-center justify-center">
+              <img
+                src={`${import.meta.env.BASE_URL}assets/3d-digital-globe.png`}
+                alt="TEJAYS Digital Network Globe"
+                width="400"
+                height="400"
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full max-w-[400px] object-contain drop-shadow-[0_20px_35px_rgba(227,41,47,0.12)] transition-transform duration-700 hover:scale-[1.03]"
               />
-
-              {/* =================================================
-            CENTER NETWORK ICON
-        ================================================= */}
-
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div
-                  className="
-                    relative
-
-                    flex
-                    h-28
-                    w-28
-
-                    items-center
-                    justify-center
-
-                    rounded-full
-
-                    border
-                    border-white/40
-
-                    bg-white
-
-                    text-[#e3292f]
-
-                    shadow-[0_15px_50px_rgba(0,0,0,0.15)]
-
-                    transition-all
-                    duration-700
-
-                    group-hover:scale-110
-                    group-hover:border-white
-
-                    group-hover:shadow-[0_0_70px_rgba(255,255,255,0.25)]
-
-                    sm:h-36
-                    sm:w-36
-                "
-                >
-                  {/* Center Inner Glow */}
-
-                  <div className="pointer-events-none absolute inset-3 rounded-full bg-[#e3292f]/5 blur-xl" />
-
-                  <Network
-                    size={55}
-                    strokeWidth={1.3}
-                    className="relative z-10 text-[#e3292f] transition-all duration-700 group-hover:rotate-12 group-hover:scale-110 sm:h-[65px] sm:w-[65px]"
-                  />
-                </div>
-              </div>
-
-              {/* =================================================
-            ORBIT DOT 1
-        ================================================= */}
-
-              <span className="absolute left-[17%] top-[27%] h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_20px_rgba(255,255,255,0.75)] transition-transform duration-500 group-hover:scale-150" />
-
-              {/* =================================================
-            ORBIT DOT 2
-        ================================================= */}
-
-              <span className="absolute right-[20%] top-[24%] h-2 w-2 rounded-full bg-white/70 shadow-[0_0_12px_rgba(255,255,255,0.45)] transition-transform duration-500 group-hover:scale-150" />
-
-              {/* =================================================
-            ORBIT DOT 3
-        ================================================= */}
-
-              <span className="absolute bottom-[23%] left-[23%] h-2 w-2 rounded-full bg-white/70 shadow-[0_0_12px_rgba(255,255,255,0.45)] transition-transform duration-500 group-hover:scale-150" />
-
-              {/* =================================================
-            ORBIT DOT 4
-        ================================================= */}
-
-              <span className="absolute bottom-[27%] right-[18%] h-2.5 w-2.5 rounded-full bg-white shadow-[0_0_20px_rgba(255,255,255,0.75)] transition-transform duration-500 group-hover:scale-150" />
-
-              {/* =================================================
-            NETWORK LABEL
-        ================================================= */}
-
-              <div className="absolute bottom-8 left-0 right-0 text-center transition-transform duration-500 group-hover:-translate-y-1">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/75 sm:text-xs">
-                  Network Infrastructure
-                </p>
-
-                <p className="mt-1 text-xs font-bold text-white">
-                  Reliable
-                  <span className="mx-1.5 text-white/70">•</span>
-                  Secure
-                  <span className="mx-1.5 text-white/70">•</span>
-                  Scalable
-                </p>
-              </div>
-
-              {/* =================================================
-            OUTER HIGHLIGHT
-        ================================================= */}
-
-              <div className="pointer-events-none absolute inset-0 rounded-full border border-white/20" />
             </div>
 
-            {/* =================================================
-        INFO CARDS
-    ================================================= */}
+            {/* =====================================================
+      INFO CARDS — UPTIME SLA & SUPPORT
+  ===================================================== */}
 
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
-              {/* =================================================
-            UPTIME CARD
-        ================================================= */}
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-7 sm:gap-4">
+              {/* UPTIME SLA CARD */}
 
               <div
                 data-aos="fade-up"
                 data-aos-delay="700"
-                className="
-                group
-                relative
-                overflow-hidden
-
-                border
-                border-slate-200
-
-                bg-white
-
-                p-4
-
-                text-center
-
-                shadow-[0_10px_30px_rgba(15,23,42,0.05)]
-
-                transition-all
-                duration-500
-
-                hover:-translate-y-2
-
-                hover:border-[#e3292f]/30
-
-                hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]
-            "
+                className="group relative overflow-hidden border border-slate-200 bg-white p-4 text-center shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#e3292f]/30 hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]"
               >
                 {/* Top Accent */}
 
@@ -2025,38 +1808,12 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* =================================================
-            SUPPORT CARD
-        ================================================= */}
+              {/* SUPPORT CARD */}
 
               <div
                 data-aos="fade-up"
                 data-aos-delay="780"
-                className="
-                group
-                relative
-                overflow-hidden
-
-                border
-                border-slate-200
-
-                bg-white
-
-                p-4
-
-                text-center
-
-                shadow-[0_10px_30px_rgba(15,23,42,0.05)]
-
-                transition-all
-                duration-500
-
-                hover:-translate-y-2
-
-                hover:border-[#e3292f]/30
-
-                hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]
-            "
+                className="group relative overflow-hidden border border-slate-200 bg-white p-4 text-center shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#e3292f]/30 hover:shadow-[0_18px_40px_rgba(227,41,47,0.10)]"
               >
                 {/* Top Accent */}
 

@@ -610,7 +610,7 @@ const Contact = () => {
             aria-label="Chat on WhatsApp"
             className="flex flex-1 flex-col items-center justify-center gap-1 text-white transition-opacity hover:opacity-80"
           >
-           <FaWhatsapp size={21} />
+            <FaWhatsapp size={21} />
             <span className="text-[10px] font-semibold">WhatsApp</span>
           </a>
 

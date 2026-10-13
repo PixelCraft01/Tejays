@@ -326,7 +326,7 @@ export default function Footer() {
               <img
                 src={`${import.meta.env.BASE_URL}assets/tejays-logo2.png`}
                 alt="TEJAYS Network"
-                className="h-12 w-auto max-w-[200px] object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-12 w-auto max-w-[200px] object-contain transition-transform duration-300 "
               />
             </Link>
 

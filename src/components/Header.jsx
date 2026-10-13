@@ -107,7 +107,7 @@ export default function Header() {
           to="/"
           onClick={closeMobile}
           aria-label="TEJAYS Home"
-          className="group flex min-w-0 shrink-0 items-center justify-center transition-transform duration-300 hover:scale-[1.02]"
+          className="group flex min-w-0 shrink-0 items-center justify-center transition-transform duration-300 "
         >
           <img
             src={`${import.meta.env.BASE_URL}assets/tejays-logo1.png`}
