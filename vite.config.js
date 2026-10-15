@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ command }) => ({
-  base: command === "serve" ? "/" : "/Tejays/",
+  base: command === "serve" ? "/" : "/react-test/dist/",
+  // base: command === "serve" ? "/" : "/Tejays/",
   plugins: [react(), tailwindcss()],
   server: {
     host: "0.0.0.0",
