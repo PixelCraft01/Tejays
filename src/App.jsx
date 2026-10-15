@@ -42,6 +42,9 @@ function PageLayout({ children }) {
   );
 }
 
+
+
+
 /* =========================================================
    SERVICE PAGE
 ========================================================= */
@@ -165,7 +168,7 @@ function App() {
       <AutoScroll />
 
       <a
-        href="https://wa.me/919509612559"
+        href=""
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
