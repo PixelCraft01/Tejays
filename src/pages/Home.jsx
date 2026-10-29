@@ -474,7 +474,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-[#f8fafc] py-20 sm:py-24 lg:py-32">
         {/* ============================================================
                     BACKGROUND DECORATION
-                               ============================================================ */}
+          ============================================================ */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           {/* Red glow */}
           <div className="absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-red-100/70 blur-[110px]" />

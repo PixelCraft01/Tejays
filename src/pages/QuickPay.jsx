@@ -283,7 +283,7 @@ const QuickPay = () => {
                       {/* QR Outer Border */}
                       <div className="rounded-[26px] border border-slate-200 bg-slate-50 p-3 shadow-inner">
                         {/* QR */}
-                        <div className="flex h-[250px] w-[250px] items-center justify-center rounded-[20px] bg-white p-4 shadow-[0_10px_30px_rgba(15,23,42,0.08)] sm:h-[280px] sm:w-[280px]">
+                        <div className="flex h-[250px] w-[250px] items-center justify-center rounded-[20px] bg-white p-2 border-2 shadow-[0_10px_30px_rgba(15,23,42,0.08)] sm:h-[280px] sm:w-[280px]">
                           <img
                             src={`${import.meta.env.BASE_URL}assets/Tejays-barcode.png`}
                             alt="TEJAYS Payment QR Code"
@@ -318,22 +318,60 @@ const QuickPay = () => {
                     {/* =============================================
                             UPI APPS
                         ============================================== */}
-                    <div className="mt-6 flex flex-wrap justify-center gap-2">
-                      <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[11px] font-bold text-slate-600">
-                        Google Pay
-                      </span>
 
-                      <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[11px] font-bold text-slate-600">
-                        PhonePe
-                      </span>
-
-                      <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[11px] font-bold text-slate-600">
-                        Paytm
-                      </span>
-
-                      <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[11px] font-bold text-slate-600">
-                        Airtel
-                      </span>
+                    <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+                      {[
+                        {
+                          name: "Google Pay",
+                          color:
+                            "bg-gradient-to-r from-white via-blue-50 to-white",
+                          text: "text-[#1A73E8]",
+                          border: "border-[#4285F4]/30",
+                        },
+                        {
+                          name: "PhonePe",
+                          color: "bg-[#5F259F]",
+                          text: "text-white",
+                          border: "border-[#5F259F]",
+                        },
+                        {
+                          name: "Paytm",
+                          color: "bg-[#00B9F1]",
+                          text: "text-white",
+                          border: "border-[#00B9F1]",
+                        },
+                        {
+                          name: "BHIM UPI",
+                          color: "bg-[#16834A]",
+                          text: "text-white",
+                          border: "border-[#16834A]",
+                        },
+                        {
+                          name: "Amazon Pay",
+                          color: "bg-[#232F3E]",
+                          text: "text-white",
+                          border: "border-[#232F3E]",
+                        },
+                        {
+                          name: "WhatsApp Pay",
+                          color: "bg-[#25D366]",
+                          text: "text-white",
+                          border: "border-[#25D366]",
+                        },
+                        {
+                          name: "Airtel",
+                          color: "bg-[#E3292F]",
+                          text: "text-white",
+                          border: "border-[#E3292F]",
+                        },
+                      ].map((app) => (
+                        <span
+                          key={app.name}
+                          className={`rounded-full border ${app.border} ${app.color} ${app.text} px-3 py-1.5 text-[10px] font-bold shadow-sm transition-transform duration-300 hover:-translate-y-0.5 sm:text-[11px]`}
+                        >
+                          {app.name}
+                        </span>
+                      ))}
                     </div>
                   </div>
 

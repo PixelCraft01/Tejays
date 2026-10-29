@@ -5,14 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "node server/server.js",
+    "dev:full": "concurrently -k -n API,WEB \"npm:dev:server\" \"npm:dev\"",
+    "verify:smtp": "node server/verify-smtp.js",
     "build": "vite build",
     "lint": "oxlint",
+    "test:server": "node --test server/server.test.js",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
     "aos": "^2.3.4",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
     "lucide-react": "^1.33.0",
+    "nodemailer": "^10.1.7",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-icons": "^5.7.0",
@@ -23,6 +30,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "concurrently": "^10.0.6",
     "oxlint": "^1.75.0",
     "vite": "^8.2.0"
   }

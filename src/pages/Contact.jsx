@@ -9,8 +9,6 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/tejays48@gmail.com";
-
 const Contact = () => {
   const [contactWidgetOpen, setContactWidgetOpen] = useState(false);
   const [form, setForm] = useState({
@@ -48,57 +46,22 @@ const Contact = () => {
     setSubmissionError("");
 
     try {
-      const response = await fetch(FORM_ENDPOINT, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
-        body: JSON.stringify({
-          ...form,
-          _subject: "TEJAYS - New Contact Enquiry",
-        }),
+        body: JSON.stringify(form),
       });
 
-      const responseText = await response.text();
-      let result;
+      const result = await response.json().catch(() => null);
 
-      try {
-        result = JSON.parse(responseText);
-      } catch {
-        result = null;
-      }
-
-      console.log("FormSubmit response:", {
-        status: response.status,
-        ok: response.ok,
-        body: result ?? responseText,
-      });
-
-      const successValue = result?.success ?? result?.status;
-      const confirmedSuccess =
-        successValue === true ||
-        (typeof successValue === "string" &&
-          successValue.trim().toLowerCase() === "true") ||
-        (typeof successValue === "string" &&
-          successValue.trim().toLowerCase() === "success") ||
-        (typeof result?.message === "string" &&
-          /^form submitted successfully[.!]?$/i.test(
-            result.message.trim(),
-          ));
-
-      if (!response.ok || !confirmedSuccess) {
-        const activationRequired =
-          typeof result?.message === "string" &&
-          /needs activation|activate form/i.test(result.message);
-        const errorMessage = activationRequired
-          ? "This contact form is awaiting email verification. The site owner must activate it using FormSubmit's verification email before enquiries can be delivered. Please use another contact method for now."
-          : !response.ok
-            ? response.status === 429
-              ? "The form service is receiving too many requests. Please wait a moment and try again."
-              : `The form service could not accept your enquiry (HTTP ${response.status}). Please try again later.`
-            : "The form service did not confirm that your enquiry was submitted. Please try again.";
-        throw new Error(errorMessage);
+      if (!response.ok || result?.success !== true) {
+        throw new Error(
+          typeof result?.message === "string"
+            ? result.message
+            : "Unable to submit your enquiry. Please try again later.",
+        );
       }
 
       setSent(true);
@@ -119,7 +82,7 @@ const Contact = () => {
       console.error("Contact form submission failed:", error);
       setSubmissionError(
         error instanceof TypeError
-          ? "Unable to connect to the form service. Check your internet connection and try again."
+          ? "Unable to connect to the enquiry service. Please try again later."
           : error instanceof Error
             ? error.message
             : "Unable to submit your enquiry. Please try again.",
